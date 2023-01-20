@@ -1,0 +1,121 @@
+.about-ol {
+  background: #FFFFFF;
+  border-radius: var(--brad-regular);
+  padding-top: 5.25rem;//84px;
+  padding-bottom: 7.125rem;//114px;
+  @media (max-width: 768px) {
+    padding-left: 36px;
+    padding-right: 36px;
+    border-radius: 24px;
+  }
+  @media (max-width: 601px) {
+    border-radius: 12px;
+    padding-top: 40px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 67px;
+  }
+}
+.about-ol__title {
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 3.0625rem;//49px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 601px) {
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+}
+.about-ol-list {
+  max-width: var(--w-container);//1186px;
+  margin-left: auto;
+  margin-right: auto;
+  column-count: 2;
+  column-gap: 0.5rem;
+  counter-reset: about-ol;
+  // @media (min-width: 1800px) {
+  //   max-width: 1560px;
+  // }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px
+  }
+  @media (max-width: 768px) {
+    column-count: 1;
+  }
+}
+.about-ol-list__item {
+  break-inside: avoid;
+  background: #F0F3F5;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875;
+  color: #000000;
+  list-style: none;
+  counter-increment: about-ol;
+  padding-top: 1.0625rem;//17px;
+  padding-right: 1.25rem;//20px;
+  padding-bottom: 1.25rem;
+  padding-left: 2.0625rem;//33px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    min-height: 94px;
+  }
+  @media (max-width: 768px) {
+    font-size: 28px;
+    padding: 12px;
+    padding-bottom: 24px;
+    padding-left: 60px;
+    padding-right: 40px;
+    min-height: 182px;
+    margin-bottom: 16px;
+    border-radius: 24px;
+  }
+  @media (max-width: 601px) {
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.18;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 91px;
+    margin-bottom: 8px;
+  }
+}
+.about-ol-list__item::before {
+  content: counter(about-ol);
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  color: #000000;
+  margin-right: 2.8125rem;//45px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    margin-right: 40px;
+    min-width: 60px;
+    display: block;
+    max-width: 60px;
+    font-size: 80px;
+  }
+  @media (max-width: 601px) {
+    margin-right: 20px;
+    min-width: 30px;
+    display: block;
+    max-width: 30px;
+  }
+}
+.about-ol-list__item:last-child {
+  margin-bottom: 0;
+}

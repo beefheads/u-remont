@@ -1,0 +1,121 @@
+.account {
+  display: grid;
+  grid-template-columns: 22.083333333333332vw auto;//318px auto;
+  column-gap: 1.875rem;//30px;
+  margin-bottom: 3.625rem;//58px;
+  @media (max-width: 1024px) {
+    grid-template-columns: 208px auto;
+  }
+  @media (max-width: 1020px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+    padding-bottom: 120px;
+    position: relative;
+  }
+}
+
+.account__title {
+  font-weight: 400;
+  font-size: 1.6875rem;//27px;
+  line-height: 110%;
+  margin-bottom: 1.9375rem;//31px;
+  padding-left: 0.625rem;//10px;
+  padding-right: 0.625rem;//10px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 56px;
+    font-size: 40px;
+  }
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-bottom: 28px;
+    padding-left: 20px;
+  }
+}
+.account__pages {
+  @media (min-width: 1021px) {
+    position: relative;
+    padding-top: 60px;
+  }
+  @media (min-width: 1800px) {
+    padding-top: 110px;
+  }
+}
+.account__pages .side-navigation__list {
+  @media (min-width: 1021px) {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.account-personal__main {
+  margin-bottom: 21px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 68px;
+  }
+  @media (max-width: 601px) {
+    margin-bottom: 34px;
+  }
+}
+.account-personal-addresses__card .fieldset__title {
+  margin-bottom: 54px;
+  @media (max-width: 601px) {
+    margin-bottom: 32px;
+  }
+}
+
+.account-personal-addresses {
+  margin-bottom: 32px;
+  @media (min-width: 602px) and (max-width: 768px) {
+    margin-bottom: 28px;
+  }
+  @media (max-width: 601px) {
+    margin-bottom: 14px;
+  }
+}
+
+.page__account .page-heading {
+  padding-top: 26px;
+}
+.page__account .page-heading__title:only-child {
+  @media (min-width: 1025px) {
+    margin-bottom: 96px;
+  }
+}
+
+
+.page__account .fieldset .calendar {
+  margin-bottom: 8px;
+  @media (max-width: 768px) {
+    margin-bottom: 0
+  }
+}
+
+.account-personal-addresses__button-use {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 10px;
+  }
+  @media (max-width: 601px) {
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 13.4px;
+    text-align: center;
+  }
+}
+
+.account-personal-addresses__card-remove {
+  font-size: 14px;
+  margin-top: 10px;
+  @media (min-width: 602px) {
+    display: none;
+  }
+}
+
+.account-personal__add-address-button {
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+  }
+}

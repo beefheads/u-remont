@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <section class="message">
+          <div class="message__container">
+            <article class="message-card">
+              <h1 class="message-card__title">Ошибка 404</h1>
+              <p class="message-card__desc">Страница не найдена</p>
+              <a href="#" class="button button--primary button--dark message-card__button">Вернуться на главную страницу</a>
+            </article>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

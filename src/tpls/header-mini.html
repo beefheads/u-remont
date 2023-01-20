@@ -1,0 +1,113 @@
+<header class="header header--mini">
+  <div class="header__snacks">
+    <div class="header-snack" data-snack="city">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите страну или регион, чтобы контент и онлайн-товары
+          соответствовали вашему местоположению
+        </h3>
+        <div class="header-snack__content">
+          <div class="select select--has-search header-snack__select" data-search-placeholder="Населенный пункт">
+            <select
+              name="city"
+              id="dropdown-city"
+              class="select__input"
+            >
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область
+              </option>
+              <option value="Казань">Казань, Татарстан республика</option>
+              <option value="Челябинск">Челябинск, Челябинская область</option>
+              <option value="Краснодар">Краснодар, Краснодарский Край</option>
+              <option value="Самара">Самара, Самарская область</option>
+              <option value="Москва">2 Москва</option>
+              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область 2
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область 2
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область 2
+              </option>
+              <option value="Казань">Казань, Татарстан республика 2</option>
+              <option value="Челябинск">
+                Челябинск, Челябинская область 2
+              </option>
+              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+              <option value="Самара">Самара, Самарская область 2</option>
+            </select>
+          </div>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+    <div class="header-snack" data-snack="language">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите язык, используемый на сайте
+        </h3>
+        <div class="header-snack__content">
+          <form action="/api" class="chips chips--ghost header-snack__language">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" class="chips__input" checked hidden name="language">
+                <span class="chips__caption">Русский</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" class="chips__input" hidden name="language">
+                <span class="chips__caption">English</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+  </div>
+  <div class="header__container">
+    <a class="button button--small button--light header__button-back">
+      <svg class="header__button-back-icon">
+        <use xlink:href="./img/common/arrow-left.svg#arrow-left" />
+      </svg>
+    </a>
+    <a href="#" class="header__logo logo">
+      <svg class="header__logo logo">
+        <use xlink:href="./img/common/logo.svg#logo" />
+      </svg>
+    </a>
+    <div class="header__menu">
+      <div class="header__pickers">
+        <button
+          class="header__geo header__picker"
+          data-snack="city"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/geo.svg#geo" />
+          </svg>
+          <span class="header__picker-text">Москва</span>
+        </button>
+        <button
+          class="header__language header__picker"
+          data-snack="language"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/language.svg#language" />
+          </svg>
+          <span class="header__picker-text">En</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

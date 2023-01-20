@@ -1,0 +1,121 @@
+.doc--small {
+  padding-left: 2.5rem;//40px;
+  padding-right: 2.5rem;
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.doc__title {
+  margin-top: 2.75rem;//44px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
+  @media (max-width: 768px) {
+    font-size: 1.6875rem;//27px;
+    // margin-top: 24px;
+    // margin-bottom: 24px;
+    margin-top: 2.5rem;//40px;
+    margin-bottom: 1.75rem;//28px;
+  }
+}
+.doc-card {
+  padding-top: 5.0rem;//80px;
+  padding-left: 7.5rem;//120px;
+  padding-bottom: 5.125rem;//82px;
+  padding-right: 7.5rem;
+  background-color: var(--bg-element);
+  display: grid;
+  border-radius: var(--brad-regular);
+  grid-template-columns: 21.38888888888889vw auto;//308px auto;
+  column-gap: 3.125rem;//50px;
+  margin-bottom: 0.5rem;
+  @media (max-width: 768px) {
+    display: block;
+    padding: 1.25rem;//20px;
+    padding-bottom: 1.3125rem;//21px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    border-radius: 24px;
+  }
+}
+.doc-card:last-of-type {
+  margin-bottom: 0;
+}
+.doc--small .doc-card {
+  column-gap: 1.8125rem;//29px;
+  grid-template-columns: 22.2rem auto;//320px auto;
+  @media (max-width: 768px) {
+    // padding-bottom: 1px;
+    padding-top: 0.875rem;
+  }
+  @media (min-width: 769px) {
+    padding-top: 2.5rem;//40px;
+    padding-left: 5rem;//80px;
+    padding-right: 4.375rem;//70px;
+    padding-bottom: 2.5rem;//40px;
+  }
+}
+
+.doc--small .doc-card__title {
+  @media (max-width: 768px) {
+    margin-bottom: 0.75rem;
+  }
+}
+.doc-card__title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 120%;
+  color: #000000;
+  @media (max-width: 768px) {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+}
+.doc-card__desc {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #000000;
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+}
+.doc-card__desc p {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 1.4em;
+  // margin-bottom: 1.4em;
+  @media (max-width: 601px) {
+    margin-bottom: 1.2em;
+  }
+}
+.doc-card__desc p:last-of-type {
+  margin-bottom: 0;
+}
+.doc-card__desc a {
+  @extend .button--thirdly;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.doc ~ .callback-cards {
+  @media (min-width: 602px) {
+    padding-top: 1.875rem;//30px
+  }
+  @media (max-width: 601px) {
+    padding-top: 3.75rem;//60px
+  }
+}
+
+.doc--has-spoilers .doc-card__desc.doc-card__desc--minified {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

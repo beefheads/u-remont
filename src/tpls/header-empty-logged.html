@@ -1,0 +1,727 @@
+<header class="header">
+  <div class="header__snacks">
+    <div class="header-snack" data-snack="city">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите страну или регион, чтобы контент и&nbsp;онлайн-товары
+          соответствовали вашему местоположению
+        </h3>
+        <div class="header-snack__content">
+          <div class="select select--has-search header-snack__select" data-search-placeholder="Населенный пункт">
+            <select
+              name="city"
+              id="dropdown-city"
+              class="select__input"
+            >
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область
+              </option>
+              <option value="Казань">Казань, Татарстан республика</option>
+              <option value="Челябинск">Челябинск, Челябинская область</option>
+              <option value="Краснодар">Краснодар, Краснодарский Край</option>
+              <option value="Самара">Самара, Самарская область</option>
+              <option value="Москва">2 Москва</option>
+              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область 2
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область 2
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область 2
+              </option>
+              <option value="Казань">Казань, Татарстан республика 2</option>
+              <option value="Челябинск">
+                Челябинск, Челябинская область 2
+              </option>
+              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+              <option value="Самара">Самара, Самарская область 2</option>
+            </select>
+          </div>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+    <div class="header-snack" data-snack="language">
+      <div class="header-snack__container">
+        <h3 class="header-snack__title">
+          Выберите язык, используемый на сайте
+        </h3>
+        <div class="header-snack__content">
+          <form action="/api" class="chips chips--ghost header-snack__language">
+            <div class="chips__content">
+              <label class="chips__item">
+                <input type="radio" class="chips__input" checked hidden name="language">
+                <span class="chips__caption">Русский</span>
+              </label>
+              <label class="chips__item">
+                <input type="radio" class="chips__input" hidden name="language">
+                <span class="chips__caption">English</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <button class="header-snack__close" type="button"></button>
+      </div>
+    </div>
+  </div>
+  <div class="header__container">
+    <a href="#" class="header__logo logo">
+      <svg class="header__logo logo">
+        <use xlink:href="./img/common/logo.svg#logo" />
+      </svg>
+    </a>
+    <div class="header__menu">
+      <nav class="nav header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item header__nav-item--mobile-open">
+            <a href="#catalog" class="header__nav-link">Косметика</a>
+            <div class="header__nav-item-dropdown">
+              <div
+                class="header__nav-item-dropdown-content header__nav-item-dropdown-content--nav"
+              >
+                <nav class="nav header__nav-catalog">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Тип средств</h4>
+                    </li>
+                    <li class="nav__item nav__item--bold">
+                      <a href="#" class="nav__link">Все средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Новинки</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Бестеселлеры</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Очищающие средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Тонизирующие средства</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Кремы для лица и шеи</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Cредства для кожи век</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Маски для лица и шеи</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Состояние кожи</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Нормальная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Сухая</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Жирная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Комбинированная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Проблемная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Чувствительная</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Возрастная</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Активы</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ретинол</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Коллаген</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Кислоты</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Витамин С</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Витамин D</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">SPF-фактор</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Время применения</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Дневной уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ночной уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Ежедневный уход</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Лето</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Зима</a>
+                    </li>
+                  </ul>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <h4 class="nav__list-title">Потребности кожи</h4>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Увлажнение</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Питание и восстановление</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Омоложение и лифтинг</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link"
+                        >Пилинг, отшелушивание, обновление</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Тонирование</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">SPF-защита</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#services" class="header__nav-link">Услуги</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <!-- <div class="header__nav-item-dropdown-heading"> -->
+                  <h3 class="header__nav-item-dropdodwn-title">
+                    Услуги Cosmomedica в вашем городе
+                  </h3>
+                  <a
+                    href="#"
+                    class="button button--primary button--dark header__button-services"
+                    >См. все услуги в Москве</a
+                  >
+                <!-- </div> -->
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Cosmomedica Center</h3>
+                        <p class="blog-card__desc">Москва, Малая Бронная 15Б</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <p class="blog-card__desc">
+                          Косметологические процедуры, индивидуальный подбор
+                          косметики и другие услуги.
+                        </p>
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Записаться</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Cosmomedica на&nbsp;Коробейников
+                        </h3>
+                        <p class="blog-card__desc">
+                          Москва, Коробейников пер. 1
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <p class="blog-card__desc">
+                          Косметологические процедуры, индивидуальный подбор
+                          косметики и другие услуги.
+                        </p>
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Записаться</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-1.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#changes" class="header__nav-link">До и после</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Решение кожных проблем с помощью Cosmomedica
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все проблемы</a
+                >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Акне. Острый воспалительный процесс
+                        </h3>
+                        <p class="blog-card__desc">
+                          Длительное воспалительное заболевание кожи,
+                          возникающее в ситуации, когда мертвые клетки кожи и
+                          кожное сало ...
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Подробнее о проблеме</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <div class="blog-card__media-compare">
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-41.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-42.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Пигментация</h3>
+                        <p class="blog-card__desc">
+                          Длительное воспалительное заболевание кожи,
+                          возникающее в ситуации, когда мертвые клетки кожи и
+                          кожное сало ...
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Подробнее о проблеме</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <div class="blog-card__media-compare">
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-31.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                        <picture class="blog-card__pic">
+                          <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                          <img
+                            class="blog-card__img lazy"
+                            data-src="./img/changes/ba-32.jpg"
+                          src="./placeholder.png"
+                            alt=""
+                          >
+                        </picture>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#shops" class="header__nav-link">Магазины</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                  <h3 class="header__nav-item-dropdodwn-title">
+                    Фирменные магазины Cosmomedica в вашем городе
+                  </h3>
+                  <a
+                    href="#"
+                    class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                    >См. все магазины</a
+                  >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">Cosmomedica Center</h3>
+                        <p class="blog-card__desc">Москва, Малая Бронная 15Б</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Показать на карте</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">ТЦ Авиапарк</h3>
+                        <p class="blog-card__desc">
+                          Ходынский б-р, 4, 1-ый этаж (напротив аквариума)
+                        </p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Показать на карте</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-3.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#blog" class="header__nav-link">Блог</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">
+                  Статьи, новости, акции
+                </h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__nav-item-dropdodwn-button header__button-services"
+                  >См. все записи</a
+                >
+                <div class="header__nav-item-dropdown-cards">
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Основные принципы ежедневного ухода за кожей
+                        </h3>
+                        <p class="blog-card__desc">21 сен. 2022</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Читать статью</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-2.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                  <article class="header__nav-item-dropdown-card blog-card">
+                    <div class="blog-card__info">
+                      <div class="blog-card__top">
+                        <h3 class="blog-card__title">
+                          Торжественное открытие корнера Cosmomedica в ТЦ
+                          Авиапарк (Москва)
+                        </h3>
+                        <p class="blog-card__desc">21 сен. 2022</p>
+                      </div>
+                      <div class="blog-card__bottom">
+                        <a
+                          href="#"
+                          class="button button--primary button--light blog-card__button"
+                          >Читать новость</a
+                        >
+                      </div>
+                    </div>
+                    <div class="blog-card__media">
+                      <picture class="blog-card__pic">
+                        <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                        <img
+                          class="blog-card__img lazy"
+                          data-src="./img/locations/location-3.jpg"
+                          src="./placeholder.png"
+                          alt=""
+                        >
+                      </picture>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header__nav-item">
+            <a href="#about" class="header__nav-link">О бренде</a>
+            <div class="header__nav-item-dropdown">
+              <div class="header__nav-item-dropdown-content">
+                <h3 class="header__nav-item-dropdodwn-title">Главное</h3>
+                <a
+                  href="#"
+                  class="button button--primary button--dark header__button-services"
+                  >Подробнее о бренде</a
+                >
+                <article
+                  class="header__nav-item-dropdown-card--single header__nav-item-dropdown-card blog-card"
+                >
+                  <div class="blog-card__info">
+                    <div class="blog-card__top">
+                      <h3 class="blog-card__title">
+                        Здравствуйте! <br >
+                        Меня зовут Елена Кондрашева. <br >
+                        Я врач-дерматолог и косметолог.
+                      </h3>
+                    </div>
+                    <div class="blog-card__bottom">
+                      <p class="blog-card__desc">
+                        Имея 20-летний практический опыт омоложения и лечения
+                        кожи, я приняла решение о создании собственной
+                        косметической марки. Со своей коман- дой биохимиков и
+                        технологов мне удалось разрабо- тать комплексную систему
+                        ухода, которая основана на базовых принципах омоложения
+                        кожи...
+                      </p>
+                    </div>
+                  </div>
+                  <div class="blog-card__media">
+                    <picture class="blog-card__pic">
+                      <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                      <img
+                        class="blog-card__img lazy"
+                        data-src="./img/about/header-about.jpg"
+                          src="./placeholder.png"
+                        alt=""
+                      >
+                    </picture>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__pickers">
+        <button
+          class="header__geo header__picker"
+          data-snack="city"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/geo.svg#geo" />
+          </svg>
+          <span class="header__picker-text">Москва</span>
+        </button>
+        <button
+          class="header__language header__picker"
+          data-snack="language"
+          type="button"
+        >
+          <svg class="header__picker-icon">
+            <use xlink:href="./img/common/language.svg#language" />
+          </svg>
+          <span class="header__picker-text">RU</span>
+        </button>
+      </div>
+      <div class="header__controls">
+        <button
+          class="button button--primary button--circle button--dark button-cart header__button"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/cart.svg#cart" />
+          </svg>
+          <span class="button-cart__counter">4</span>
+        </button>
+        <div class="minicart header__minicart">
+          <p class="minicart__message">В корзине пока нет товаров</p>
+          <div class="minicart__bottom">
+            <a href="#" class="button button--primary button--light minicart__button">Перейти в каталог</a>
+          </div>
+        </div>
+        <button
+          class="button button--primary button--circle button--dark button-burger burger header__button"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <button
+          class="button button--primary button--circle button--dark button-auth header__button"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/profile.svg#profile" />
+          </svg>
+        </button>
+        <div class="auth header__auth">
+          <a href="#" class="auth__name">Иванов Иван Иванович</a>
+          <ul class="auth__list-likns">
+            <li class="auth__list-item">
+              <a href="#" class="auth__list-link">История заказов</a>
+            </li>
+            <li class="auth__list-item">
+              <a href="#" class="auth__list-link">История посещений</a>
+            </li>
+            <li class="auth__list-item">
+              <a href="#" class="auth__list-link">Личные данные</a>
+            </li>
+          </ul>
+          <button class="button auth__logout">
+            <span class="button__icon"></span>
+            <span class="button__text">Выход</span>
+          </button>
+        </div>
+
+        <button
+          class="button button--primary button--circle button--dark header__button"
+          data-poppa-open="search-pop"
+        >
+          <svg class="button__icon">
+            <use xlink:href="./img/common/search.svg#search" />
+          </svg>
+        </button>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="poppa search-pop" id="search-pop">
+  <div class="search-pop__container">
+    <div class="search-pop__box search">
+      <form class="search-pop__form search__form">
+        <input
+          type="search"
+          name="s"
+          placeholder="Поиск по каталогу товаров"
+          class="search__input"
+        >
+        <button class="search__button" type="submit">
+          <svg class="search__button-icon">
+            <use xlink:href="./img/common/search.svg#search" />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="search-pop__suggests">
+      <div class="search-pop__suggests-track">
+        <button class="search-pop__suggest search-pop__suggest--search">
+          См. все очищающие средства
+        </button>
+        <a href="#" class="search-pop__suggest">См. все очищающие средства</a>
+        <a href="#" class="search-pop__suggest">См. все очищающие средства</a>
+      </div>
+    </div>
+    <div class="search-pop__results">
+      <h2 class="section-title search-pop__title">
+        Результаты поиска по запросу “очищающий крем для жирной кожи”
+      </h2>
+      <p class="search-pop__results-count">Найдено 6 товаров</p>
+      <div class="search-pop__gallery">
+        <div class="search-pop__gallery-inner">
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+          @@include('./cards/card.html',{img: "card.png"})
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

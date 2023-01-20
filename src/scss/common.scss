@@ -1,0 +1,122 @@
+// Бургер
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: $tr;
+
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #fff;
+    transition: $tr;
+    @media (min-width: 602px) and (max-width: 768px) {
+      width: 50%;
+      height: 4px;
+    }
+
+    &:nth-child(1) {
+      transform: translate(-50%, calc(-50% - 5px));
+      @media (min-width: 602px) and (max-width: 768px) {
+        transform: translate(-50%, calc(-50% - 10px));
+      }
+    }
+
+    &:nth-child(2) {
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, calc(-50% + 5px));
+      @media (min-width: 602px) and (max-width: 768px) {
+        transform: translate(-50%, calc(-50% + 10px));
+      }
+    }
+  }
+
+  &.is-active {
+    background-color: #F0F3F5;
+    & span {
+      background-color: #000;
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
+//========================================================================================================================================================
+
+// Раздел
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.8rem;//40px;
+}
+.section-heading__links {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1D2025;
+  font-size: 0.875rem;
+  padding-top: 1rem;
+}
+/*
+.section {
+  margin: 120px 0;
+
+  &.is-fill {
+    // background: $frame-light;
+    padding: 50px 0;
+  }
+
+  &.have-margin-s {
+    margin: 80px 0;
+
+    @media (max-width: $mobile-l) {
+      margin: 60px 0;
+    }
+  }
+
+  @media (max-width: $mobile-l) {
+    margin: 80px 0;
+  }
+}
+*/
+//========================================================================================================================================================
+
+// Шапка раздела
+.s-header {
+  margin-bottom: 40px;
+
+  @media (max-width: $mobile-l) {
+    margin-bottom: 30px;
+  }
+}
+
+.s-header__title {
+}
+
+.s-header__subtitle {
+}
+
+.s-header__text {
+}
+//========================================================================================================================================================

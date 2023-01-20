@@ -1,0 +1,34 @@
+.proud__title {
+	margin-bottom: 3.3rem;
+}
+.proud-card--has-callout {
+	display: grid;
+	grid-template-columns: minmax(304px ,48.837209302325576%) auto;
+}
+.proud-card__media {
+	display: block;
+	margin-bottom: 1.5rem;
+}
+.proud-card__pic {
+	display: block;
+}
+
+.proud-card__desc {
+	display: grid;
+	grid-template-columns: minmax(220px, 410px) auto;
+}
+.proud-card__info {
+
+}
+.proud-card__title {
+	font-size: 1.5rem;
+	line-height: 1.4;
+	margin-bottom: 1rem;
+	font-family: var(--ff-title);
+}
+
+.proud-card__cta {
+	align-self: start;
+	justify-self: end;
+}
+

@@ -1,0 +1,106 @@
+.product-cases {
+  --brad: var(--brad-regular);
+  background-color: var(--bg-element);
+  border-radius: var(--brad);
+  padding-top: 2.5rem;//40px;
+  padding-bottom: 3.125rem;//50px;
+  margin-bottom: 5.4375rem;//87px;
+  @media (max-width: 810px) {
+    margin-bottom: 32px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    --brad: 25px;
+  }
+  @media (max-width: 601px) {
+    padding-top: 26px;
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+  }
+}
+.product-cases__container {
+  // max-width: 1388px;
+  max-width: var(--w-container);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-cases-carousel {
+  padding-left: 94px;
+  padding-right: 94px;
+  @media (max-width: 601px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.product-cases-carousel-slide__title {
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 2.875rem;//46px;
+  @media (max-width: 1024px) and (min-width: 769px){
+   font-size: 19.12px; 
+   margin-bottom: 33px;
+  }
+  @media (max-width: 601px) {
+    max-width: 155px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+}
+
+.product-cases-carousel__button-prev {
+  left: 0;
+  @media (max-width: 1024px) {
+    left: 20px;
+  }
+}
+.product-cases-carousel__button-next {
+  right: 0;
+  @media (max-width: 1024px) {
+    right: 20px;
+  }
+}
+
+.product-cases-carousel__button-prev,
+.product-cases-carousel__button-next {
+  width: 60px;
+  height: 40px;
+  background-color: #F0F3F5;
+  @media (max-width: 768px) {
+    top: 30px;
+  }
+}
+.product-cases-carousel__button-prev::after,
+.product-cases-carousel__button-next::after {
+  color: transparent;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  @include getmask("../img/common/arrow-right-long.svg");
+  background-color: #000;
+}
+.product-cases-carousel__button-prev:hover,
+.product-cases-carousel__button-next:hover {
+  @media (any-hover:hover) {
+    background-color: #000;
+  }
+}
+.product-cases-carousel__button-prev:hover::after,
+.product-cases-carousel__button-next:hover::after {
+  @media (any-hover:hover) {
+    background-color: #fff;
+  }
+}
+.product-cases-carousel__button-prev::after {
+  transform: scaleX(-1);
+}

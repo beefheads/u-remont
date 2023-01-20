@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <section class="stores">
+          <div class="stores__container">
+            <div class="stores__menu">
+              <div class="stores__list">
+                <form action="/api" class="stores__city">
+                  <div class="select select--has-search stores__city-picker">
+                    <select
+                      name="city"
+                      id="stores-city"
+                      class="select__input"
+                    >
+                      <option value="Москва">Москва</option>
+                      <option value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option value="Екатеринбург">
+                        Екатеринбург, Свердловская область
+                      </option>
+                      <option value="Нижний Новгород">
+                        Нижний Новгород, Нижегородская область
+                      </option>
+                      <option value="Новосибирск">
+                        Новосибирск, Новосибирская область
+                      </option>
+                      <option value="Казань">Казань, Татарстан республика</option>
+                      <option value="Челябинск">Челябинск, Челябинская область</option>
+                      <option value="Краснодар">Краснодар, Краснодарский Край</option>
+                      <option value="Самара">Самара, Самарская область</option>
+                      <option value="Москва">2 Москва</option>
+                      <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+                      <option value="Екатеринбург">
+                        Екатеринбург, Свердловская область 2
+                      </option>
+                      <option value="Нижний Новгород">
+                        Нижний Новгород, Нижегородская область 2
+                      </option>
+                      <option value="Новосибирск">
+                        Новосибирск, Новосибирская область 2
+                      </option>
+                      <option value="Казань">Казань, Татарстан республика 2</option>
+                      <option value="Челябинск">
+                        Челябинск, Челябинская область 2
+                      </option>
+                      <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+                      <option value="Самара">Самара, Самарская область 2</option>
+                    </select>
+                  </div>
+                </form>
+                <h1 class="section-title stores__list-title">Список <br>магазинов</h1>
+                <div class="stores__results">
+                  <p class="stores__results-caption">6 магазинов в городе</p>
+                  <div class="stores__results-list stores-list">
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Aa95b31ee79e1de0dd54f534c3822882bef98664a5c1a8ea597713600bc76416b&amp;source=constructor">
+                      <h3 class="stores-list-card__name">ТЦ Рио</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, Ходынский бульвар 4, <br>
+                            ТЦ Авиапарк 1 этаж, рядом <br>
+                            с аквариумом
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            Пн-Чт: 10:00 — 21:00 <br>
+                            Пт-Сб:  10:00 — 23:00 <br>
+                            Вс: 11:00 — 23:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                            <a href="#">+7 (916) 863-50-67 (WhatsApp)</a>
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--info">
+                          <div class="stores-list-card__desc-inner">
+                            ИП Эхов Тимур Борисович <br>
+                            ИНН: 773581029073 <br>
+                            Консультация по подбору косметики в WhatsApp:
+                            <a href="">+7 (926) 912 70 03</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor">
+                      <h3 class="stores-list-card__name">ТЦ Авиапарк</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, ул. Малая Бронная
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            10:00 — 21:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Aa95b31ee79e1de0dd54f534c3822882bef98664a5c1a8ea597713600bc76416b&amp;source=constructor">
+                      <h3 class="stores-list-card__name">ТЦ Рио</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, ул. Малая Бронная
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            10:00 — 21:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor">
+                      <h3 class="stores-list-card__name">Cosmomedica Center</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, ул. Малая Бронная
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            10:00 — 21:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Aa95b31ee79e1de0dd54f534c3822882bef98664a5c1a8ea597713600bc76416b&amp;source=constructor">
+                      <h3 class="stores-list-card__name">ТЦ Рио</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, ул. Малая Бронная
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            10:00 — 21:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="stores-list-card" data-map="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor">
+                      <h3 class="stores-list-card__name">Cosmomedica Center</h3>
+                      <div class="stores-list-card__info">
+                        <div class="stores-lists-card__desc stores-lists-card__desc--location">
+                          <div class="stores-list-card__desc-inner">
+                            г. Москва, ул. Малая Бронная
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--time">
+                          <div class="stores-list-card__desc-inner">
+                            10:00 — 21:00
+                          </div>
+                        </div>
+                        <div class="stores-lists-card__desc stores-lists-card__desc--contacts">
+                          <div class="stores-list-card__desc-inner">
+                            <a href="tel:+79168600077">+7 (916) 860-00-77</a>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stores__map">
+              <iframe class="stores__map-frame" data-map-all="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" src="https://yandex.ru/map-widget/v1/?um=constructor%3A55860d3fd995a2cb53892f466e8293d43f61c8888b604205c95f69e6aec34dd2&amp;source=constructor" ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

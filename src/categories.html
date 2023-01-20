@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Каталог косметики Cosmomedica</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body class="page__categories">
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item">Каталог косметики Cosmomedica</li>
+        </ul>
+        </div>
+        <section class="page-heading categories__page-heading page-heading--sticky">
+          <h1 class="page-heading__title">Каталог косметики Cosmomedica</h1>
+
+          <nav class="page-heading__nav nav-dynamic">
+            <ul class="page-heading__nav-list">
+              <li class="page-heading__nav-item"><a href="#cat1" class="page-heading__nav-link page-heading__nav-link--current">По типу средства</a></li>
+              <li class="page-heading__nav-item"><a href="#cat2" class="page-heading__nav-link">По состоянию кожи</a></li>
+              <li class="page-heading__nav-item"><a href="#cat3" class="page-heading__nav-link">По потребности кожи</a></li>
+              <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">По активам</a></li>
+              <li class="page-heading__nav-item"><a href="#" class="page-heading__nav-link">По времени применения</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <div class="nav-dynamic-content">
+          <div id="cat1" class="categories categories-catalog nav-dynamic-content__section">
+            <div class="categories__container">
+              <div class="categories__gallery">
+              <article class="categories-card js-categories-card-slideshow">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                    <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/all.jpg" alt="" >
+                </picture>
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                  <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/facemask.jpg" alt="" >
+                </picture>
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                  <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/clearer.jpg" alt="" >
+                </picture>
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                  <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/card.png" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Все средства</a></h3>
+              </article>
+              <article class="categories-card categories-card--image-mobile-cover">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/new.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Новинки</a></h3>
+              </article>
+              <article class="categories-card categories-card--wide categories-card--image-mobile-cover">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/bestseller.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Бестселлеры</a></h3>
+              </article>
+
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/tonics.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Тонизирующие средства</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/facecreams.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Кремы для лица и шеи</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/facemask.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Маски для лица и шеи</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/facedots.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Сыворотки для лица и шеи</a></h3>
+              </article>
+
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/spf.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Косметика с SPF-защитой</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/slif.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Шлифовки для лица и шеи</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/special.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Специальные средства</a></h3>
+              </article>
+              <article class="categories-card">
+                <picture class="categories-card__pic">
+                  <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/catalog/clearer.jpg" alt="" >
+                </picture>
+                <h3 class="categories-card__name"><a href="#" class="categories-card__link">Очищающие средства</a></h3>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div id="cat2" class="categories nav-dynamic-content__section">
+            <div class="categories__container">
+              <h2 class="categories__title section-title section-text--center">Категории косметики по состоянию кожи</h2>
+              <nav class="categories-nav">
+                <ul class="categories-nav__list">
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Возрастная кожа</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Комбинированная кожа</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Жирная кожа</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Нормальная кожа</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Чувствительная кожа</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Проблемная кожа</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="categories__gallery">
+                <article class="categories-card categories-card--tight">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/wet.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Увлажнение</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/spf-icon.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">SPF-защита</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/tone.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Тонирование</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/restore.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Питание и восстановление</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/piling.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Пилинг, отшелушивание, обновление</a></h3>
+                </article>
+            </div>
+            </div>
+          </div>
+
+          <div id="cat3" class="categories nav-dynamic-content__section">
+            <div class="categories__container">
+              <h2 class="categories__title section-title section-text--center">Категории косметики по состоянию кожи</h2>
+              <nav class="categories-nav">
+                <ul class="categories-nav__list">
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Ретинол</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Витамин С</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Витамин С</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Кислоты</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">Коллаген</a>
+                  </li>
+                  <li class="categories-nav__list-item">
+                    <a href="#" class="categories-nav__list-link">SPF-фактор</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="categories__gallery">
+                <article class="categories-card categories-card--tight categories-card--dark">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/daily.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Ежедневный уход</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight categories-card--dark">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/day.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Дневной уход</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight categories-card--dark">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/night.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Ночной уход</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight categories-card--dark"> <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/summer.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Лето</a></h3>
+                </article>
+                <article class="categories-card categories-card--tight categories-card--dark">
+                  <picture class="categories-card__pic">
+                    <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> --> <img class="categories-card__img lazy" src="placeholder.png" data-src="./img/categories/winter.jpg" alt="" >
+                  </picture>
+                  <h3 class="categories-card__name"><a href="#" class="categories-card__link">Зима</a></h3>
+                </article>
+            </div>
+            </div>
+          </div>
+
+          <div class="categories">
+            <div class="container">
+              <a href="#" class="button button--primary button--light button--fullsize">
+                <span class="_only-desktop">Перейти в каталог и просмотреть все средства</span>
+                <span class="_only-mobile">Перейти в каталог</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        @@include('tpls/sections/callback-cards.html',{})
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

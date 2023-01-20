@@ -1,0 +1,35 @@
+<article class="product-card cart-product">
+  <div class="product-card__inner">
+    <picture class="product-card__pic">
+      <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+      <img class="product-card__img lazy" src="placeholder.png" data-src="./img/catalog/@@img" alt="" >
+    </picture>
+    <div class="product-card__info">
+      <div class="product-card__top">
+        <h3 class="product-card__name">
+          <a href="" class="product-card__link"
+            >
+              Дневная защитная сыворотка с витамином
+            </a>
+        </h3>
+        <p class="product-card__variation">200мл</p>
+      </div>
+      <div class="product-card__bottom">
+        <div class="product-card__order">
+          <button class="button button--pirmary button--dark cart-product__button-return">Вернуть</button>
+          <div class="stepper product-card__stepper">
+            <button class="stepper__button stepper__button-minus"></button>
+            <input type="text" class="stepper__value" inputmode="numeric"  value="2">
+            <button class="stepper__button stepper__button-plus"></button>
+          </div>
+          <div class="product-card__price">
+            <p class="product-card__price-old">4 000 ₽</p>
+            <p class="product-card__price-new">2 000 ₽</p>
+            <p class="product-card__price-out">Нет в наличии</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="cart-product__button-remove"></button>
+  </div>
+</article>

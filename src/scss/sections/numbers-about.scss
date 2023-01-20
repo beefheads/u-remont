@@ -1,0 +1,17 @@
+.numbers-about {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-around;
+	text-align: center;
+}
+.numbers-about-card__digit {
+	font-family: var(--ff-title);
+	font-weight: 700;
+	font-size: 4rem;
+	line-height: 1;
+	margin-bottom: 1.6rem;
+}
+.numbers-about-card__desc {
+	font-size: 1.125rem;
+	line-height: 1.5;
+}

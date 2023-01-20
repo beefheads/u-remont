@@ -1,0 +1,124 @@
+/*
+* Пример использования компонента кнопки
+*/
+
+:root {
+  --fz-button: 0.875rem;
+  --lh-button: 1;
+  --fw-button: 700;
+
+  --bg-button-primary: var(--c-text-regular);
+  --bg-button-secondary: var(--c-text-secondary);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.9285714285714286em 3.4285714285714284em; // 28 48
+  border: 0.07142857142857142em solid var(--button-bg); //1
+
+  font-size: var(--fz-button);
+  font-weight: var(--fw-button);
+  line-height: var(--lh-button);
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+
+  border-radius: var(--brad-regular);
+  color: var(--button-color);
+  --icon-color: var(--button-color);
+  background: var(--button-bg, transparent);
+
+  transition: all 0.3s ease;
+}
+
+.button[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.button:active {
+  @media (min-width: $minHover) {
+    opacity: 0.6;
+  }
+}
+
+.button__text {
+  width: 100%;
+  font-size: inherit;
+}
+
+.button__icon {
+  display: block;
+  --width: 1.2857142857142858em; //18
+  width: var(--button-icon-size, var(--width));
+  min-width: var(--button-icon-size, var(--width));
+  max-width: var(--button-icon-size, var(--width));
+  height: 1.4285714285714286em; //20
+  background-color: transparent;
+  fill: var(--icon-color);
+  stroke: none;
+  transition: all var(--tr) ease;
+}
+.button--icon-stroke .button__icon {
+  fill: transparent;
+  stroke: var(--icon-color);
+}
+.button__icon ~ .button__text {
+  // margin-left: 0.5rem;//8px;
+  // @media (min-width: 602px) and (max-width: 768px) {
+  //   margin-left: 16px;
+  // }
+}
+
+.button--icon-left .button__icon {
+  order: -1;
+  margin-right: 0.57em;
+}
+.button--icon-right .button__icon {
+  order: 5;
+  margin-left: 0.57em;
+}
+.button__icon path {
+  stroke: var(--button-color);
+}
+.button--icon-left ,
+.button--icon-right {
+  padding: 1.3571428571428572em 3.4285714285714284em; // 19 48
+}
+
+// Вариации кнопок
+.button--primary {
+  --button-bg: var(--bg-button-primary);
+  --button-color: var(--c-text-on);
+}
+.button--primary:hover {
+  @media (any-hover:hover) {
+    --button-bg: var(--bg-button-secondary);
+  }
+}
+
+.button--secondary {
+  --button-bg: var(--bg-button-secondary);
+  --button-color: var(--c-text-on);
+}
+.button--secondary:hover {
+  @media (any-hover:hover) {
+    border: 1px solid #EFF2F5;
+    background: transparent;
+    --button-color: var(--c-text-regular);
+  }
+}
+
+.button--ghost {
+  --button-bg: transparent;
+  border-color: var(--bg-button-secondary);
+}
+
+.button--on:hover {
+  @media (any-hover:hover) {
+    --button-color: var(--c-text-on);
+  }
+}

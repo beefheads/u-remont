@@ -1,0 +1,41 @@
+.input-attach {
+	--icon-color: var(--c-text-regular);
+	--icon-size: 2.5rem;
+	--color: var(--c-text-regular);
+	--underline-color: #959DA7;
+	display: flex;
+	cursor: pointer;
+}
+.input-attach__field {
+	visibility: hidden;
+	position: absolute;
+	opacity: 0;
+	appearance: none;
+}
+.input-attach--on {
+	--icon-color: var(--c-text-on);
+	--color: var(--c-text-on);
+}
+.input-attach__icon {
+	display: block;
+	--size: var(--icon-size);
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	fill: var(--icon-color);
+	margin-right: 0.75rem;
+}
+.input-attach__text {
+	--link-color: var(--color);
+}
+.input-attach__text:hover {
+	@media (any-hover:hover) {
+		--link-color: var(--color);
+	}
+}
+.input-attach__text .link__text {
+	padding-bottom: 7px;
+	border-width: 2px;
+	border-color: var(--underline-color);
+}

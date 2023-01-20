@@ -1,0 +1,94 @@
+.callback-cards {
+  padding-top: 40px;
+  @media (max-width: 768px) {
+    padding-top: 8px;
+  }
+}
+.callback-cards__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  @media (max-width: 768px) and (min-width: 602px) {
+    column-gap: 16px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+}
+.callback-cards-card {
+  --brad: var(--brad-regular);
+  background-color: var(--bg-element);
+  border-radius: var(--brad);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 380px;
+  @media (min-width: 1800px) {
+    min-height: #{'calc(var(--index) * 21.4)'};
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    min-height: 394px;
+    --brad: 25px;
+  }
+  @media (max-width: 601px) {
+    min-height: 192px;
+    padding: 20px;
+  }
+}
+.callback-cards-card__title {
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 110%;
+  color: #000000;
+  margin-bottom: 0.9259259259259259em;//25px;
+  // margin-bottom: 30px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 32px;
+    margin-bottom: 32px
+  }
+  @media (max-width: 601px) {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 13px;
+  }
+}
+.callback-cards-card__title > *{
+  color: inherit;
+}
+.callback-cards-card__desc {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #000000;
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 24.58px;
+  }
+  @media (max-width: 601px) {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
+
+.callback-cards-card__desc br {
+  @media (max-width: 601px) {
+    display: none;
+  }
+}
+
+.callback-cards-card__button {
+  padding: 0.7857142857142857em 1.2857142857142858em 1em;//11px 18px 14px 18px;
+  // @media (min-width: 1800px) {
+  //   padding: 14px 22px 18px 22px;
+  // }
+  @media (max-width: 768px) and (min-width: 602px) {
+    --fz-button: 24.58px;
+  }
+  @media (max-width: 601px) {
+    --fz-button: 12px;
+    padding: 7px 15px 9px 15px;
+    font-weight: 400
+  }
+}

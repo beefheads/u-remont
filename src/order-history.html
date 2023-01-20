@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>История заказов | Личный кабинет</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <section class="page-heading">
+          <h1 class="page-heading__title">Личный кабинет</h1>
+        </section>
+
+        <section class="account">
+          <nav class="side-navigation account__pages">
+            <ul class="side-navigation__list">
+              <li class="side-navigation__item--current side-navigation__item">
+                <a href="#" class="side-navigation__link">История заказов</a>
+              </li>
+              <li class="side-navigation__item">
+                <a href="#" class="side-navigation__link">Личные данные</a>
+              </li>
+            </ul>
+            <button class="button button--primary side-navigation__button-mobile">
+              <svg class="button__icon">
+                <use xlink:href="./img/common/burger.svg#burger" />
+              </svg>
+              <span class="button__text">История заказов</span>
+            </button>
+          </nav>
+          <div class="order-history">
+            <div class="order-history__active">
+              <h2 class="account__title">Активные</h2>
+              @@include('tpls/cards/order-history-card.html', {})
+              @@include('tpls/cards/order-history-card.html', {})
+            </div>
+            <div class="order-history__archive">
+              <h2 class="account__title">Архив</h2>
+              <article class="order-history-card">
+                <div class="order-history-card__top">
+                  <div class="order-history-card__heading">
+                    <h3 class="order-history-card__id">Заказ №121124134 от 13 дек. 2020</h3>
+                    <p class="order-history-card__status">Доставлен </p>
+                    <p class="order-history-card__caption">Дата оформления заказа: 31 декабря 2020</p>
+                  </div>
+                  <div class="order-history-card__buttons">
+                    <button class="button button--primary button--dark order-history-card__button-more" data-text-hide="Скрыть подробности">Подробнее</button>
+                  </div>
+                </div>
+                <div class="order-history-card__bottom">
+                  <section class="order-history-card__info">
+                    <div class="order-history-card__info-column">
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Доставка</h4>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Сервис</h4>
+                        <p class="order-history-card__info-value">Курьерская служба СДЭК</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Планируемая дата доставки</h4>
+                        <p class="order-history-card__info-value">1 января 2022 (понедельник)</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Стоимость</h4>
+                        <p class="order-history-card__info-value">200 ₽</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Адрес</h4>
+                        <p class="order-history-card__info-value">Москва, Чистый переулок 5А</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Получатель</h4>
+                        <p class="order-history-card__info-value">Иванов Иван Иванович</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Трек-номер</h4>
+                        <p class="order-history-card__info-value">3123124124124124</p>
+                      </div>
+                    </div>
+                    <div class="order-history-card__info-column">
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Оплата</h4>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Способ оплаты</h4>
+                        <p class="order-history-card__info-value">Картой на сайте</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Статус заказа</h4>
+                        <p class="order-history-card__info-value">Оплачен</p>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="order-history-card__products">
+                    <h3 class="order-history-card__products-title">Состав заказа</h3>
+                    <div class="order-history-card__products-gallery products--layout-horizontal">
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      <div class="order-history-card__products-more">+2</div>
+                    </div>
+                    <div class="order-history-card__total-short">
+                      <p class="order-history-card__total-short-summary">7 товаров на сумму 15 000 ₽</p>
+                      <button class="button--thirdly order-history-card__button-repeat">Повторить заказ</button>
+                    </div>
+                  </section>
+                  <div class="order-history-card__total">
+                    <div class="order-hisotry-card__total-full">
+                      <article class="order-history-card__total-card sidebar-card sidebar-card--autoheight checkout__subtotal">
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Стоимость товаров (2)</h4>
+                          <p class="cart-total__value">14 700 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Стоимость доставки</h4>
+                          <p class="cart-total__value">500 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Скидка по промокоду</h4>
+                          <p class="cart-total__value">-300 ₽</p>
+                        </div>
+                      </article>
+                      <article class="order-history-card__total-card sidebar-card sidebar-card--autoheight">
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Итого</h4>
+                          <p class="cart-total__value">12 000 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <button class="button button--primary button--light order-history-card__total-button-repeat">Повторить заказ</button>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="order-history-card">
+                <div class="order-history-card__top">
+                  <div class="order-history-card__heading">
+                    <h3 class="order-history-card__id">Заказ №121124134 от 13 дек. 2020</h3>
+                    <p class="order-history-card__status">Отменён</p>
+                    <p class="order-history-card__caption">Дата оформления заказа: 31 декабря 2020</p>
+                  </div>
+                  <div class="order-history-card__buttons">
+                    <button class="button button--primary button--dark order-history-card__button-more" data-text-hide="Скрыть подробности">Подробнее</button>
+                  </div>
+                </div>
+                <div class="order-history-card__bottom">
+                  <section class="order-history-card__info">
+                    <div class="order-history-card__info-column">
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Доставка</h4>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Сервис</h4>
+                        <p class="order-history-card__info-value">Курьерская служба СДЭК</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Планируемая дата доставки</h4>
+                        <p class="order-history-card__info-value">1 января 2022 (понедельник)</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Стоимость</h4>
+                        <p class="order-history-card__info-value">200 ₽</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Адрес</h4>
+                        <p class="order-history-card__info-value">Москва, Чистый переулок 5А</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Получатель</h4>
+                        <p class="order-history-card__info-value">Иванов Иван Иванович</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Трек-номер</h4>
+                        <p class="order-history-card__info-value">3123124124124124</p>
+                      </div>
+                    </div>
+                    <div class="order-history-card__info-column">
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Оплата</h4>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Способ оплаты</h4>
+                        <p class="order-history-card__info-value">Картой на сайте</p>
+                      </div>
+                      <div class="order-history-card__info-row">
+                        <h4 class="order-history-card__info-title">Статус заказа</h4>
+                        <p class="order-history-card__info-value">Оплачен</p>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="order-history-card__products">
+                    <h3 class="order-history-card__products-title">Состав заказа</h3>
+                    <div class="order-history-card__products-gallery products--layout-horizontal">
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      @@include('./tpls/cards/order-history-product.html',{img: "product-cropped.png", className: "order-history__product "})
+                      <div class="order-history-card__products-more">+2</div>
+                    </div>
+                    <div class="order-history-card__total-short">
+                      <p class="order-history-card__total-short-summary">7 товаров на сумму 15 000 ₽</p>
+                      <button class="button--thirdly order-history-card__button-repeat">Повторить заказ</button>
+                    </div>
+                  </section>
+                  <div class="order-history-card__total">
+                    <div class="order-hisotry-card__total-full">
+                      <article class="order-history-card__total-card sidebar-card sidebar-card--autoheight checkout__subtotal">
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Стоимость товаров (2)</h4>
+                          <p class="cart-total__value">14 700 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Стоимость доставки</h4>
+                          <p class="cart-total__value">500 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Скидка по промокоду</h4>
+                          <p class="cart-total__value">-300 ₽</p>
+                        </div>
+                      </article>
+                      <article class="order-history-card__total-card sidebar-card sidebar-card--autoheight">
+                        <div class="cart-total__row">
+                          <h4 class="cart-total__title">Итого</h4>
+                          <p class="cart-total__value">12 000 ₽</p>
+                        </div>
+                        <div class="cart-total__row">
+                          <button class="button button--primary button--light order-history-card__total-button-repeat">Повторить заказ</button>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <section class="message-card poppa" id="order-cancel">
+      <h2 class="message-card__title">Вы уверены, что хотите отменить заказ №1211241334 от 1 янв. 2022?</h2>
+      <p class="message-card__desc">7 товаров на сумму 15 000 ₽ </p>
+      <button class="button button--primary button--dark message-card__button">Подтвердить отмену заказа</button>
+      <button data-poppa-close="order-cancel" class="button--thirdly message-card__link">Не отменять заказ</button>
+    </section>
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Товар</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Тип средств</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Сыворотки для лица и шеи</a></li>
+            <li class="breadcrumbs__item">Биостимулирующий тоник с витамином С</li>
+          </ul>
+        </div>
+
+        <section class="product-hero">
+          <div class="product-hero__top">
+            <button data-fancybox-trigger="product-pop-gallery" class="product-hero-play button button--primary button--icon-stroke" type="button">
+              <svg class="button__icon">
+                <use xlink:href="./img/common/play-icon.svg#play" />
+              </svg>
+              <span class="button__text">Смотреть</span>
+            </button>
+            <div class="product-hero__pop-slides">
+              <a data-fancybox="product-pop-gallery" href="https://www.youtube.com/watch?v=z2X2HaTvkl8">
+                <img src="./img/catalog/product-hero.png" alt="">
+              </a>
+              <a data-fancybox="product-pop-gallery" href="./img/catalog/facemask.jpg">
+                <img src="./img/catalog/facemask.jpg" alt="">
+              </a>
+              <a data-fancybox="product-pop-gallery" href="./img/catalog/card.png">
+                <img src="./img/catalog/card.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="product-hero__main">
+            <div class="product-hero__media">
+              <picture class="product-hero__media-pic">
+                <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                <img class="product-hero__media-img " src="./img/catalog/product-hero.png" alt="" >
+              </picture>
+            </div>
+            <div class="product-hero__info">
+              <div class="product-hero__badges">
+                <a href="#" class="button button--primary product-hero__badge">Бестселлер</a>
+                <a href="#" class="button button--primary product-hero__badge">Новинка</a>
+              </div>
+              <h1 class="product-hero__name section-title">Биостимулирующий тоник с витамином С</h1>
+              <p class="product-hero__sku">Арт. 093-A0</p>
+              <div class="product-hero__desc">
+                <p><strong>
+                  Для всех типов кожи
+                </strong></p>
+                <p> Стимулирует выработку коллагена, осветляет пигментные пятна, сокращает проявление мелазмы, cтимулирует выработку коллагена...  <a href="#product-details" class="button--thirdly">Подробнее</a></p>
+              </div>
+              <form action="/api" class="chips product-hero__options">
+                <div class="chips__track">
+                  <div class="chips__content">
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" checked hidden>
+                      <span class="chips__caption">200мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">100мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">50мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">15мл</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <ul class="product-hero__bullets">
+                <li class="product-hero__bullet">
+                  <img src="./img/product/woman.svg" alt="" class="product-hero__bullet-icon">
+                  <span class="product-hero__bullet-desc">Подходит беременным и кормящим</span>
+                </li>
+                <li class="product-hero__bullet">
+                  <img src="./img/product/in-stock.svg" alt="" class="product-hero__bullet-icon">
+                  <span class="product-hero__bullet-desc">В наличии</span>
+                </li>
+              </ul>
+              <div class="product-hero__order">
+                <div class="product-hero__price">
+                  <p class="product-hero__price-new">5 000 ₽ </p>
+                </div>
+                <div class="product-hero__order-buy">
+                  <div class="stepper product-hero__stepper">
+                    <button class="stepper__button stepper__button-minus"></button>
+                    <input type="text" class="stepper__value" inputmode="numeric"  value="2">
+                    <button class="stepper__button stepper__button-plus"></button>
+                  </div>
+                  <button class="button button--primary button--dark product-hero__order-buy-button" data-in-cart-text="В корзине">
+                    <span class="button__icon">
+                      <svg class="button__icon--cart">
+                        <use xlink:href="./img/common/cart.svg#cart" />
+                      </svg>
+                      <svg class="button__icon--selected">
+                        <use xlink:href="./img/common/check.svg#check" />
+                      </svg>
+                    </span>
+                    <span class="button__text">В корзину</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <div class="product-bullets">
+          <div class="product-page__container container">
+            <ul class="product-bullets__list">
+              <li class="product-bullets-card">
+                <img src="./img/product/gift.svg" alt="" class="product-bullets-card__img">
+                <span class="prodct-bullets-card__desc">Миниатюра в подарок при покупке от&nbsp;10&nbsp;000&nbsp;₽</span>
+              </li>
+              <li class="product-bullets-card">
+                <img src="./img/product/pet-test.svg" alt="" class="product-bullets-card__img">
+                <span class="prodct-bullets-card__desc">Не тестируется на животных</span>
+              </li>
+              <li class="product-bullets-card">
+                <img src="./img/product/eco.svg" alt="" class="product-bullets-card__img">
+                <span class="prodct-bullets-card__desc">Экологичная упаковка</span>
+              </li>
+              <li class="product-bullets-card">
+                <img src="./img/product/consult.svg" alt="" class="product-bullets-card__img">
+                <span class="prodct-bullets-card__desc">Индивидуальная консультация по подбору</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-sticky">
+          <picture class="product-stikcy__pic">
+            <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+            <img class="product-sticky__img " src="./img/catalog/product-hero.png" alt="" >
+          </picture>
+          <div class="product-sticky__info">
+            <h3 class="product-sticky__name">Биостимулирующий крем с витамином С</h3>
+            <div class="product-sticky__meta">              
+              <form action="/api" class="chips product-sticky__options">
+                <div class="chips__track">
+                  <div class="chips__content">
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" checked hidden>
+                      <span class="chips__caption">200мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">100мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">50мл</span>
+                    </label>
+                    <label class="chips__item">
+                      <input type="radio" name="option" class="chips__input" hidden>
+                      <span class="chips__caption">15мл</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+              <nav class="product-sticky__nav">
+                <a href="#product-about" class="product-sticky__nav-link button--thirdly">О продукте</a>
+                <a href="#product-reviews" class="product-sticky__nav-link button--thirdly">Отзывы</a>
+                <a href="#product-recommeded" class="product-sticky__nav-link button--thirdly">Рекомендации</a>
+                <a href="#product-related" class="product-sticky__nav-link button--thirdly">Похожие товары</a>
+              </nav>
+            </div>
+          </div>
+          <div class="product-sticky__buy">
+            <div class="product-hero__price product-sticky__price">
+              <p class="product-hero__price-new">5 000 ₽ </p>
+            </div>
+            <div class="product-hero__order-buy">
+              <div class="stepper product-hero__stepper">
+                <button class="stepper__button stepper__button-minus"></button>
+                <input type="text" class="stepper__value" inputmode="numeric"  value="2">
+                <button class="stepper__button stepper__button-plus"></button>
+              </div>
+              <button class="button button--primary button--dark product-hero__order-buy-button product-sticky__button-cart" data-in-cart-text="В корзине">
+                <span class="button__icon">
+                  <svg class="button__icon--cart">
+                    <use xlink:href="./img/common/cart.svg#cart" />
+                  </svg>
+                  <svg class="button__icon--selected">
+                    <use xlink:href="./img/common/check.svg#check" />
+                  </svg>
+                </span>
+                <span class="button__text">В корзину</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <section class="product-details" id="product-details">
+          <div class="product-details__container container">
+            <h2 class="section-title section-text--center product-details__title">О продукте</h2>
+            <div class="product-details-content">
+              <div class="product-details__info">
+                <div class="product-details__desc">
+                  <h3>Действие</h3>
+                  <p>Стимулирует выработку коллагена, осветляет пигментные пятна, сокращает проявление мелазмы, уменьшает воспаление при угревой болезни и посттравматическую пигментацию</p>
+                  <h3>Применение</h3>
+                  <p>Средство можно использовать утром и вечером постоянно</p>
+                  <ol>
+                    <li> Снимите макияж мицелярным лосьоном или молочком </li>
+                    <li>Умойтесь любым из <a href="#"> муссов</a></li>
+                    <li>Протрите тоником лицо (включая зону век), шею, декольте.</li>
+                    <li>Вотрите тоник в кожу</li>
+                    <li>Для усиления эффекта нанесите на кожу <a href="#">сыворотку и крем с витамином С</a></li>
+                  </ol>
+                  <article class="product-details-contra">
+                    <h3 class="product-details-contra__title">Противопоказания</h3>
+                    <p class="product-details-contra__desc">Беременность и кормление грудью. Кормящим не допускать соприкосновения кожи ребёнка средствами с ретинолом и с кислотами</p>
+                  </article>
+                </div>
+                <div class="product-details-actives">
+                  <div class="product-page__container">
+                    <div class="product-details__desc">
+                      <h3 class="product-details-actives__title">Активы</h3>
+                    </div>
+                    <!-- <h2 class="product-details-actives__title">Активы</h2> -->
+                    <div class="product-details-actives__gallery">
+                      <article class="product-details-actives-card">
+                        <h3 class="product-details-actives-card__title">Комплекс аминокислот</h3>
+                        <p class="product-details-actives-card__desc">Мультифункциональный компонент, который способствует регенерационным процессам, поддерживает барьерную функцию кожи, помогает визуально сократить морщинки и контролировать пигментацию.</p>
+                        <a href="#" class="product-details-actives-card__link button--thirdly">См. все средства с аминоксилотами</a>
+                      </article>
+                      <article class="product-details-actives-card">
+                        <h3 class="product-details-actives-card__title">Витамин С </h3>
+                        <p class="product-details-actives-card__desc">Мультифункциональный компонент, который способствует регенерационным процессам, поддерживает барьерную функцию кожи, помогает визуально сократить морщинки
+                        и контролировать пигментацию.</p>
+                        <a href="#" class="product-details-actives-card__link button--thirdly">См. все средства с Витамином С</a>
+                      </article>
+                      <article class="product-details-actives-card">
+                        <h3 class="product-details-actives-card__title">VC-IP</h3>
+                        <p class="product-details-actives-card__desc">Мультифункциональный компонент, который способствует регенерационным процессам, поддерживает барьерную функцию кожи, помогает визуально сократить морщинки и контролировать пигментацию.</p>
+                        <a href="#" class="product-details-actives-card__link button--thirdly">См. все средства с VC-IP</a>
+                      </article>
+                      <article class="product-details-actives-card">
+                        <h3 class="product-details-actives-card__title">Amino acids complex </h3>
+                        <p class="product-details-actives-card__desc">Мультифункциональный компонент, который способствует регенерационным процессам, поддерживает барьерную функцию кожи, помогает визуально сократить морщинки и контролировать пигментацию.</p>
+                        <a href="#" class="product-details-actives-card__link button--thirdly">См. все средства с Amino acids complex </a>
+                      </article>
+                    </div>
+                    <div class="product-details__desc">
+                      <h3>Состав</h3>
+                      <p>Вода фуллереновая, глицерет-26, аскорбил глюкозид, аскорбиновая кислота, С12-13 парет-9, аскорбил тетраизопальмитат, янтарная кислота, пирролидон карбоксилат натрия, лактат натрия, аргинин, аспарагиновая кислота, пирролидон-карбоновая кислота, глицин, аланин</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <picture class="product-details-content__pic">
+                <!-- <source data-srcset="./img/catalog/product.webp," type="image/webp"> -->
+                <img class="product-details-content__img" src="./img/product/desc-hero.jpg" alt="" >
+              </picture>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="product-cases">
+          <div class="product-cases__container">
+            <div class="swiper product-cases-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product-cases-carousel-slide">
+                  <h3 class="product-cases-carousel-slide__title">Александра, 24 года</h3>
+                  @@include('tpls/gallery-accordion.html', {pic: "1"})
+                </div>
+                <div class="swiper-slide product-cases-carousel-slide">
+                  <h3 class="product-cases-carousel-slide__title">Александра, 24 года</h3>
+                  @@include('tpls/gallery-accordion.html', {pic: "2"})
+                </div>
+                <div class="swiper-slide product-cases-carousel-slide">
+                  <h3 class="product-cases-carousel-slide__title">Александра, 24 года</h3>
+                  @@include('tpls/gallery-accordion.html', {pic: "3"})
+                </div>
+                <div class="swiper-slide product-cases-carousel-slide">
+                  <h3 class="product-cases-carousel-slide__title">Александра, 24 года</h3>
+                  @@include('tpls/gallery-accordion.html', {pic: "4"})
+                </div>
+              </div>
+              <div class="swiper-button-prev product-cases-carousel__button-prev button button--primary"></div>
+              <div class="swiper-button-next product-cases-carousel__button-next button button--primary"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="related-products">
+          <div class="related-products__contianer">
+            <h2 class="section-title related-products__title">C этим товаром покупают</h2>
+            <div class="related-products__gallery">
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+            </div>
+          </div>
+        </section>
+        <section class="related-products">
+          <div class="related-products__contianer">
+            <h2 class="section-title related-products__title">Другие товары этой категории</h2>
+            <div class="related-products__gallery">
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+              @@include('tpls/cards/card.html',{img: "card.png"})
+            </div>
+            <div class="container">
+              <button class="button button--primary button--fullsize button--light related-products__button-load">Загрузить ещё</button>
+            </div>
+          </div>
+        </section>
+
+        @@include('tpls/sections/callback-cards.html',{})
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+.product-bullets {
+  margin-left: -8px;
+  width: calc(100% + 16px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d8dee1;
+  margin-bottom: 40px;
+  @media (min-width: 1800px) {
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+  @media (max-width: 1388px) and (min-width: 1280px) {
+    padding-top: 35px;
+    padding-bottom: 37px;
+  }
+  @media (max-width: 1279px) and (min-width: 769px) {
+    padding-top: 28px;
+    padding-bottom: 27px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 49px;
+    padding-bottom: 65px;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 601px) {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+.product-bullets__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(255px, 17.708333333333336vw));
+  // grid-template-columns: repeat(4, 255px);
+  justify-content: space-between;
+  @media (max-width: 1280px) {
+    // grid-template-columns: repeat(auto-fill, minmax(255px, 300px));
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+    justify-content: center
+  }
+  @media (max-width: 1279px) and (min-width: 769px) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    padding-left: 57px;
+    padding-right: 57px;
+    row-gap: 55px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 601px) {
+    // padding-left: 28px;
+    // padding-right: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.product-bullets-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.product-bullets-card__img {
+  margin-right: 0.9375rem;//15px;
+  width: 2.5rem;//40px;
+  @media (max-width: 768px) and (min-width: 602px) {
+    width: 60px;
+    margin-right: 32px
+  }
+}
+
+.prodct-bullets-card__desc {
+  font-size: 0.875rem;//14px;
+  line-height: 140%;
+  color: #A1AEB3;
+  @media (min-width: 1800px) {
+    font-size: 18.6px;
+  }
+  @media (max-width: 1388px) and (min-width: 1280px) {
+    font-size: 12.26px;
+  }
+  @media (max-width: 1279px) and (min-width: 769px) {
+    font-size: 9.95px;
+    line-height: 125%;
+  }
+  @media (max-width: 768px) and (min-width: 602px) {
+    font-size: 28.6px;
+  }
+  @media (max-width: 601px) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,93 @@
+// ================ Responsive Start ================
+$min-width: 320px;
+$max-width: 1920px;
+$max-width-container: 1170px;
+$container-padding: 48;
+$container-width: $max-width-container + $container-padding;
+
+$laptop-l: 1500px;
+$laptop: 1100px;
+$tablet: 800px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+$hide-menu: $tablet;
+$minHover: $laptop;
+// ================ Responsive End ================
+
+// ================ Colors Start ================
+// Текст
+$text-primary: var(--c-text-regular);
+$text-second: var(--c-text-secondary);
+$text-label: var(--c-text-label);
+$accent: #5f6c75;
+$light: #fff;
+
+// Задний фон разделов
+// $frame-dark: #080A0A;
+// $frame-light: #0E1010;
+
+// Обводка
+$border-line: var(--c-border);
+
+// Радиусы
+$radius-s: var(--radius-s);
+$radius-l: var(--radius-l);
+
+// Текстовые поля
+$input-placeholder: var(--c-input-placeholder);
+
+// Уведомления
+$error: var(--c-error);
+// ================ Colors End ================
+:root {
+  --index: #{"calc(1vw + 1vh)"};
+
+  --c-text-regular: #2B3B50;
+  --c-text-secondary: #77828F;
+
+  --icon-color: #8196B1;
+
+  --c-text-on: #fff;
+
+  --bg-element: #fff;
+  --bg-app: #fff;
+
+  --bg-dropdown: #384043;
+  --bg-dropdown-list: #4e5557;
+
+  --bg-poppa: #171b1f;
+  --radius-poppa: 10px;
+  --overlay-poppa: rgba(0, 0, 0, 0.8);
+
+  --tr: 0.3s;
+  --tr-regular: all var(--tr) ease;
+
+  --ff-regular: "Inter", sans-serif;
+  --ff-title: "TTProstoSans", sans-serif;
+
+  --brad-regular: 0.25rem;
+
+
+  --w-container: 1186px;
+  @media (min-width: 1800px) {
+    --w-container: 1580px;
+  }
+  @media (min-width: 2000px) {
+    --w-container: 2090px;
+  }
+  @media (max-width: 1280px) {
+    --w-container: calc(100% - 16px);
+  }
+  @media (max-width: 768px) {
+    --w-container: 100%;
+  }
+}
+
+// ================ Other Start ================
+$ff-main: var(--ff-regular);
+$tr: var(--tr);
+// ================ Other End ================
+
+$burgerwidth: 920px;
+$mobile-break: 768px;

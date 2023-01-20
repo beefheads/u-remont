@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Блог</title>
+    <link rel="stylesheet" href="./css/style.css" >
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" >
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
+    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+        <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item">Блог</li>
+        </ul>
+        </div>
+        <section class="page-heading">
+          <h1 class="page-heading__title">Блог</h1>
+          <p class="page-heading__desc">Последние новости, специальные предложения и секреты вечной красоты от российского бренда авторской косметики Cosmomedica by doctor Kondrasheva</p>
+        </section>
+
+
+        <div class="blog">
+          <div class="blog__container">
+            <form action="/api" class="blog__filters row-filters">
+            <div class="select row-filters__select">
+            <select
+              name="sort"
+              id="blog-sort"
+              class="select__input"
+            >
+              <option value="Москва">Сначала новые</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область
+              </option>
+              <option value="Казань">Казань, Татарстан республика</option>
+              <option value="Челябинск">Челябинск, Челябинская область</option>
+              <option value="Краснодар">Краснодар, Краснодарский Край</option>
+              <option value="Самара">Самара, Самарская область</option>
+              <option value="Москва">2 Москва</option>
+              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область 2
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область 2
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область 2
+              </option>
+              <option value="Казань">Казань, Татарстан республика 2</option>
+              <option value="Челябинск">
+                Челябинск, Челябинская область 2
+              </option>
+              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+              <option value="Самара">Самара, Самарская область 2</option>
+            </select>
+          </div>
+          <div class="select row-filters__select">
+            <select
+              name="filter"
+              id="blog-filter"
+              class="select__input "
+            >
+              <option value="Все публикации">Все публикации</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область
+              </option>
+              <option value="Казань">Казань, Татарстан республика</option>
+              <option value="Челябинск">Челябинск, Челябинская область</option>
+              <option value="Краснодар">Краснодар, Краснодарский Край</option>
+              <option value="Самара">Самара, Самарская область</option>
+              <option value="Москва">2 Москва</option>
+              <option value="Санкт-Петербург">2 Санкт-Петербург</option>
+              <option value="Екатеринбург">
+                Екатеринбург, Свердловская область 2
+              </option>
+              <option value="Нижний Новгород">
+                Нижний Новгород, Нижегородская область 2
+              </option>
+              <option value="Новосибирск">
+                Новосибирск, Новосибирская область 2
+              </option>
+              <option value="Казань">Казань, Татарстан республика 2</option>
+              <option value="Челябинск">
+                Челябинск, Челябинская область 2
+              </option>
+              <option value="Краснодар">Краснодар, Краснодарский Край 2</option>
+              <option value="Самара">Самара, Самарская область 2</option>
+            </select>
+          </div>
+            </form>
+            <div class="blog__gallery">
+              <article class="blog-card">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Основные принципы ежедневного ухода за кожей
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a href="#" class="button button--primary blog-card__button"
+                      >Читать статью</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      data-src="./img/magazine/blog-1.jpg"
+                      src="placeholder.png"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card blog-card--accent">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Скидка 30% на все бестселлеры Cosmomedica до конца мая во
+                      всех магазинах
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Подробнее об акции
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      data-src="./img/magazine/blog-3.jpg"
+                      src="placeholder.png"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Торжественное открытие корнера Cosmomedica в ТЦ Авиапарк
+                      (Москва)
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Читать новость
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      data-src="./img/magazine/blog-2.jpg"
+                      src="placeholder.png"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card blog-card--grey">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">Новинка</h3>
+                    <p class="blog-card__desc">
+                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
+                      фирменных магазинах в России
+                    </p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a
+                      href="#"
+                      class="button button--primary button--dark blog-card__button"
+                      >Подробнее о новинке</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  @@include('tpls/cards/card.html',{img: "card.png"})
+                </div>
+              </article>
+              <article class="blog-card blog-card--grey">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">Новинка</h3>
+                    <p class="blog-card__desc">
+                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
+                      фирменных магазинах в России
+                    </p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a
+                      href="#"
+                      class="button button--primary button--dark blog-card__button"
+                      >Подробнее о новинке</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  @@include('tpls/cards/card.html',{img: "card.png"})
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Уход за кожей <br>в холодное время года: рекомендуемая косметика из каталога Cosmomedica
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Читать новость
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      data-src="./img/magazine/blog-4.jpg"
+                      src="placeholder.png"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card blog-card--accent">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">
+                      Скидка 20% на все бестселлеры Cosmomedica до конца января во всех магазинах
+                    </h3>
+                    <p class="blog-card__desc">21 сен. 2022</p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <button class="button button--primary blog-card__button">
+                      Подробнее об акции
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  <picture class="blog-card__pic">
+                    <!-- <source data-srcset="./img/magazine/blog-1.webp," type="image/webp"> -->
+                    <img
+                      class="blog-card__img lazy"
+                      data-src="./img/magazine/blog-5.jpg"
+                      src="placeholder.png"
+                      alt=""
+                    >
+                  </picture>
+                </div>
+              </article>
+              <article class="blog-card blog-card--grey">
+                <div class="blog-card__info">
+                  <div class="blog-card__top">
+                    <h3 class="blog-card__title">Новинка</h3>
+                    <p class="blog-card__desc">
+                      В продаже с 21 сен. 2022 в Cosmomedica Shop и всех
+                      фирменных магазинах в России
+                    </p>
+                  </div>
+                  <div class="blog-card__bottom">
+                    <a
+                      href="#"
+                      class="button button--primary button--dark blog-card__button"
+                      >Подробнее о новинке</a
+                    >
+                  </div>
+                </div>
+                <div class="blog-card__media">
+                  @@include('tpls/cards/card.html',{img: "card.png"})
+                </div>
+              </article>
+            </div>
+            <div class="container">
+              <button class="button button--primary button--fullsize button--light blog__button-load">Загрузить ещё</button>
+            </div>
+          </div>
+        </div>
+
+        @@include('tpls/sections/callback-cards.html',{})
+      </main>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>
