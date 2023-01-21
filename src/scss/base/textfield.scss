@@ -42,7 +42,7 @@
   font-weight: 100;
   color: #fff;
   pointer-events: none;
-  transition: $tr;
+  transition: var(--tr);
   transform: translate(0, -50%);
 }
 
@@ -58,7 +58,7 @@
     display: inline-block;
     margin-top: 6px;
     font-size: 12px;
-    color: $error;
+    // color: $error;
     content: attr(data-textfield-error);
   }
 }

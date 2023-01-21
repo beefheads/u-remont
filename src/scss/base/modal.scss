@@ -9,7 +9,7 @@
   visibility: hidden;
   background: rgba(0, 0, 0, 0.9);
   opacity: 0;
-  transition: $tr;
+  transition: var(--tr);
 
   &.is-show {
     overflow-y: auto;
@@ -37,7 +37,7 @@
   justify-content: center;
   min-height: 100%;
   padding: 30px 16px;
-  transition: $tr;
+  transition: var(--tr);
   transform: translate(0, 100vh);
 }
 
@@ -55,7 +55,7 @@
   right: 0;
   width: 36px;
   height: 36px;
-  transition: $tr;
+  transition: var(--tr);
 
   @media (any-hover: hover) {
     &:hover {

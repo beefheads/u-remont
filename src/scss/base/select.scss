@@ -49,12 +49,12 @@
 
 .select-input__title {
   padding: 0 16px;
-  color: $input-placeholder;
+  // color: $input-placeholder;
   pointer-events: none;
 
-  @media (max-width: $mobile-l) {
-    font-size: 16px;
-  }
+  // @media (max-width: $mobile-l) {
+  //   font-size: 16px;
+  // }
 }
 
 .select-input__chevron {
@@ -65,7 +65,7 @@
   width: 24px;
   height: 24px;
   pointer-events: none;
-  transition: $tr;
+  transition: var(--tr);
   transform: translate(0, -50%);
 }
 
@@ -82,7 +82,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: $tr;
+  transition: var(--tr);
   transform: translate(0, 100%);
 }
 
@@ -103,7 +103,7 @@
   font-size: 14px;
   cursor: pointer;
   background: inherit;
-  transition: $tr;
+  transition: var(--tr);
 
   &.is-selected {
     &::before {
@@ -126,7 +126,7 @@
     background-position: center center;
     background-size: contain;
     opacity: 0;
-    transition: $tr;
+    transition: var(--tr);
     transform: translate(0, -50%);
   }
 

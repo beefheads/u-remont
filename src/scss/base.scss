@@ -1,18 +1,26 @@
-// Общие стили текста
-@import "./base/text";
-
-// Поля выбора
+/*
+   Поля выбора
+ */
 // @import "./base/select";
 
-// Поля ввода
+/*
+  Поля ввода
+ */ 
 // @import "./base/textfield";
 
-// Модальные окна
+/*
+  Модальные окна
+ */ 
 // @import "./base/modal";
 
-// Аккордеоны (Спойлеры)
+/*
+  Аккордеоны (Спойлеры)
+ */ 
 // @import "./base/accordion";
 
+/*
+  Кирпичики
+ */ 
 .flex {
   display: flex;
   width: 100%;
@@ -26,6 +34,9 @@
   flex-direction: column;
 }
 
+/*
+  Модификаторы
+ */ 
 ._only-desktop {
   @media (max-width: 786px) {
     display: none !important;

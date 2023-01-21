@@ -11,14 +11,467 @@
     <meta name="format-detection" content="telephone=no" >
 
     <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
-    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
-    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
+    <meta http-equiv="Cache-Control" content="no-cache" >
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >
   </head>
   <body>
     <div class="wrapper">
       @@include('tpls/header.html',{})
 
+      <main class="main">
+        <section class="section hero">
+          <div class="container hero__container">
+            <h1 class="hero__title section-title">
+              Ремонтно-отделочные работы в квартирах и коммерческих помещениях <br>
+              <span class="section-text--color">в Санкт-Петербурге и области</span>
+            </h1>
+            <p class="hero__desc section-desc">Идеальный ремонт существует! Наша бригада профессионалов поможет в этом убедиться.</p>
+            <div class="hero-gallery">
+              <div class="hero-gallery__circle">Бесплатная консультация</div>
+              <picture class="hero-gallery__pic">
+                <img src="./img/hero/hero.jpg" alt="" class="hero-gallery__img">
+              </picture>
+              <div class="hero-gallery__shield">
+                <svg class="hero-gallery__icon">
+                  <use xlink:href="./img/hero/shield-search.svg#shield-search" />
+                </svg>
+                <span class="hero-gallery__desc">
+                  Работа по договору
+                  с гарантией до 3х лет
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <section class="section turnkey">
+          <div class="container turnkey__container">
+            <h2 class="section-title turnkey__title">
+              Выполняем ремонты
+              <span class="section-text--color">"под ключ"</span>
+            </h2>
+            <div class="turnkey__gallery">
+              <article class="turnkey-card">
+                <div class="turnkey-card__shield">от 5 500 ₽ / м²</div>
+                <picture class="turnkey-card__pic">
+                  <img src="./img/works/1.jpg" alt="" class="turnkey-card__img">
+                </picture>
+                <button class="turnkey-card__more" type="button">подробнее</button>
+                <h3 class="turnkey-card__title">
+                  <a href="#" class="turnkey-card__link">Ремонт квартир "под ключ"</a>
+                </h3>
+              </article>
+              <article class="turnkey-card">
+                <div class="turnkey-card__shield">от 6 000 ₽ / м³</div>
+                <picture class="turnkey-card__pic">
+                  <img src="./img/works/2.jpg" alt="" class="turnkey-card__img">
+                </picture>
+                <button class="turnkey-card__more" type="button">подробнее</button>
+                <h3 class="turnkey-card__title">
+                  <a href="#" class="turnkey-card__link">Ремонт ванной комнаты и сан узла</a>
+                </h3>
+              </article>
+              <article class="turnkey-card">
+                <div class="turnkey-card__shield">от 4 900 ₽ / м²</div>
+                <picture class="turnkey-card__pic">
+                  <img src="./img/works/3.jpg" alt="" class="turnkey-card__img">
+                </picture>
+                <button class="turnkey-card__more" type="button">подробнее</button>
+                <h3 class="turnkey-card__title">
+                  <a href="#" class="turnkey-card__link">Ремонт коридора или прихожей</a>
+                </h3>
+              </article>
+              <article class="turnkey-card">
+                <div class="turnkey-card__shield">от 4 500 ₽ / м³</div>
+                <picture class="turnkey-card__pic">
+                  <img src="./img/works/4.jpg" alt="" class="turnkey-card__img">
+                </picture>
+                <button class="turnkey-card__more" type="button">подробнее</button>
+                <h3 class="turnkey-card__title">
+                  <a href="" class="turnkey-card__link">Ремонт гостиной и спальни</a>
+                </h3>
+              </article>
+              <article class="turnkey-card">
+                <div class="turnkey-card__shield">от 3 900 ₽ / м³</div>
+                <picture class="turnkey-card__pic">
+                  <img src="./img/works/5.jpg" alt="" class="turnkey-card__img">
+                </picture>
+                <button class="turnkey-card__more" type="button">подробнее</button>
+                <h3 class="turnkey-card__title">
+                  <a href="#" class="turnkey-card__link">Ремонт офисных помещений</a>
+                </h3>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section worktypes">
+          <div class="container worktypes__container">
+            <h2 class="section-title worktypes__title">
+              И 
+              <span class="section-text--color">отдельные</span>
+              виды работ
+            </h2>
+            <div class="worktypes__content">
+              <picture class="worktypes__pic">
+                <img src="./img/works/works.jpg" alt="" class="worktypes__img">
+              </picture>
+              <ul class="worktypes__list">
+                <li class="worktypes__item">Штукатурные работы</li>
+                <li class="worktypes__item">Демонтажные работы</li>
+                <li class="worktypes__item">Монтаж оконных откосов</li>
+                <li class="worktypes__item">Отделочные работы</li>
+                <li class="worktypes__item">Электромонтажные работы</li>
+                <li class="worktypes__item">Стяжка пола</li>
+                <li class="worktypes__item">Монтаж перегородок</li>
+                <li class="worktypes__item">Монтаж потолка</li>
+                <li class="worktypes__item">Сантехнические работы</li>
+                <li class="worktypes__item">Шпатлевание стен или потолка</li>
+                <li class="worktypes__item">Устройство душевного поддона с установкой трапа</li>
+              </ul>
+              <a href="#" class="button-primary worktypes__button">Посмотреть весь перечень услуг</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section stages">
+          <div class="container stages__container">
+            <h2 class="section-title stages__title">
+              <span class="section-text--color">5 этапов </span>
+              до ремонта мечты
+            </h2>
+
+            <div class="stages__gallery">
+              <article class="stages-card">
+                <h3 class="stages-card__title">Оставьте заявку для консультации</h3>
+                <p class="stages-card__desc">
+                  Вы можете позвонить нам <br>
+                  или написать в мессенджере.
+                </p>
+              </article>
+              <article class="stages-card">
+                <h3 class="stages-card__title">Выезжаем на объект</h3>
+                <p class="stages-card__desc">
+                  Замеряем помещение <br>
+                  и составляем смету.
+                </p>
+              </article>
+              <article class="stages-card">
+                <h3 class="stages-card__title">Заключение договора</h3>
+                <div class="stages-card__quote">
+                  <p class="stages-card__quote-desc">
+                    Оплата ремонта производится только по факту выполнения и приемки работ.
+                  </p>
+                  <p class="stages-card__quote-cite">
+                    — Да, без предоплаты. :)
+                  </p>
+                  <picture class="stages-card__quote-pic">
+                    <img src="./img/bullets/worker.png" alt="" class="stages-card__qoute-img">
+                  </picture>
+                </div>
+              </article>
+              <article class="stages-card">
+                <h3 class="stages-card__title">Начало ремонта</h3>
+                <p class="stages-card__desc">
+                  Выполнение ремонтных работ согласно договору.
+                </p>
+              </article>
+              <article class="stages-card">
+                <h3 class="stages-card__title">Оплата работ по этапам</h3>
+                <p class="stages-card__desc">Согласно актам выполненных работ.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section consult">
+          <div class="container consult__container">
+            <div class="consult-card">
+              <div class="conuslt-card__info">
+                <h2 class="section-title consult__title">
+                  <span class="section-text--color">
+                    Запишитесь на бесплатную консультацию
+                  </span>
+                  для обсуждения деталей своего ремонта
+                </h2>
+                <p class="consult__desc">Заполните форму ниже, а мы перезвоним вам в течение часа.</p>
+                <form action="./mail.php" class="consult-form">
+                  <fieldset class="consult-form__fieldset">
+                    @@include('tpls/inputs/name.html',{})
+                    @@include('tpls/inputs/tel.html',{})
+                    <button class="button-primary consult-form__submit" type="submit">Оставить заявку</button>
+                  </fieldset>
+                  <a class="consult-form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+                </form>
+              </div>
+              <picture class="consult-card__pic">
+                <img src="./img/form/form-circle.png" alt="" class="consutl-card__img">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reviews">
+          <div class="container reviews__container">
+            <h2 class="section-title reviews__title">
+              Рейтинг команды на 
+              <span class="section-text--color">Яндекс.Услугах</span>
+              <span class="reviews__title-rating">4,6</span>
+            </h2>
+            <div class="reviews__gallery">
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <a href="#" class="reviews-card__profile-link">Дарья Г.</a>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Большое спасибо Юрию за ремонт в сталинке! Когда въехали был «Советский ремонт», но Юрий помог выровнять стены, полы, сделать окраску стен и укладку паркета и плитки, установить двери, плинтуса, а так же решить вопросы с электрикой. Учёл все наши пожелания, а так же временные рамки. Ремонту уже пол года, но все выглядит как новое. Большое спасибо за проделанную работу и ответственный подход к делу! Буду рекомендовать друзьям и знакомым
+                  </p>
+                </div>
+                <div class="reviews-card__gallery">
+                  <a href="./img/services/2/1.png" class="reviews-card__gallery-photo">
+                    <picture class="reviews-card__pic">
+                      <img src="./img/services/2/1.png" alt="" class="reviews-card__img">
+                    </picture>
+                  </a>
+                  <a href="./img/services/2/2.png" class="reviews-card__gallery-photo">
+                    <picture class="reviews-card__pic">
+                      <img src="./img/services/2/2.png" alt="" class="reviews-card__img">
+                    </picture>
+                  </a>
+                </div>
+              </article>
+
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <a href="#" class="reviews-card__profile-link">Артурка Фишер</a>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Решили сделать ремонт, не знаете с чего начать, как реализовать свои хотелки? Смело к Юрию!
+                    Обратились к Юрию с переделкой ремонта от застройщика в квартире у родителей. Сняли уродливые обои, выровняли стены, аккуратно поклеили новые, установили новые плинтуса, исправили откосы от застройщика, перенесли розетки, в электрике он просто гуру. Не знаете где купить материалы, что выбрать, как вообще подойти к ремонту? По всем этим вопросам вас проконсультируют, подскажут какие материалы нужны, где можно сэкономить не потеряв в качестве. Ремонт в 2 комнатах и коридоре общей площадью 45 кв.м сделан за 7 дней без перерывов и выходных, весь мусор по окончанию работ за собой был убран и отправлен на свалку, даже полы за собой помыли!!! Цена? За такое безупречное качество и исполнение безобразно занижена.
+                    Следующий ремонт однозначно будем заказывать только у Юрия. 
+
+                    P.S. Так же попросили повесить люстры уже в своей квартире, Юрий оперативно приехал на подмогу и безупречно установил люстры.
+                    Буду рекомендовать Юрия и его команду друзьям и близким.
+                  </p>
+                </div>
+              </article>
+
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <a href="#" class="reviews-card__profile-link">Диана Г.</a>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Очень понравилась работа мастера и его помощников! Сделал ремонт двух комнат за три недели, даже раньше, чем мы планировали. В частности особо понравилась декоративная штукатурка, предложенная самим Юрием. Мастер вежливый, всегда на связи, вызывает доверие. Спасибо за работу
+                  </p>
+                </div>
+                <div class="reviews-card__gallery">
+                  <a href="./img/services/3/1.png" class="reviews-card__gallery-photo">
+                    <picture class="reviews-card__pic">
+                      <img src="./img/services/3/1.png" alt="" class="reviews-card__img">
+                    </picture>
+                  </a>
+                </div>
+              </article>
+
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <a href="#" class="reviews-card__profile-link">Александр Н.</a>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Благодарю Юрия за работу в загородном доме. 
+                    Все выполнено быстро, аккуратно, качественно. 
+                    Адекватная цена за выполненную работу. Рекомендуем!
+                  </p>
+                </div>
+                <div class="reviews-card__gallery">
+                  <a href="./img/services/3/2.png" class="reviews-card__gallery-photo">
+                    <picture class="reviews-card__pic">
+                      <img src="./img/services/3/2.png" alt="" class="reviews-card__img">
+                    </picture>
+                  </a>
+                </div>
+              </article>
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/reviews/review-photo-1.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <span class="reviews-card__profile-name">Татьяна Пищальникова</span>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Спасибо за индивидуальный подход и клиентоориентированность.
+                    А также за подготовку комнаты к предчистовой отделке.
+                    Хочу отметить, что несмотря на споры и местами отсутствие взаимопонимания - все сделано в срок, ровно и качественно.
+                    За переделку балок и потраченное время - отдельное спасибо.
+                    Я наверное не лучший клиент, но буду рада дальнейшему сотрудничеству.
+                  </p>
+                </div>
+              </article>
+              <article class="reviews-card">
+                <div class="reviews-card__review">
+                  <header class="reviews-card__profile">
+                    <picture class="reviews-card__profile-pic">
+                      <img src="./img/reviews/review-photo-2.png" alt="" class="reviews-card__profile-img">
+                    </picture>
+                    <h3 class="reviews-card__profile-name">
+                      <span class="reviews-card__profile-name">Игорь Лезжов</span>
+                      <div class="reviews-card__profile-stars">
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                        <svg class="reviews-card__profile-star">
+                          <use xlink:href="./img/common/star.svg#star">
+                        </svg>
+                      </div>
+                    </h3>
+                  </header>
+                  <p class="reviews-card__feedback">
+                    Укладывали керамогранит в кухне (+фартук из плитки) и коридоре, результатом остался доволен, очень ответственный и скрупулезный подход!
+                  </p>
+                </div>
+              </article>
+
+              <div class="reviews-shifter">
+                <h3 class="reviews-shifter__title">Больше отзывов на популярных сервисах</h3>
+                <button class="reviews-shifter__make-feedback" data-poppa-open="feedback-review">Оставить свой отзыв на сайте</button>
+                <div class="reviews-shifter__platforms platforms">
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="platforms__link">
+                    <svg class="platforms__icon">
+                      <use xlink:href="./img/common/ya-services.png" />
+                    </svg>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="platforms__link">
+                    <svg class="platforms__icon">
+                      <use xlink:href="./img/common/avito.png" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       @@include('tpls/footer.html',{})
     </div>
 

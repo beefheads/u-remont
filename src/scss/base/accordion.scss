@@ -9,9 +9,9 @@
 
 .acc {
   display: block;
-  border-top: 1px solid $text-primary;
-  border-bottom: 1px solid $text-primary;
-  transition: $tr;
+  border-top: 1px solid var(--c-text-regular);
+  border-bottom: 1px solid var(--c-text-regular);
+  transition: var(--tr);
 
   &.is-show {
     & > .acc__toggler {
@@ -43,7 +43,7 @@
   font-weight: 100;
   line-height: 1.3;
   // pointer-events: none;
-  transition: $tr;
+  transition: var(--tr);
 }
 
 .acc__toggler-icon {
@@ -53,7 +53,7 @@
   min-width: 42px;
   height: 29px;
   margin-left: 16px;
-  transition: $tr;
+  transition: var(--tr);
 }
 
 // Тело аккордеона
@@ -62,7 +62,7 @@
   // opacity: 0;
   // visibility: hidden;
   overflow: hidden;
-  transition: $tr;
+  transition: var(--tr);
 }
 
 .acc__content {

@@ -61,7 +61,7 @@
   font-weight: 600;
 
   & a {
-    color: $accent2;
+    // color: $accent2;
     text-decoration: underline;
 
     &:hover {
@@ -83,8 +83,8 @@
     width: 1.5px;
     height: 12px;
     content: '';
-    background: $second;
-    transition: $tr;
+    // background: $second;
+    transition: var(--tr);
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
@@ -95,8 +95,8 @@
     width: 1.5px;
     height: 12px;
     content: '';
-    background: $second;
-    transition: $tr;
+    // background: $second;
+    transition: var(--tr);
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 

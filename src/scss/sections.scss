@@ -1,3 +1,29 @@
+.section-title {
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 2.5rem; //40
+  margin-bottom: 0.6em;
+}
+.section-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #a1aeb3;
+  @media (min-width: 1800px) {
+    font-size: 18px;
+  }
+  @media (min-width: 602px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.section-text--center {
+  text-align: center;
+}
+.section-text--right {
+  text-align: right;
+}
+
 @import "./sections/header";
 
 
