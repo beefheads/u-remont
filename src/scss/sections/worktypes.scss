@@ -75,6 +75,7 @@
 	letter-spacing: initial;
 	font-size: rem(22);
 	font-family: var(--ff-em);
+  transition: var(--tr-regular);
 }
 .worktypes__button::after,
 .worktypes__button::before {
@@ -97,4 +98,16 @@
 }
 .worktypes__button::after {
   background-color: var(--c-accent);
+  border: 1px solid var(--c-accent);
+  transition: var(--tr-regular);
+}
+.worktypes__button:hover {
+	@media (any-hover:hover) {
+		color: var(--c-accent);
+	}
+}
+.worktypes__button:hover:after {
+	@media (any-hover:hover) {
+		background-color: var(--bg-element);
+	}
 }

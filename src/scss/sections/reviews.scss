@@ -78,7 +78,14 @@
 .reviews-card__profile-link {
 	color: var(--color);
 	border-bottom: 1px solid var(--color);
+	transition: var(--tr-regular);
 }
+.reviews-card__profile-link:hover {
+	@media (any-hover:hover) {
+		--color: var(--c-accent);
+	}
+}
+
 .reviews-card__profile-stars {
 	display: flex;
 	justify-content: flex-start;
@@ -147,4 +154,10 @@
 	font-size: rem(22);
 	margin-bottom: rem(40);
 	border-bottom: 1px solid var(--c-accent);
+	transition: var(--tr-regular);
+}
+.reviews-shifter__make-feedback:hover {
+	@media (any-hover:hover) {
+		border-color: transparent;
+	}
 }

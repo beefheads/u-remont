@@ -9,6 +9,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: rem(10);
 }
 .consult__title {
 	margin-bottom: rem(20);
@@ -29,10 +30,18 @@
 	margin-bottom: rem(16);
 }
 .consult-form__caption {
+	--color: var(--c-text-on);
+	color: var(--color);
 	font-size: rem(14);
 	letter-spacing: initial;
 	font-style: italic;
-	border-bottom: 1px solid var(--c-text-on);
+	border-bottom: 1px solid var(--color);
+	transition: var(--tr-regular);
+}
+.consult-form__caption:hover {
+	@media (any-hover:hover) {
+		--color: var(--c-accent);
+	}
 }
 
 .consult-card__pic {

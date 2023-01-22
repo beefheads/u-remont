@@ -66,8 +66,14 @@
 .footer-contact__info-desc {
 	line-height: initial;
 }
-.footer-contact__info-desc:nth-of-type(2) {
-	// margin-bottom: 2;
+
+.footer-contact__info-desc a {
+	transition: var(--tr-regular);
+}
+.footer-contact__info-desc a:hover {
+	@media (any-hover:hover) {
+		color: var(--c-accent);
+	}
 }
 
 .footer-contact__socials {
@@ -89,6 +95,12 @@
 .footer__link {
 	border-bottom: 1px solid;
 	color: var(--c-text-regular);
+	transition: var(--tr-regular);
+}
+.footer__link:hover {
+	@media (any-hover:hover) {
+		color: var(--c-accent)
+	}
 }
 
 .footer__author {

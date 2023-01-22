@@ -35,6 +35,12 @@
 
   transition: all 0.3s ease;
 }
+.button-primary:hover {
+  @media (any-hover:hover) {
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover)
+  }
+}
 
 /*
 .button[disabled] {

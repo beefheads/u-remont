@@ -34,10 +34,16 @@
 	--color: var(--c-text-bold);
 	color: var(--color);
 	border-bottom: 1px solid transparent;
+	transition: var(--tr-regular);
 }
 .header__nav-link--current {
 	--color: var(--c-text-regular);
 	border-color: var(--color);
+}
+.header__nav-link:hover {
+	@media (any-hover:hover) {
+		--color: var(--c-accent);
+	}
 }
 
 
@@ -57,6 +63,7 @@
 .header__contact {
 	color: var(--color);
 	border-bottom: 1px solid var(--color);
+	transition: var(--tr-regular);
 }
 .header__contact--phone {
 	--color: var(--c-text-bold);
@@ -64,6 +71,11 @@
 }
 .header__contact--whatsapp {
 	--color: var(--c-wa);
+}
+.header__contact:hover {
+	@media (any-hover:hover) {
+		--color: var(--c-accent);
+	}
 }
 
 .header__workhours {
