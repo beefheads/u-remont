@@ -1,5 +1,7 @@
 .stages {
 	background-color: #F6F6F6;
+	position: relative;
+	z-index: 1;
 }
 .stages__gallery {
 	display: grid;
