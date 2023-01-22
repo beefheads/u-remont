@@ -1,37 +1,69 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 @use "sass:math";
 
-// Библиотеки
+/*
+  Библиотеки
+ */ 
 @import "./libs/swiper";
 @import "./b_libs/bayan";
 
-// Базовые стили, шаблоны, заготовки
+/*
+  Базовые стили, шаблоны, заготовки
+ */ 
 @import "./base";
 @import "./variables";
 @import "./mixins";
 
-// Шрифты
+/*
+  Шрифты
+ */ 
+@include font(
+  "Inter",
+  normal,
+  300,
+  "../resources/fonts/inter/Inter-Light"
+);
 @include font(
   "Inter",
   normal,
   400,
-  "../resources/fonts/Inter-Regular"
+  "../resources/fonts/inter/Inter-Regular"
+);
+@include font(
+  "Inter",
+  italic,
+  400,
+  "../resources/fonts/inter/Inter-RegularItalic"
+);
+@include font(
+  "Inter",
+  normal,
+  500,
+  "../resources/fonts/inter/Inter-Medium"
 );
 @include font(
   "Inter",
   normal,
   600,
-  "../resources/fonts/Inter-SemiBold"
+  "../resources/fonts/inter/Inter-SemiBold"
 );
 @include font(
-  "TTProstoSans",
-  normal,
+  "Inter",
+  italic,
   600,
-  "../resources/fonts/TTProstoSans-Bold"
+  "../resources/fonts/inter/Inter-SemiBoldItalic"
+);
+@include font(
+  "TexGyreChorus",
+  normal,
+  400,
+  "../resources/fonts/texgyrechorus/TexGyreChorus-MediumItalic"
 );
 
 
-// Сброс CSS
+/*
+  Сброс CSS
+ */ 
 @import "./reset";
 
 html {
@@ -39,7 +71,7 @@ html {
   // scrollbar-width: thin;
   // font-size: 16px;
   // font-size: calc(var(--index) * 0.54795);
-  font-size: 0.833333vw; //1920 16px
+  // font-size: 0.833333vw; //1920 16px
   @media (max-width: 1440px) {
     font-size: 1.11111vw; //1440 16px
   }
@@ -53,7 +85,10 @@ html {
 body {
   font-family: var(--ff-regular);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.16;
+  // letter-spacing: -0.5px;
+  
+  font-size: #{'calc(var(--index) * 0.547945)'}; // 1920 — 16px
   color: var(--c-text-regular);
   background-color: var(--bg-app);
 }
@@ -64,6 +99,7 @@ body._lock {
 
 .wrapper {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -80,10 +116,12 @@ body._lock {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: 80.625vw;
-  @media (min-width: 1128px) {
-    min-width: 1128px;
-  }
+  max-width: var(--w-container);
+}
+.container-tight {
+  max-width: #{'calc(var(--w-container) - 101px)'};
+  margin-left: auto;
+  margin-right: auto;
 }
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
@@ -91,18 +129,28 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
-// Общие стили проекта
+/*
+  Общие стили проекта
+ */ 
 @import "./components";
 
-// Карточки
+/*
+  Карточки
+ */ 
 // @import "./components/cards/";
 
-// Модальные окна
+/*
+  Модальные окна
+ */ 
 // @import "./components/modals/";
 
 
-// Секции
+/*
+  Секции
+ */ 
 @import "./sections";
 
-// Стили для отдельных страниц
+/*
+  Стили для отдельных страниц
+ */ 
 // @import "./pages/";

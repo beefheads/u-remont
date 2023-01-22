@@ -12,7 +12,7 @@
     height: var(--size);
     min-height: var(--size);
     max-height: var(--size);
-    margin-right: 0.5em;//12px;
+    margin-right: 0.5em; //12px;
     fill: var(--icon-color);
     @media (min-width: 602px) and (max-width: 768px) {
         --size: 64px;

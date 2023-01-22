@@ -1,0 +1,116 @@
+.turnkey {
+	padding-bottom: 6.5rem;
+}
+.turnkey__gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.turnkey-card {
+	--color: var(--c-text-on);
+	position: relative;
+	z-index: 1;
+	padding: rem(20);
+	margin-bottom: rem(20);
+	color: var(--color);
+	max-width: 32.142007%;
+	width: 100%;
+}
+
+.turnkey-card__shield {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: rem(10) rem(25) rem(10) rem(5);
+	margin-left: rem(20);
+	color: var(--c-text-regular);
+	font-size: rem(12);
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: rem(155);
+}
+.turnkey-card__shield::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: rem(-24);
+	display: block;
+	height: 100%;
+	width: rem(30);
+	background-image: url(../img/common/price-bullet.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.turnkey-card__shield::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	// right: rem(-25);
+	width: 100%;
+	height: 100%;
+	background-color: var(--bg-element);
+	border-radius: 0 rem(5) rem(5) 0;
+	z-index: -1;
+}
+
+.turnkey-card__pic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.turnkey-card__pic::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: rem(10);
+	background-color: rgba(0,0,0,0.3);
+}
+.turnkey-card__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: rem(10);
+	object-fit: cover;
+}
+
+.turnkey-card__more {
+	display: block;
+	cursor: pointer;
+	font-family: var(--ff-em);
+	font-size: rem(18);
+	margin-bottom: rem(20);
+	color: var(--c-text-on);
+	border-bottom: 1px solid var(--c-text-on);
+}
+
+.turnkey-card__title {
+	font-size: rem(22);
+	font-weight: 600;
+	line-height: initial;
+}
+
+.turnkey__gallery > .turnkey-card:nth-child(1),
+.turnkey__gallery > .turnkey-card:nth-child(2) {
+}
+.turnkey__gallery > .turnkey-card:nth-child(1) .turnkey-card__shield,
+.turnkey__gallery > .turnkey-card:nth-child(2) .turnkey-card__shield {
+	margin-bottom: rem(255);
+}
+.turnkey__gallery > .turnkey-card:nth-child(1) {
+	max-width: 59.628252788104085%;
+}
+.turnkey__gallery > .turnkey-card:nth-child(2) {
+	max-width: 38.876952%;
+}
+.turnkey__gallery > .turnkey-card:nth-child(5) {
+}

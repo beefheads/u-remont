@@ -21,11 +21,13 @@
       <main class="main">
         <section class="section hero">
           <div class="container hero__container">
-            <h1 class="hero__title section-title">
-              Ремонтно-отделочные работы в квартирах и коммерческих помещениях <br>
-              <span class="section-text--color">в Санкт-Петербурге и области</span>
-            </h1>
-            <p class="hero__desc section-desc">Идеальный ремонт существует! Наша бригада профессионалов поможет в этом убедиться.</p>
+            <div class="container-tight">
+              <h1 class="hero__title section-title">
+                Ремонтно-отделочные работы в квартирах и коммерческих помещениях <br>
+                <span class="section-text--color section-text--em">в Санкт-Петербурге и области</span>
+              </h1>
+              <p class="hero__desc section-desc">Идеальный ремонт существует! Наша бригада профессионалов поможет в этом убедиться.</p>
+            </div>
             <div class="hero-gallery">
               <div class="hero-gallery__circle">Бесплатная консультация</div>
               <picture class="hero-gallery__pic">
@@ -36,7 +38,7 @@
                   <use xlink:href="./img/hero/shield-search.svg#shield-search" />
                 </svg>
                 <span class="hero-gallery__desc">
-                  Работа по договору
+                  Работа по договору <br>
                   с гарантией до 3х лет
                 </span>
               </div>
@@ -44,8 +46,70 @@
           </div>
         </section>
 
+        <section class="section features">
+          <div class="container features__container">
+            <div class="features__gallery">
+              <article class="features-card">
+                <picture class="features-card__pic">
+                  <img src="./img/bullets/team.svg" alt="" class="features-card__img">
+                </picture>
+                <h3 class="features-card__title">
+                  В команде 
+                  <span class="section-text--color section-text--bold">только профессиональные мастера</span>
+                  , с опытом работы свыше 8 лет.
+                </h3>
+              </article>
+              <article class="features-card">
+                <picture class="features-card__pic">
+                  <img src="./img/bullets/payment.svg" alt="" class="features-card__img">
+                </picture>
+                <h3 class="features-card__title">
+                  <span class="section-text--color section-text--bold">
+                    Работаем без предоплаты,
+                  </span>
+                  оплата производится поэтапно по факту выполнения и приемки работ
+                </h3>
+              </article>
+              <article class="features-card">
+                <picture class="features-card__pic">
+                  <img src="./img/bullets/tools.svg" alt="" class="features-card__img">
+                </picture>
+                <h3 class="features-card__title">
+                  <span class="section-text--color section-text--bold">
+                    В наличии 
+                  </span>
+                  профессиональные инструменты и оборудование
+                </h3>
+              </article>
+              <article class="features-card">
+                <picture class="features-card__pic">
+                  <img src="./img/bullets/help.svg" alt="" class="features-card__img">
+                </picture>
+                <h3 class="features-card__title">
+                  Оказываем 
+                  <span class="section-text--color section-text--bold">
+                    помощь в закупке <br> и подборе материала
+                  </span>
+                </h3>
+              </article>
+              <article class="features-card">
+                <picture class="features-card__pic">
+                  <img src="./img/bullets/free.svg" alt="" class="features-card__img">
+                </picture>
+                <h3 class="features-card__title">
+                  <span class="section-text--color section-text--bold">
+                    Выезд на объект бесплатно
+                  </span>
+                  <br> в ближайшие два дня после обращения
+                </h3>
+              </article>
+              <button class="features__button">Рассчитать стоимость бесплатно</button>
+            </div>           
+          </div>
+        </section>
+
         <section class="section turnkey">
-          <div class="container turnkey__container">
+          <div class="container container-tight turnkey__container">
             <h2 class="section-title turnkey__title">
               Выполняем ремонты
               <span class="section-text--color">"под ключ"</span>
@@ -106,7 +170,7 @@
         </section>
 
         <section class="section worktypes">
-          <div class="container worktypes__container">
+          <div class="container container-tight worktypes__container">
             <h2 class="section-title worktypes__title">
               И 
               <span class="section-text--color">отдельные</span>
@@ -135,7 +199,7 @@
         </section>
 
         <section class="section stages">
-          <div class="container stages__container">
+          <div class="container container-tight stages__container">
             <h2 class="section-title stages__title">
               <span class="section-text--color">5 этапов </span>
               до ремонта мечты
@@ -160,7 +224,7 @@
                 <h3 class="stages-card__title">Заключение договора</h3>
                 <div class="stages-card__quote">
                   <p class="stages-card__quote-desc">
-                    Оплата ремонта производится только по факту выполнения и приемки работ.
+                    Оплата ремонта производится только по факту выполнения и&nbsp;приемки работ.
                   </p>
                   <p class="stages-card__quote-cite">
                     — Да, без предоплаты. :)
@@ -192,6 +256,7 @@
                   <span class="section-text--color">
                     Запишитесь на бесплатную консультацию
                   </span>
+                  <br>
                   для обсуждения деталей своего ремонта
                 </h2>
                 <p class="consult__desc">Заполните форму ниже, а мы перезвоним вам в течение часа.</p>
@@ -201,18 +266,18 @@
                     @@include('tpls/inputs/tel.html',{})
                     <button class="button-primary consult-form__submit" type="submit">Оставить заявку</button>
                   </fieldset>
-                  <a class="consult-form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+                  <a href="#" target="_blank" class="consult-form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</a>
                 </form>
               </div>
               <picture class="consult-card__pic">
-                <img src="./img/form/form-circle.png" alt="" class="consutl-card__img">
+                <img src="./img/form/form-circle.png" alt="" class="consult-card__img">
               </picture>
             </div>
           </div>
         </section>
 
         <section class="section reviews">
-          <div class="container reviews__container">
+          <div class="container container-tight reviews__container">
             <h2 class="section-title reviews__title">
               Рейтинг команды на 
               <span class="section-text--color">Яндекс.Услугах</span>
@@ -264,7 +329,7 @@
                 </div>
               </article>
 
-              <article class="reviews-card">
+              <article class="reviews-card reviews__gallery-item--double">
                 <div class="reviews-card__review">
                   <header class="reviews-card__profile">
                     <picture class="reviews-card__profile-pic">
@@ -295,7 +360,8 @@
                     Решили сделать ремонт, не знаете с чего начать, как реализовать свои хотелки? Смело к Юрию!
                     Обратились к Юрию с переделкой ремонта от застройщика в квартире у родителей. Сняли уродливые обои, выровняли стены, аккуратно поклеили новые, установили новые плинтуса, исправили откосы от застройщика, перенесли розетки, в электрике он просто гуру. Не знаете где купить материалы, что выбрать, как вообще подойти к ремонту? По всем этим вопросам вас проконсультируют, подскажут какие материалы нужны, где можно сэкономить не потеряв в качестве. Ремонт в 2 комнатах и коридоре общей площадью 45 кв.м сделан за 7 дней без перерывов и выходных, весь мусор по окончанию работ за собой был убран и отправлен на свалку, даже полы за собой помыли!!! Цена? За такое безупречное качество и исполнение безобразно занижена.
                     Следующий ремонт однозначно будем заказывать только у Юрия. 
-
+                    <br>
+                    <br>
                     P.S. Так же попросили повесить люстры уже в своей квартире, Юрий оперативно приехал на подмогу и безупречно установил люстры.
                     Буду рекомендовать Юрия и его команду друзьям и близким.
                   </p>
@@ -452,19 +518,15 @@
                 </div>
               </article>
 
-              <div class="reviews-shifter">
-                <h3 class="reviews-shifter__title">Больше отзывов на популярных сервисах</h3>
+              <div class="reviews-shifter reviews__gallery-item--double">
+                <h3 class="reviews-shifter__title section-title">Больше отзывов на популярных сервисах</h3>
                 <button class="reviews-shifter__make-feedback" data-poppa-open="feedback-review">Оставить свой отзыв на сайте</button>
                 <div class="reviews-shifter__platforms platforms">
                   <a href="#" target="_blank" rel="noopener noreferrer" class="platforms__link">
-                    <svg class="platforms__icon">
-                      <use xlink:href="./img/common/ya-services.png" />
-                    </svg>
+                    <img class="platforms__icon" src="./img/common/ya-services.png" alt="">
                   </a>
                   <a href="#" target="_blank" rel="noopener noreferrer" class="platforms__link">
-                    <svg class="platforms__icon">
-                      <use xlink:href="./img/common/avito.png" />
-                    </svg>
+                    <img class="platforms__icon" src="./img/common/avito.png" alt="">
                   </a>
                 </div>
               </div>

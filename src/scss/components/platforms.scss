@@ -1,0 +1,12 @@
+.platforms {
+	display: flex;
+}
+.platforms__link {
+	height: rem(49);
+	display: block;
+	margin-right: rem(40);
+	mix-blend-mode: darken;
+}
+.platforms__link:last-child {
+	margin-right: 0;
+}

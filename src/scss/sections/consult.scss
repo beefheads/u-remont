@@ -1,0 +1,52 @@
+.consult {
+	padding-bottom: 12.5rem;
+}
+.consult-card {
+	position: relative;
+	padding: rem(75) rem(100) rem(75) rem(47);
+	color: var(--c-text-on);
+	background-image: url(../img/form/form-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.consult__title {
+	margin-bottom: rem(20);
+}
+.consult__desc {
+	font-size: rem(22);
+	font-family: var(--ff-em);
+	line-height: initial;
+	margin-bottom: rem(60);
+}
+
+.consult-form__fieldset {
+	display: grid;
+	grid-template-columns: repeat(3, 227px);
+	column-gap: rem(20);
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: rem(16);
+}
+.consult-form__caption {
+	font-size: rem(14);
+	letter-spacing: initial;
+	font-style: italic;
+	border-bottom: 1px solid var(--c-text-on);
+}
+
+.consult-card__pic {
+	position: absolute;
+	right: rem(100);
+	bottom: rem(-82);
+	display: block;
+	border: rem(12) solid var(--bg-element);
+	border-radius: 50%;
+}
+.consult-card__img {
+	display: block;
+	width: rem(429);
+	height: rem(438);
+	border-radius: 50%;
+	object-fit: cover;
+}

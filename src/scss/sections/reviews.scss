@@ -1,0 +1,134 @@
+.reviews {
+	background-color: #F6F6F6;
+	padding-bottom: 6rem;
+}
+.reviews__gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.reviews-card {
+	background-color: var(--bg-element);
+	border-radius: rem(10);
+	padding: rem(20);
+	padding-top: 0;
+	margin-bottom: rem(20);
+	flex-basis: 32.3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.reviews__gallery-item--double {
+	flex-basis: 66.2%;
+}
+
+
+.reviews-card__profile {
+	display: flex;
+	padding-top: rem(13);
+	padding-bottom: rem(13);
+}
+.reviews-card__profile-pic {
+	background-color: #f6f6f6;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(65);
+	height: rem(65);
+	margin-left: rem(-25);
+	margin-right: rem(15);
+}
+.reviews-card__profile-img {
+	border-radius: 50%;
+	display: block;
+	width: rem(55);
+	height: rem(55);
+}
+.reviews-card__profile-name {
+	--color: var(--c-text-regular);
+	color: var(--color);
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+	font-family: var(--ff-em);
+	font-size: rem(20);
+	letter-spacing: -0.5px;
+	margin-bottom: rem(5);
+}
+.reviews-card__profile-link {
+	color: var(--color);
+	border-bottom: 1px solid var(--color);
+}
+.reviews-card__profile-stars {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.reviews-card__profile-star {
+	display: block;
+	width: rem(17);
+	height: rem(17);
+}
+
+.reviews-card__feedback {
+	position: relative;
+	padding-top: rem(22);
+	margin-bottom: rem(20);
+	font-weight: 300;
+	line-height: 120%;
+	letter-spacing: -0.5px;
+}
+.reviews-card__feedback::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.5;
+	background: #4E3D33;
+	display: block;
+	height: 1px;
+}
+
+
+.reviews-card__gallery {
+	display: grid;
+	grid-template-columns: rem(85) rem(85) rem(85) rem(85);
+	column-gap: rem(10);
+	row-gap: rem(10);
+}	
+.reviews-card__gallery-photo {
+	display: block;
+	height: rem(85);
+}
+.reviews-card__pic {
+	display: block;
+	height: 100%;
+}
+.reviews-card__img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	border-radius: rem(10);
+}
+
+
+.reviews-shifter {
+	padding: rem(26) rem(22);
+}
+.reviews-shifter__title {
+	margin-bottom: 0;
+}
+.reviews-shifter__make-feedback {
+	font-family: var(--ff-em);
+	color: var(--c-accent);
+	font-size: rem(22);
+	margin-bottom: rem(40);
+	border-bottom: 1px solid var(--c-accent);
+}

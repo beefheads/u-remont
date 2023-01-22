@@ -3,29 +3,32 @@
 */
 
 :root {
-  --fz-button: 0.875rem;
-  --lh-button: 1;
-  --fw-button: 700;
+  --fz-button: 1rem;
+  --fw-button: 500;
+  --lh-button: auto;
 
-  --bg-button-primary: var(--c-text-regular);
-  --bg-button-secondary: var(--c-text-secondary);
+  --button-bg: var(--c-accent);
+  --button-bg-hover: var(--bg-element);
+  --button-color: var(--c-text-on);
+  --button-color-hover: var(--c-accent);
 }
-.button {
+
+.button-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: rem(21.5) rem(31.5);
 
-  padding: 1.9285714285714286em 3.4285714285714284em; // 28 48
-  border: 0.07142857142857142em solid var(--button-bg); //1
+  border: 1px solid var(--c-accent); //1
 
   font-size: var(--fz-button);
   font-weight: var(--fw-button);
   line-height: var(--lh-button);
+
   text-align: center;
   cursor: pointer;
-  letter-spacing: 0.04em;
 
-  border-radius: var(--brad-regular);
+  border-radius: rem(10);
   color: var(--button-color);
   --icon-color: var(--button-color);
   background: var(--button-bg, transparent);
@@ -33,6 +36,7 @@
   transition: all 0.3s ease;
 }
 
+/*
 .button[disabled] {
   pointer-events: none;
   cursor: default;
@@ -65,12 +69,6 @@
 .button--icon-stroke .button__icon {
   fill: transparent;
   stroke: var(--icon-color);
-}
-.button__icon ~ .button__text {
-  // margin-left: 0.5rem;//8px;
-  // @media (min-width: 602px) and (max-width: 768px) {
-  //   margin-left: 16px;
-  // }
 }
 
 .button--icon-left .button__icon {
@@ -122,3 +120,4 @@
     --button-color: var(--c-text-on);
   }
 }
+*/
