@@ -15,7 +15,15 @@
 * `poppa-open`
 * `poppa-close`
 
+Если хочешь, чтобы кнопка закрытия была внутри — пропиши `data-poppa-closer="inside"`
+```html
+<div class="poppa" id="your-modal-name" data-poppa-closer="inside">
+	<!- Твой контент окна ->
+</div>
+```
+
 ## Кнопки
+
 По клику откроет окно, которое ты создал ранее. В атрибуте `data-poppa-open` укажи id попапа
 Если поменять значение `data-poppa-open`, то будет открываться актуальное окно
 ```html

@@ -146,7 +146,13 @@ class Poppa {
     document.querySelector(".poppa__storage").append(overlay);
     aligner.append(poppa);
     overlay.append(aligner);
-    overlay.append(closer);
+
+    const closerType = poppa.dataset.poppaCloser
+    if (closerType === "inside") {
+      poppa.append(closer);
+    } else {
+      overlay.append(closer);
+    }
 
     this.instances.push(overlay);
   }
