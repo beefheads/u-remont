@@ -6,6 +6,8 @@ import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
 import webpack from "webpack-stream";
 
+// import merge from "merge-stream";
+
 
 /**
  * @source https://stackoverflow.com/questions/40096470/get-webpack-not-to-bundle-files
@@ -14,6 +16,7 @@ import webpack from "webpack-stream";
  */
 const jsEntryPoints = {
   index: "/src/js/index.js",
+  phoneUtils: "/src/js/phoneUtils.js",
   // new: "/src/js/new.js"
 }
 
@@ -27,12 +30,12 @@ export default function jsBuild() {
         entry: jsEntryPoints,
         output: {
           // filename: "bundle.min.js",
-          filename: "./[name].js",
+          filename: "[name].js",
           sourceMapFilename: './[name].js.map'
         },
       })
     )
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(app.path.build.js))
     .pipe(browserSync.reload({ stream: true }));
 }

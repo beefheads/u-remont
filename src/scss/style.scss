@@ -6,6 +6,12 @@
  */ 
 @import "./libs/swiper";
 @import "./b_libs/bayan";
+@import "./libs/intlTelInput";
+
+/*
+  Сброс CSS
+ */ 
+@import "./reset";
 
 /*
   Базовые стили, шаблоны, заготовки
@@ -31,15 +37,15 @@
 );
 @include font(
   "Inter",
-  italic,
-  400,
-  "../resources/fonts/inter/Inter-RegularItalic"
-);
-@include font(
-  "Inter",
   normal,
   500,
   "../resources/fonts/inter/Inter-Medium"
+);
+@include font(
+  "Inter",
+  italic,
+  400,
+  "../resources/fonts/inter/Inter-MediumItalic"
 );
 @include font(
   "Inter",
@@ -61,10 +67,6 @@
 );
 
 
-/*
-  Сброс CSS
- */ 
-@import "./reset";
 
 html {
   // scrollbar-color: #000 transparent;

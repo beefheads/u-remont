@@ -1,3 +1,22 @@
+<section class="modal poppa modal-callback" id="callback" data-poppa-closer="inside">
+	<h2 class="modal__title section-title">
+		Оставьте свои контактные данные,
+		и&nbsp;<span class="section-text--color">мы&nbsp;перезвоним вам в течение часа</span>
+		<br>
+		для уточнения деталей
+	</h2>
+	<form action="./callback.php" class="modal__form">
+		<fieldset class="modal__fieldset">
+      @@include('./inputs/name.html',{})
+      @@include('./inputs/tel.html',{})
+      <button class="button-primary modal__submit">Получить консультацию по расчёту</button>
+		</fieldset>
+    <a href="#" class="modal__caption">
+    	Нажимая кнопку, вы соглашаетесь на обработку <br>
+      персональных данных.
+    </a>
+	</form>
+</section>
 <footer class="footer">
 	<div class="container container-tight footer__container">
 		<div class="footer-contact">

@@ -12,7 +12,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-poppa);
+  // z-index: var(--z-poppa);
+  z-index: 1;
   display: block;
   width: 100%;
   // height: #{'calc(100 * 1vh)'};
@@ -62,13 +63,13 @@
 
 .poppa__closer {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 1.4em;
+  right: 0.9em;
   display: block;
   width: 2.5em;
   height: 2.5em;
   font-size: 0;
-  background-color: transparent;
+  background: transparent;
   transition: all 0.3s ease;
   --closer-color: #fff;
   @media (min-width: 602px) and (max-width: 768px) {
@@ -82,21 +83,41 @@
   left: 0;
   display: block;
   width: 100%;
-  height: 10%;
+  height: 20%;
   content: "";
   background-color: var(--closer-color);
   border-radius: 1em;
   transition: all 0.3s ease;
 }
 .poppa__closer::before {
-  transform: rotate(45deg);
+  transform: rotate(35deg);
 }
 .poppa__closer::after {
-  transform: rotate(-45deg);
+  transform: rotate(-35deg);
 }
 .poppa__closer:hover::before,
 .poppa__closer:hover::after {
   background-color: var(--c-poppa-closer-hover);
+}
+
+
+.poppa__closer {
+  --closer-color: #fff;
+  font-size: 1.25rem;//20px;
+  color: transparent;
+}
+.poppa__closer::before,
+.poppa__closer::after {
+  top: 44%;
+  right: 0;
+  width: 65%;
+  height: 7%;
+  margin-right: auto;
+  margin-left: auto;
+  // @media (max-width: 768px) {
+  //   top: 46%;
+  //   width: 70%;
+  // }
 }
 
 /*
@@ -155,17 +176,6 @@
   background: var(--bg-poppa-overlay);
 }
 
-.poppa__closer {
-  --closer-color: #fff;
-  font-size: 1.25rem;//20px;
-  color: transparent;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-poppa);
-  @media (max-width: 768px) {
-    font-size: 0.75rem;//12px;
-  }
-}
-
 .poppa__title {
   margin-bottom: 20px;
   font-family: var(--ff-title);
@@ -179,7 +189,7 @@
   color: inherit;
 }
 .poppa__title-link:hover {
-  @media (min-width: $minHover) {
+  @media (any-hover:hover) {
     color: var(--c-accent);
   }
 }
@@ -193,30 +203,8 @@
   }
 }
 
-.poppa__closer {
-  top: 0.75rem;//12px;
-  right: 1.5rem;//11px;
-  @media (max-width: 601px) {
-    top: 1.375rem;//22px;
-    width: 2.125rem;//50px;
-    height: 2.125rem;//50px;
-  }
-}
 body:not(.os-linux):not(.os-macos) .poppa__closer {
   @media (min-width: 769px) {
     right: 27px;
-  }
-}
-.poppa__closer::before,
-.poppa__closer::after {
-  top: 44%;
-  right: 0;
-  width: 85%;
-  height: 5%;
-  margin-right: auto;
-  margin-left: auto;
-  @media (max-width: 768px) {
-    top: 46%;
-    width: 70%;
   }
 }

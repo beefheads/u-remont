@@ -20,7 +20,7 @@
 /**
  * Poppa
  */
-// import "./poppa.js";
+import "./poppa.js";
 
 /**
  * Lazy Load
@@ -31,7 +31,7 @@ let lazyLoadInstance = new LazyLoad();
 
 
 
-import "./unstable/tabs.js";
+// import "./unstable/tabs.js";
 
 /**
  * Smooth anchors
@@ -41,7 +41,21 @@ import "./utils/smooth-anchors.js";
 /**
  * Smooth anchors
  **/
-import "./unstable/bayan.js";
+// import "./unstable/bayan.js";
+
+import intlTelInput from 'intl-tel-input';
+const telInputs = document.querySelectorAll('input[type="tel"]');
+telInputs.forEach((input) => {
+  const iti = intlTelInput(input, {
+      initialCountry: "ru",
+      // separateDialCode: true,
+      nationalMode: "true",
+      preferredCountries: ['ru', 'by', "kz"],
+      utilsScript: "./js/phoneUtils.js"
+  });
+})
+
+
 
 
 /*

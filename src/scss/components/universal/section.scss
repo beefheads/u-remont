@@ -1,0 +1,31 @@
+/*
+  Секции
+ */
+.section {
+  padding-top: rem(120);
+  padding-bottom: rem(120);
+}
+.section-title {
+  font-weight: 600;
+  font-size: rem(32);
+  margin-bottom: rem(60);
+}
+.section-desc {
+}
+.section-text--color {
+  color: var(--c-accent);
+}
+.section-text--em {
+  font-style: italic;
+}
+.section-text--bold {
+  font-weight: 600;
+}
+
+.section-text--center {
+  text-align: center;
+}
+.section-text--right {
+  text-align: right;
+}
+

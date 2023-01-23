@@ -1,6 +1,9 @@
 # U-remont
 [Макет](https://www.figma.com/file/QAjPyqFaF6l1i9jn2OYrsQ/Сайт-%7C-Ю-Ремонт?node-id=322%3A152&t=5dAD3olscrbF8c86-0)
 
+## Issues
+- [ ] Несколько масок телефонынх не сделать
+
 ## Учесть
 
 ### Адаптация
