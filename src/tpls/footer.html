@@ -6,6 +6,8 @@
 		для уточнения деталей
 	</h2>
 	<form action="./callback.php" class="modal__form">
+		<input type="hidden" name="page_url" value="">
+		<input type="hidden" name="form_name" value="Перезвонить">
 		<fieldset class="modal__fieldset">
       @@include('./inputs/name.html',{})
       @@include('./inputs/tel.html',{})
@@ -17,6 +19,82 @@
     </a>
 	</form>
 </section>
+
+<section class="modal poppa modal-callback" id="demolish" data-poppa-closer="inside">
+	<h2 class="modal__title section-title">
+		<span class="section-text--color">Оставьте свои контактные данные,</span>
+		<br>
+		и мы перезвоним вам в течение часа
+		<br>
+		<span class="section-text--color">для расчёта демонтажа или уборки</span>
+	</h2>
+	<form action="./callback.php" class="modal__form">
+		<input type="hidden" name="page_url" value="">
+		<input type="hidden" name="form_name" value="Демонтаж и вывоз мусора">
+		<fieldset class="modal__fieldset">
+      @@include('./inputs/name.html',{})
+      @@include('./inputs/tel.html',{})
+      <button class="button-primary modal__submit">Получить консультацию по расчёту</button>
+		</fieldset>
+    <a href="#" class="modal__caption">
+    	Нажимая кнопку, вы соглашаетесь на обработку <br>
+      персональных данных.
+    </a>
+	</form>
+</section>
+
+<section class="modal poppa modal-review" id="review" data-poppa-closer="inside">
+	<h2 class="modal__title modal-review__title section-title">
+		Чтобы оставить свой отзыв <br>
+		<span class="section-text--color">заполните форму ниже</span>
+	</h2>
+	<p class="modal__desc">
+		Мы будем рады увидеть ваше честное мнение о нашей работе. :) <br>
+		После проверки модератором, отзыв будет опубликован на сайте.
+	</p>
+	<form action="./callback.php" class="modal__form">
+		<input type="hidden" name="page_url" value="">
+		<input type="hidden" name="form_name" value="Оставить отзыв">
+		<fieldset class="modal__fieldset modal-review__fieldset">
+      @@include('./inputs/name.html',{})
+      @@include('./inputs/email.html',{})
+      @@include('./inputs/attach-single.html',{})
+      @@include('./inputs/attach-single.html',{})
+      @@include('./inputs/textarea.html',{})
+      <div class="modal-review__rating">
+      	<h3 class="modal-review__rating-title">Насколько вы довольны качеством выполненной работы?</h3>
+      	<div class="modal-review__starpicker starpicker">
+					<label class="starpicker__star">
+						<input type="radio" name="rating" class="starpicker__input" value="1">
+						<span class="starpicker__check"></span>
+					</label>
+					<label class="starpicker__star">
+						<input type="radio" name="rating" class="starpicker__input" value="2">
+						<span class="starpicker__check"></span>
+					</label>
+					<label class="starpicker__star">
+						<input type="radio" name="rating" class="starpicker__input" value="3" checked>
+						<span class="starpicker__check"></span>
+					</label>
+					<label class="starpicker__star">
+						<input type="radio" name="rating" class="starpicker__input" value="4">
+						<span class="starpicker__check"></span>
+					</label>
+					<label class="starpicker__star">
+						<input type="radio" name="rating" class="starpicker__input" value="5">
+						<span class="starpicker__check"></span>
+					</label>
+      	</div>
+      </div>
+      <button class="button-primary modal__submit modal-review__submit">Отправить отзыв</button>
+		</fieldset>
+    <a href="#" class="modal__caption modal-review__caption">
+    	Нажимая кнопку, вы соглашаетесь на обработку <br>
+      персональных данных.
+    </a>
+	</form>
+</section>
+
 <footer class="footer">
 	<div class="container container-tight footer__container">
 		<div class="footer-contact">
@@ -36,7 +114,7 @@
 						<p class="footer-contact__info-desc">ИНН: 519098252992</p>
 						<p class="footer-contact__info-desc">ОГРНИП: 322784700232131</p>
 						<br>
-						<p class="footer-contact__info-desc">Телефон: <a href="tel:+79119709415">+7 (911) 970-94-15</a></p>
+						<p class="footer-contact__info-desc">Телефон: <a href="tel:+79119709415" class="js_click-copy">+7 (911) 970-94-15</a></p>
 						<p class="footer-contact__info-desc">График работы: Пн-Вс с 8:00 до 23:00</p>
 					</div>
 					<div class="footer-contact__socials socials">

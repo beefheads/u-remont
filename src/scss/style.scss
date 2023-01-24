@@ -5,6 +5,7 @@
   Библиотеки
  */ 
 @import "./libs/swiper";
+@import "./libs/fancybox";
 @import "./b_libs/bayan";
 @import "./libs/intlTelInput";
 
@@ -28,6 +29,12 @@
   normal,
   300,
   "../resources/fonts/inter/Inter-Light"
+);
+@include font(
+  "Inter",
+  normal,
+  300,
+  "../resources/fonts/inter/Inter-LightItalic"
 );
 @include font(
   "Inter",

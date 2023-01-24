@@ -6,16 +6,18 @@
 
 // import "./components/header.js"
 // import "./components/controls.js"
+import { Fancybox, Carousel } from "@fancyapps/ui";
 // import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
-// Fancybox.bind('[data-fancybox]', {
-//   Toolbar: {
-//     display: [
-//       "close",
-//     ],
-//   },
-// });
+Fancybox.bind('[data-fancybox]', {
+  Toolbar: {
+    display: [
+      "close",
+    ],
+  },
+});
 
+import "./unstable/copyclicker.js";
 
 /**
  * Poppa
