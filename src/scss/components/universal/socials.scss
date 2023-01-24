@@ -15,6 +15,7 @@
   transition: var(--tr);
   margin-right: 1.25rem;
   transition: var(--tr-regular);
+  border-radius: 50%;
 }
 .socials__link:last-child {
   margin-right: 0;
@@ -23,4 +24,17 @@
   @media (any-hover:hover) {
     transform: scale(1.1);
   }
+}
+
+.socials__icon {
+  border-radius: 50%;
+}
+.socials__icon--whatsapp {
+  background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+}
+.socials__icon--telegram {
+  background: linear-gradient(180deg, #2AABEE 0%, #229ED9 99.26%);
+}
+.socials__icon--vk {
+  background: linear-gradient(45deg, #025BC7 0.73%, #0089FD 91.97%);
 }
