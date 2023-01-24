@@ -42,6 +42,48 @@
   }
 }
 
+
+/*
+  Swiper Buttons
+ */
+.swiper-button-prev {
+
+}
+.swiper-button-prev:after {
+  color: transparent;
+}
+.swiper-button-prev .swiper-button__icon {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(-1, 1);
+}
+.swiper-button-next {
+
+}
+.swiper-button-next:after {
+  color: transparent;
+}
+.swiper-button-next .swiper-button__icon {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-prev .swiper-button__icon,
+.swiper-button-next .swiper-button__icon {
+  fill: var(--bg-element);
+  stroke: var(--c-text-regular);
+  transition: var(--tr);
+}
+.swiper-button-prev:hover .swiper-button__icon,
+.swiper-button-next:hover .swiper-button__icon {
+  @media (any-hover:hover) {
+    fill: var(--c-text-regular);
+    stroke: var(--bg-element);
+  }
+}
 /*
 .button[disabled] {
   pointer-events: none;

@@ -2,7 +2,7 @@
   --text-color: var(--c-text-regular);
   --label-color: var(--bg-element);
   --border-color: var(--c-text-regular);
-  --input-bg: ;
+  --input-bg: var(--bg-element);
   --fz: 0.875rem;
   --lh: 1;
   border-radius: rem(10);
@@ -26,12 +26,13 @@
 }
 .input-tel .iti__selected-flag {
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
+  left: 1px;
+  top: 1px;
+  height: calc(100% - 2px);
   background-color: transparent;
   padding-left: rem(14);
   border-radius: rem(6);
+  transition: var(--tr-regular);
 }
 .input-tel .iti .iti__selected-flag:hover {
   background-color: #F6F6F6;
@@ -59,9 +60,20 @@
   padding-left: rem(70);
 }
 .input-tel .iti__country-list  {
+  display: block;
   top: 105%;
   border-radius: rem(10);
   padding-top: rem(14);
+  transform-origin: top;
+  transition: var(--tr-regular);
+  opacity: 1;
+  transform: scale(1, 1);
+  pointer-events: initial;
+}
+.input-tel .iti__country-list.iti__hide {
+  opacity: 0;
+  transform: scale(1, 0.3);
+  pointer-events: none;
 }
 .input-tel .iti__country {
   padding-left: rem(14);

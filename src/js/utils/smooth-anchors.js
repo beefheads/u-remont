@@ -23,6 +23,7 @@ function scrollToAnchor(distanceTop = 0) {
             if (!href || href == "#") return;
             let anchor = document.querySelector(href)
             if (!anchor) return;
+            if (anchor.classList.contains('poppa')) return
             window.scroll({
                 top: anchor.getBoundingClientRect().top + pageYOffset - distanceTop,
                 left: 0,

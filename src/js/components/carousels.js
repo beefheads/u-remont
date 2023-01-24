@@ -72,51 +72,77 @@ quizes.forEach((quiz, index) => {
 
 
 
+function makeThumbSwiper(selectorGallery, selectorThumbs) {
+  if (document.querySelector(selectorGallery) && document.querySelector(selectorThumbs)) {
+    let carouselThumbs = new Swiper(selectorThumbs, {
+      // direction: 'vertical',
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      centerInsufficientSlides: true,
+      spaceBetween: 10,
+      slidesPerView: 3,
+    });
+    let carouselGallery = new Swiper(selectorGallery, {
+      modules: [Navigation, Pagination, EffectFade],
+      spaceBetween: 10,
+      // pagination: {
+      //   el: ".product-hero-gallery-pagination",
+      //   clickable: true,
+      // },
+      // effect: 'fade',
+      //   fadeEffect: {
+      //   crossFade: true
+      // },
+      // navigation: {
+      //   nextEl: ".product-hero-gallery-next",
+      //   prevEl: ".product-hero-gallery-prev",
+      // },
+      thumbs: {
+        swiper: carouselThumbs,
+      },
+      on: {
+        slideChange: function() {
+          carouselThumbs.slideTo(this.activeIndex);
+        },
+        init: function() {
+          setTimeout(() => {
+            this.slides.forEach(slide => {
+              // slide.style.height = `${slide.parentElement.getBoundingClientRect().height}px`;
+            })
+          }, 2000)
+        }
+      }
+    });
+    carouselThumbs.on('slideChange', () => {
+      carouselGallery.slideTo(carouselThumbs.activeIndex);
+    })
+    carouselThumbs.slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        carouselGallery.slideTo(index);
+      })
+    })
+  }
+}
+makeThumbSwiper('.modal-case-photos-gallery-carousel', '.modal-case-photos-thumbs-carousel');
 
+// let carouselGallery = new Swiper('.modal-case-photos-gallery-carousel', {
+//   // direction: 'vertical',
+//   centeredSlides: true,
+//   centeredSlidesBounds: true,
+//   centerInsufficientSlides: true,
+//   spaceBetween: 10,
+//   slidesPerView: 3,
+// });
+// let carouselThumbs = new Swiper('.modal-case-photos-thumbs-carousel', {
+//   // direction: 'vertical',
+//   centeredSlides: true,
+//   centeredSlidesBounds: true,
+//   centerInsufficientSlides: true,
+//   spaceBetween: 10,
+//   slidesPerView: 3,
+// });
 
 // -----
-if (document.querySelector('.product-hero-gallery') && document.querySelector('.product-hero-thumbs')) {
-  let swiper = new Swiper(".product-hero-thumbs", {
-    direction: 'vertical',
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    centerInsufficientSlides: true,
-    spaceBetween: 10,
-    slidesPerView: 'auto',
-  });
-  let heroGallery = new Swiper(".product-hero-gallery", {
-    modules: [Navigation, Pagination, EffectFade],
-    spaceBetween: 10,
-    pagination: {
-      el: ".product-hero-gallery-pagination",
-      clickable: true,
-    },
-    effect: 'fade',
-      fadeEffect: {
-      crossFade: true
-    },
-    navigation: {
-      nextEl: ".product-hero-gallery-next",
-      prevEl: ".product-hero-gallery-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-    on: {
-      slideChange: function() {
-        swiper.slideTo(this.activeIndex);
-      },
-    }
-  });
-  swiper.on('slideChange', () => {
-    heroGallery.slideTo(swiper.activeIndex);
-  })
-  swiper.slides.forEach((slide, index) => {
-    slide.addEventListener('click', () => {
-      heroGallery.slideTo(index);
-    })
-  })
-}
 
 
 if (document.querySelector('.promo-carousel')) {

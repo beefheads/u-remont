@@ -2,7 +2,8 @@
   // --tr-enter-jolly: opacity 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   // --tr-enter-jolly: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   --bg-poppa-overlay: rgba(0, 0, 0, 0.8);
-  --c-poppa-closer-hover: #ff3b30;
+  // --c-poppa-closer-hover: #ff3b30;
+  --c-poppa-closer-hover: var(--c-accent);
   --z-poppa: 1234567890;
   // opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
 }
