@@ -24,15 +24,20 @@ global.app = {
   useWebp: true,
 };
 
+/*
+  @docs: https://browsersync.io/docs/options/#option-host
+ */
 function webServer() {
   browserSync.init({
-    // proxy: "", // Для работы с OpenServer (php) указываем папку, с которой работаем в OpenServer.
+    // online: false, // Чтоб запускался без интернета
     server: {
       baseDir: "./dist",
     },
     notify: false,
     port: 3000,
-    online: false,
+    // proxy: "", // Для работы с OpenServer (php) указываем папку, с которой работаем в OpenServer.
+    //https: true
+    // tunnel: "boffeer" // Открывает тунель на http://boffeer.localtunnel.me
   });
 }
 
