@@ -76,8 +76,7 @@
                 </picture>
                 <h3 class="features-card__title">
                   В команде 
-                  <span class="section-text--color section-text--bold">только профессиональные мастера</span>
-                  , с опытом работы свыше 8 лет.
+                  <span class="section-text--color section-text--bold">только профессиональные мастера</span>, с&nbsp;опытом работы свыше 8 лет.
                 </h3>
               </article>
               <article class="features-card">
@@ -119,9 +118,9 @@
                 </picture>
                 <h3 class="features-card__title">
                   <span class="section-text--color section-text--bold">
-                    Выезд на объект бесплатно
+                    Выезд на объект <br class="_only-mobile">бесплатно
                   </span>
-                  <br> в ближайшие два дня после обращения
+                  <br class="_only-desktop"> в ближайшие два&nbsp;дня&nbsp;после обращения
                 </h3>
               </article>
               <button class="features__button" data-poppa-open="callback" type="button">Рассчитать стоимость бесплатно</button>
@@ -212,7 +211,7 @@
                 <li class="worktypes__item">Монтаж потолка</li>
                 <li class="worktypes__item">Сантехнические работы</li>
                 <li class="worktypes__item">Шпатлевание стен или потолка</li>
-                <li class="worktypes__item">Устройство душевного поддона с установкой трапа</li>
+                <li class="worktypes__item">Устройство душевного поддона с&nbsp;установкой трапа</li>
               </ul>
               <a href="#" class="worktypes__button">Посмотреть весь перечень услуг</a>
             </div>
@@ -271,7 +270,7 @@
               </article>
               <article class="stages-card">
                 <h3 class="stages-card__title">Оплата работ по этапам</h3>
-                <p class="stages-card__desc">Согласно актам выполненных работ.</p>
+                <p class="stages-card__desc">Согласно актам <br class="_only-mobile"> выполненных работ.</p>
               </article>
             </div>
           </div>
@@ -285,17 +284,19 @@
                   <span class="section-text--color">
                     Запишитесь на бесплатную консультацию
                   </span>
-                  <br>
+                  <br class="_only-desktop">
                   для обсуждения деталей своего ремонта
                 </h2>
-                <p class="consult__desc">Заполните форму ниже, а мы перезвоним вам в течение часа.</p>
+                <p class="consult__desc">Заполните форму ниже, <br class="_only-mobile"> а мы перезвоним вам в течение часа.</p>
                 <form action="./mail.php" class="consult-form">
                   <fieldset class="consult-form__fieldset">
                     @@include('tpls/inputs/name.html',{})
                     @@include('tpls/inputs/tel.html',{})
                     <button class="button-primary consult-form__submit" type="submit">Оставить заявку</button>
                   </fieldset>
-                  <a href="#" target="_blank" class="consult-form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</a>
+                  <p class="consult-form__caption-row">
+                    <a href="#" target="_blank" class="consult-form__caption">Нажимая кнопку, вы соглашаетесь на <br class="_only-mobile">обработку персональных данных.</a>
+                  </p>
                 </form>
               </div>
               <picture class="consult-card__pic">
@@ -316,8 +317,7 @@
           </div>
           <div class="container container-tight reviews__container">
             <h2 class="section-title reviews__title">
-              Рейтинг команды на 
-              <span class="section-text--color">Яндекс.Услугах</span>
+              Рейтинг команды на&nbsp;<span class="section-text--color">Яндекс.Услугах</span>
               <span class="reviews__title-rating">4,6</span>
             </h2>
             <div class="reviews__gallery">
@@ -327,8 +327,8 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
-                      <a href="#" class="reviews-card__profile-link">Дарья Г.</a>
+                    <h3 class="reviews-card__profile-summary">
+                      <a href="#" class="reviews-card__profile-name reviews-card__profile-link">Дарья Г.</a>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
                           <use xlink:href="./img/common/star.svg#star">
@@ -372,8 +372,8 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
-                      <a href="#" class="reviews-card__profile-link">Артурка Фишер</a>
+                    <h3 class="reviews-card__profile-summary">
+                      <a href="#" class="reviews-card__profile-name reviews-card__profile-link">Артурка Фишер</a>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
                           <use xlink:href="./img/common/star.svg#star">
@@ -394,7 +394,7 @@
                     </h3>
                   </header>
                   <p class="reviews-card__feedback">
-                    Решили сделать ремонт, не знаете с чего начать, как реализовать свои хотелки? Смело к Юрию!
+                    Решили сделать ремонт, не знаете с чего начать, как реализовать свои хотелки? Смело к Юрию! <br>
                     Обратились к Юрию с переделкой ремонта от застройщика в квартире у родителей. Сняли уродливые обои, выровняли стены, аккуратно поклеили новые, установили новые плинтуса, исправили откосы от застройщика, перенесли розетки, в электрике он просто гуру. Не знаете где купить материалы, что выбрать, как вообще подойти к ремонту? По всем этим вопросам вас проконсультируют, подскажут какие материалы нужны, где можно сэкономить не потеряв в качестве. Ремонт в 2 комнатах и коридоре общей площадью 45 кв.м сделан за 7 дней без перерывов и выходных, весь мусор по окончанию работ за собой был убран и отправлен на свалку, даже полы за собой помыли!!! Цена? За такое безупречное качество и исполнение безобразно занижена.
                     Следующий ремонт однозначно будем заказывать только у Юрия. 
                     <br>
@@ -411,8 +411,8 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
-                      <a href="#" class="reviews-card__profile-link">Диана Г.</a>
+                    <h3 class="reviews-card__profile-summary">
+                      <a href="#" class="reviews-card__profile-name reviews-card__profile-link">Диана Г.</a>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
                           <use xlink:href="./img/common/star.svg#star">
@@ -451,8 +451,8 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/common/yandex-logo.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
-                      <a href="#" class="reviews-card__profile-link">Александр Н.</a>
+                    <h3 class="reviews-card__profile-summary">
+                      <a href="#" class="reviews-card__profile-name reviews-card__profile-link">Александр Н.</a>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
                           <use xlink:href="./img/common/star.svg#star">
@@ -492,7 +492,7 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/reviews/review-photo-1.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
+                    <h3 class="reviews-card__profile-summary">
                       <span class="reviews-card__profile-name">Татьяна Пищальникова</span>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
@@ -514,10 +514,10 @@
                     </h3>
                   </header>
                   <p class="reviews-card__feedback">
-                    Спасибо за индивидуальный подход и клиентоориентированность.
-                    А также за подготовку комнаты к предчистовой отделке.
-                    Хочу отметить, что несмотря на споры и местами отсутствие взаимопонимания - все сделано в срок, ровно и качественно.
-                    За переделку балок и потраченное время - отдельное спасибо.
+                    Спасибо за индивидуальный подход и клиентоориентированность. <br>
+                    А также за подготовку комнаты к предчистовой отделке. <br>
+                    Хочу отметить, что несмотря на споры и&nbsp;местами отсутствие взаимопонимания - все сделано в срок, ровно и качественно.<br>
+                    За переделку балок и потраченное время - отдельное спасибо.<br>
                     Я наверное не лучший клиент, но буду рада дальнейшему сотрудничеству.
                   </p>
                 </div>
@@ -528,7 +528,7 @@
                     <picture class="reviews-card__profile-pic">
                       <img src="./img/reviews/review-photo-2.png" alt="" class="reviews-card__profile-img">
                     </picture>
-                    <h3 class="reviews-card__profile-name">
+                    <h3 class="reviews-card__profile-summary">
                       <span class="reviews-card__profile-name">Игорь Лезжов</span>
                       <div class="reviews-card__profile-stars">
                         <svg class="reviews-card__profile-star">
@@ -556,7 +556,7 @@
               </article>
 
               <div class="reviews-shifter reviews__gallery-item--double">
-                <h3 class="reviews-shifter__title section-title">Больше отзывов на популярных сервисах</h3>
+                <h3 class="reviews-shifter__title section-title">Больше отзывов <br class="_only-mobile"> на популярных сервисах</h3>
                 <button class="reviews-shifter__make-feedback" data-poppa-open="review">Оставить свой отзыв на сайте</button>
                 <div class="reviews-shifter__platforms platforms">
                   <a href="#" target="_blank" rel="noopener noreferrer" class="platforms__link">

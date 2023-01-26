@@ -3,6 +3,9 @@
 	padding-bottom: 6rem;
 	position: relative;
 	z-index: 1;
+	@media (max-width: $w-mobile) {
+		padding-bottom: 4rem;
+	}
 }
 .reviews__gallery {
 	display: flex;
@@ -10,8 +13,21 @@
 	flex-wrap: wrap;
 }
 
+.reviews__title {
+	@media (max-width: $w-mobile) {
+		max-width: 12.428rem;
+		position: relative;
+		margin-bottom: 3rem;
+	}
+}
 .reviews__title-rating {
 	padding-left: rem(6);
+	@media (max-width: $w-mobile) {
+		font-size: 2.285rem;
+		right: -6.514rem;
+		top: 0.3rem;
+		position: absolute;
+	}
 }
 .reviews__title-rating::before {
 	content: "";
@@ -22,6 +38,11 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: rem(10);
+	@media (max-width: $w-mobile) {
+		width: 1.857rem;//rem(26);
+		height: 1.857rem;//rem(26);
+		margin-right: 0.428rem;
+	}
 }
 
 .reviews-card {
@@ -34,10 +55,28 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	@media (max-width: $w-mobile) {
+		flex-basis: 100%;
+		padding-left: 1.45rem;
+		padding-right: 1.45rem;
+		padding-bottom: 1.45rem;
+		max-width: 100%;
+		border-radius: 0.714rem;
+		margin-bottom: 1.2rem;
+		margin-bottom: 1.4rem;
+	}
+}
+.reviews-card:last-of-type {
+	@media (max-width: $w-mobile) {
+		// margin-bottom: 0;
+	}
 }
 
 .reviews__gallery-item--double {
 	flex-basis: 66.2%;
+	@media (max-width: $w-mobile) {
+		flex-basis: 100%;
+	}
 }
 
 
@@ -45,6 +84,16 @@
 	display: flex;
 	padding-top: rem(13);
 	padding-bottom: rem(13);
+	align-items: flex-start;
+	@media (max-width: $w-mobile) {
+		padding-top: 1.714rem;
+		padding-bottom: 1.214rem;
+	}
+}
+.reviews-card__profile-summary {
+	@media (max-width: $w-mobile) {
+		padding-top: 0.2rem;
+	}
 }
 .reviews-card__profile-pic {
 	background-color: #f6f6f6;
@@ -56,12 +105,21 @@
 	height: rem(65);
 	margin-left: rem(-25);
 	margin-right: rem(15);
+	@media (max-width: $w-mobile) {
+		width: 3.071rem;
+		height: 3.071rem;
+		margin-right: 0.638rem;
+	}
 }
 .reviews-card__profile-img {
 	border-radius: 50%;
 	display: block;
 	width: rem(55);
 	height: rem(55);
+	@media (max-width: $w-mobile) {
+		width: 2.642rem;
+		height: 2.642rem;
+	}
 }
 .reviews-card__profile-name {
 	--color: var(--c-text-regular);
@@ -74,6 +132,9 @@
 	font-size: rem(20);
 	letter-spacing: -0.5px;
 	margin-bottom: rem(5);
+	@media (max-width: $w-mobile) {
+		margin-bottom: 0.213rem;
+	}
 }
 .reviews-card__profile-link {
 	color: var(--color);
@@ -95,6 +156,10 @@
 	display: block;
 	width: rem(17);
 	height: rem(17);
+	@media (max-width: $w-mobile) {
+		width: 0.928rem;
+		height: 0.928rem;
+	}
 }
 
 .reviews-card__feedback {
@@ -104,6 +169,13 @@
 	font-weight: 300;
 	line-height: 120%;
 	letter-spacing: -0.5px;
+	@media (max-width: $w-mobile) {
+		line-height: initial;
+		margin-bottom: 1.55rem;
+	}
+}
+.reviews-card__review:last-child .reviews-card__feedback {
+	margin-bottom: 0;
 }
 .reviews-card__feedback::before {
 	content: "";
@@ -117,18 +189,28 @@
 	background: #4E3D33;
 	display: block;
 	height: 1px;
+	@media (max-width: $w-mobile) {
+		left: -0.428rem;
+		width: #{'calc(100% + calc(0.428rem * 2))'};
+	}
 }
 
 
 .reviews-card__gallery {
 	display: grid;
-	grid-template-columns: rem(85) rem(85) rem(85) rem(85);
+	grid-template-columns: repeat(4, 5.312rem) ;//rem(85)
 	column-gap: rem(10);
 	row-gap: rem(10);
+	@media (max-width: $w-mobile) {
+		grid-template-columns: repeat(3, 6.071rem) ;//rem(85)
+	}
 }	
 .reviews-card__gallery-photo {
 	display: block;
 	height: rem(85);
+	@media (max-width: $w-mobile) {
+		height: 6.071rem;
+	}
 }
 .reviews-card__pic {
 	display: block;
@@ -144,9 +226,17 @@
 
 .reviews-shifter {
 	padding: rem(26) rem(22);
+	@media (max-width: $w-mobile) {
+		padding: 0;
+		padding-top: 1.4rem;	
+	}
 }
 .reviews-shifter__title {
 	margin-bottom: 0;
+	@media (max-width: $w-mobile) {
+		font-size: 1.142rem;
+		margin-bottom: 0.8rem;
+	}
 }
 .reviews-shifter__make-feedback {
 	font-family: var(--ff-em);
@@ -155,6 +245,10 @@
 	margin-bottom: rem(40);
 	border-bottom: 1px solid var(--c-accent);
 	transition: var(--tr-regular);
+	@media (max-width: $w-mobile) {
+		font-size: 1.142rem;
+		margin-bottom: 1.1rem;
+	}
 }
 .reviews-shifter__make-feedback:hover {
 	@media (any-hover:hover) {

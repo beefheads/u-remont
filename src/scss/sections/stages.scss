@@ -3,20 +3,33 @@
 	position: relative;
 	z-index: 1;
 }
+.stages__title {
+	@media (max-width: $w-mobile) {
+		margin-bottom: 4.143rem;
+	}
+}
 .stages__gallery {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: rem(20);
 	row-gap: rem(32);
 	counter-reset: stages-cards;
+	@media (max-width: $w-mobile) {
+		grid-template-columns: 1fr;
+		row-gap: 2.6rem;
+	}
 }
 .stages-card {
 	position: relative;
 	counter-increment: stages-cards;
 	background-color: var(--bg-element);	
-	border-radius: rem(20);
+	border-radius: 1.25rem;//rem(20);
 	padding: rem(74) rem(23) rem(16) rem(23);
 	letter-spacing: -0.5px;
+	@media (max-width: $w-mobile) {
+		padding: 2.825rem 1.238rem 1.8rem 1.238rem;
+		border-radius: 1.428rem;
+	}
 }
 .stages-card::before {
 	content: "";
@@ -25,15 +38,23 @@
 	left: rem(-8);
 	background-color: var(--c-accent);
 	border-radius: 50%;
-	border-top: rem(6)solid #F6F6F6;
-	border-right: rem(8)solid #F6F6F6;
-	border-bottom: rem(10)solid #F6F6F6;
+	border-top: rem(6) solid #F6F6F6;
+	border-right: rem(8) solid #F6F6F6;
+	border-bottom: rem(10) solid #F6F6F6;
 	border-left: rem(8) solid #F6F6F6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: rem(58);
 	height: rem(58);
+	@media (max-width: $w-mobile) {
+		width: 3rem;
+		height: 3rem;
+		border-width: 0.428rem;
+		border-top-width: 0.357rem;
+		top: -1.59rem;
+		left: 0.1rem;
+	}
 }
 .stages-card::after {
 	content: counter(stages-cards);
@@ -43,21 +64,39 @@
 	font-family: var(--ff-em);
 	font-size: rem(22);
 	color: var(--c-text-on);
+	@media (max-width: $w-mobile) {
+		font-size: 1.142rem;
+		top: -0.825rem;
+		left: 1.2rem;
+	}
 }
 .stages__gallery > .stages-card:nth-child(3) {
-	grid-row-start: 1;
-	grid-row-end: 3;
-	grid-column-start: 3;
-	grid-column-end: 4;
+	@media (min-width: ($w-mobile + 1)) {
+		grid-row-start: 1;
+		grid-row-end: 3;
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+	@media (max-width: $w-mobile) {
+		padding-bottom: 0.642rem;
+		margin-bottom: -0.714rem;
+	}
 }
 
 .stages-card__title {
 	font-size: 1rem;
 	margin-bottom: rem(20);
 	font-weight: 600;
+	@media (max-width: $w-mobile) {
+		margin-bottom: 0.714rem;
+	}
 }
 .stages-card__desc {
 	font-size: 1rem;
+	@media (max-width: $w-mobile) {
+		letter-spacing: initial;
+		line-height: initial;
+	}
 }
 
 .stages-card__quote {
@@ -68,23 +107,49 @@
 	min-height: rem(205);
 	margin-top: rem(37);
 	overflow: hidden;
+	@media (max-width: $w-mobile) {
+		padding-top: 0.928rem;
+		padding-left: 0.714rem;
+		padding-bottom: 1.357rem;
+		min-height: 9.142rem;
+		margin-left: -0.785rem;
+		margin-top: 1.3rem;
+		width: #{'calc(100% + calc(0.785rem * 2))'};
+	}
 }
 .stages-card__quote-desc {
-	margin-bottom: rem(20);
-	max-width: rem(234);
-	font-size: rem(14);
+	margin-bottom: 1.25rem;//rem(20);
+	max-width: 14.625rem;//rem(234);
+	font-size: 0.875rem; //14
 	font-weight: 300;
+	font-style: normal;
+	@media (max-width: $w-mobile) {
+		max-width: 10.857rem;
+		font-size: 1rem;
+		letter-spacing: initial;
+		line-height: initial;
+		margin-bottom: 0.714rem;
+	}
 }
 .stages-card__quote-cite {
 	font-family: var(--ff-em);
-	font-size: rem(20);
+	font-size: 1.25rem;
+	@media (max-width: $w-mobile) {
+		font-size: 1rem;
+		letter-spacing: initial;
+	}
 }
 .stages-card__quote-pic {
 	position: absolute;
 	right: -20px;
-	top: 0;
+	bottom: 0;
 	height: 100%;
 	width: rem(208);
+	@media (max-width: $w-mobile) {
+		right: -29px;
+		height: 94%;
+		width: 12rem;
+	}
 }
 .stages-card__quote-img {
 	display: block;
