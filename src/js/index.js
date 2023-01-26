@@ -4,7 +4,7 @@
 // import DismalModules, { acc } from "./utils/modules.js";
 
 
-// import "./components/header.js"
+import "./components/header.js"
 // import "./components/controls.js"
 import { Fancybox, Carousel } from "@fancyapps/ui";
 // import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";

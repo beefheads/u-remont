@@ -11,6 +11,9 @@ $mobile-l: 450px;
 $mobile-m: 390px;
 $mobile-s: 330px;
 
+$w-burger: $tablet;
+$w-mobile: $tablet;
+
 :root {
   --index: #{"calc(1vw + 1vh)"};
   --tr: 0.3s;

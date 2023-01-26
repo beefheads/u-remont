@@ -1,8 +1,8 @@
 // Бургер
 .burger {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: var(--burger-width, 40px);
+  height: var(--burger-height, 40px);
   transition: var(--tr);
 
   & span {
@@ -10,40 +10,32 @@
     top: 50%;
     left: 50%;
     display: block;
-    width: 40%;
-    height: 2px;
-    background: #fff;
+    width: var(--line-width, 40%);
+    height: var(--line-height, 2px);
+    background: var(--c-burger-line, var(--c-text-regular));
     transition: var(--tr);
-    @media (min-width: 602px) and (max-width: 768px) {
-      width: 50%;
-      height: 4px;
-    }
+    // @media (min-width: 602px) and (max-width: 768px) {
+    //   width: 50%;
+    //   height: 4px;
+    // }
 
     &:nth-child(1) {
-      transform: translate(-50%, calc(-50% - 5px));
-      @media (min-width: 602px) and (max-width: 768px) {
-        transform: translate(-50%, calc(-50% - 10px));
-      }
+      transform: translate(-50%, calc(-50% - 12px));
     }
 
     &:nth-child(2) {
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, calc(-50% - 2px));
     }
 
     &:nth-child(3) {
-      transform: translate(-50%, calc(-50% + 5px));
-      @media (min-width: 602px) and (max-width: 768px) {
-        transform: translate(-50%, calc(-50% + 10px));
-      }
+      transform: translate(-50%, calc(-50% + 8px));
     }
   }
 
   &.is-active {
-    background-color: #F0F3F5;
     & span {
-      background-color: #000;
       &:nth-child(1) {
-        transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, calc(-50% + 2px)) rotate(40deg);
       }
 
       &:nth-child(2) {
@@ -51,7 +43,7 @@
       }
 
       &:nth-child(3) {
-        transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, calc(-50% + 2px)) rotate(-40deg);
       }
     }
   }

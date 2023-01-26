@@ -2,8 +2,12 @@
   Секции
  */
 .section {
-  padding-top: rem(120);
-  padding-bottom: rem(120);
+  padding-top: 7.5rem; //120
+  padding-bottom: 7.5rem; //120
+  @media (max-width: $w-burger) {
+    padding-top: 4.285714285714286rem; //60
+    padding-bottom: 4.285714285714286rem; //60
+  }
 }
 .section-title {
   font-weight: 600;

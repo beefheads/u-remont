@@ -137,3 +137,18 @@ export function bodyLock(con) {
     console.error("Неопределенный аргумент у функции bodyLock()");
   }
 }
+
+/*
+  Проверяет был ли клик за пределами выбранного блока
+ */
+export function isClickedBeyond(e, selector) {
+    let isClickBeyond = true;
+    const path = event.path || (event.composedPath && event.composedPath());
+    const isSelect = path.map((item, index, pathElems) => {
+      if (pathElems.length - 4 < index) return;
+      if (item.classList.includes(selector)) {
+        isClickBeyond = false;
+      }
+    })
+    return isClickBeyond;
+}
