@@ -1,32 +1,52 @@
 .modal {
-  padding: rem(75) rem(62);
-  border-radius: rem(10);
-  max-width: 938px;
+  padding: 4.6875rem 3.875rem;//rem(75) rem(62);
+  border-radius: 0.625rem;
+  max-width: 58.625rem;//938px;
+  @media (max-width: $w-mobile) {
+    padding: 4.285rem 2.142rem;
+    max-width: 25.714rem ;
+    border-radius: 0.714rem;
+  }
 }
 .modal__title {
   text-align: center;
   font-weight: 600;
-  max-width: 814px;
+  max-width: 50.875rem;//814px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.2;
+  margin-bottom: 3.75rem;
+  @media (max-width: $w-mobile) {
+    font-size: 1.142rem;
+    margin-bottom: 2.857rem;
+  }
 }
 .modal__desc {
   font-family: var(--ff-em);
   text-align: center;
   margin-bottom: rem(53);
   font-size: rem(24);
+  @media (max-width: $w-mobile) {
+    font-size: 1.285rem;
+    margin-bottom: 2rem;
+  }
 }
 .modal__form {
   text-align: center;
 }
 .modal__fieldset {
   display: grid;
-  max-width: 350px;
-  row-gap: rem(20);
+  max-width: 21.875rem;//350px;
+  row-gap: 1.25rem;//rem(20);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: rem(11);
+  margin-bottom: 0.6875rem;//rem(11);
+  @media (max-width: $w-mobile) {
+    max-width: 23.428rem;
+    width: 100%;
+    row-gap: 0.714rem;
+    margin-bottom: 0.714rem;
+  }
 }
 .modal__caption {
   --color: var(--c-text-on);
@@ -35,6 +55,9 @@
   font-style: italic;
   line-height: initial;
   transition: var(--tr-regular);
+  @media (max-width: $w-mobile) {
+    font-size: 0.857rem;
+  }
 }
 .modal__caption:hover {
   @media (any-hover:hover) {
@@ -46,6 +69,7 @@
   background-image: url(../img/form/callback-bg.jpg);
   background-size: cover;
 }
+
 .modal-review {
   background-image: url(../img/reviews/review-form-bg.jpg);
   background-size: cover;
@@ -55,7 +79,7 @@
   margin-bottom: rem(20);
 }
 .modal-review__fieldset {
-  max-width: 648px;
+  max-width: 40.5rem;//648px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -66,6 +90,9 @@
 .modal-review__fieldset .input-attach {
   max-width: 49%;
   --border-color: var(--c-text-regular);
+  @media (max-width: $w-mobile) {
+    max-width: 100%;
+  }
 }
 .modal-review__rating {
   padding: rem(15) rem(20);
@@ -78,6 +105,18 @@
   border-radius: rem(10);
   font-size: rem(14);
   line-height: initial;
+  @media (max-width: $w-mobile) {
+    text-align: left;
+    padding: 1.071rem 1.428rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.modal-review__rating-title {
+  @media (max-width: $w-mobile) {
+    margin-bottom: 0.857rem;
+  }
 }
 .modal-review__submit {
   width: 100%;
@@ -85,6 +124,10 @@
 .modal-review__caption {
   --color: var(--c-text-regular);
   font-size: rem(14);
+  font-weight: 300;
+  @media (max-width: $w-mobile) {
+    font-size: 0.857rem;
+  }
 }
 
 
@@ -92,7 +135,6 @@
   display: grid;
   grid-template-areas: "gallery title" "gallery content" "gallery form";
   grid-template-columns: 385px auto;
-  // grid-template-rows: repeat(3, auto);
   grid-template-rows: min-content max-content 1fr;//minmax(22px, 44px);
   column-gap: 40px;
   max-width: 1346px;
@@ -100,12 +142,24 @@
   background-color: var(--bg-element);
   padding: 40px;
   color: var(--c-text-regular);
+  @media (max-width: $w-mobile) {
+    grid-template-areas: unset;   
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    padding: 2.214rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .modal-case-photos {
   grid-area: gallery;
   max-width: 100%;
   width: 100%;
   position: relative;
+  @media (max-width: $w-mobile) {
+    max-width: 21.357rem;
+    margin-bottom: 2.857rem;
+  }
 }
 .modal-case__title {
   grid-area: title;
@@ -113,22 +167,39 @@
   font-size: rem(18);
   margin-bottom: rem(20);
   line-height: lhperc(18, 22);
+  @media (max-width: $w-mobile) {
+    order: -1;
+    margin-bottom: 1.428rem;
+    font-size: 1rem;
+    line-height: auto;
+    max-width: 80%;
+  }
 }
 .modal-case__desc {
   grid-area: content;
   font-weight: 300;
   font-size: rem(14);
-  color: var(--c-text-regular)
+  color: var(--c-text-regular);
+  @media (max-width: $w-mobile) {
+    font-size: 1rem;
+  }
 }
 .modal-case__desc ul {
   padding-left: rem(22);
   margin-bottom: rem(36);
+  @media (max-width: $w-mobile) {
+    padding-left: 1.571rem;
+    margin-bottom: 2.857rem;
+  }
 }
 .modal-case__desc li {
   font-style: italic;
   margin-bottom: rem(8);
   line-height: initial;
   position: relative;
+  @media (max-width: $w-mobile) {
+    margin-bottom: 0.571rem;
+  }
 }
 .modal-case__desc li:last-of-type {
   margin-bottom: 0;
@@ -184,6 +255,11 @@
   max-width: 100%;
   object-fit: cover;
   border-radius: rem(10);
+  @media (max-width: $w-mobile) {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .modal-case-photos__price-shield {
@@ -230,8 +306,17 @@
   align-items: center;
   column-gap: rem(10);
   margin-bottom: rem(10);
+  @media (max-width: $w-mobile) {
+    grid-template-columns: initial;
+    row-gap: 0.714rem
+  }
 }
 
+.modal-case__caption-row {
+  @media (max-width: $w-mobile) {
+    text-align: center;
+  }
+}
 .modal-case__caption {
   --color: var(--c-text-regular);
   font-size: rem(12);
@@ -239,6 +324,10 @@
   border-bottom: 1px solid var(--color);
   color: var(--color);
   transition: var(--tr-regular);
+  @media (max-width: $w-mobile) {
+    font-size: 0.857rem;
+    
+  }
 }
 .modal-case__caption:hover {
   @media (any-hover:hover) {

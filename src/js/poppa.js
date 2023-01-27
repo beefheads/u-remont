@@ -193,6 +193,14 @@ class Poppa {
     pop.dispatchEvent(event);
     pop.querySelector(".poppa").dispatchEvent(event);
     bodyLock(true);
+
+    const popupContent = pop.querySelector('.poppa');
+
+    if (window.innerHeight < popupContent.getBoundingClientRect().height) {
+      pop.classList.add('poppa--scrollable')
+    } else {
+      pop.classList.remove('poppa--scrollable')
+    }
   }
 
   handleClose(button) {
