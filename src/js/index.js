@@ -78,4 +78,4 @@ if (servicesLeadButton) {
 }
 */
 import "./components/carousels.js";
-// import "./utils/ios-input-zoom-fix.js";
+import "./utils/ios-input-zoom-fix.js";

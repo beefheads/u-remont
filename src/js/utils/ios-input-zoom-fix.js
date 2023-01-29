@@ -1,3 +1,5 @@
+"use strict";
+
 const addMaximumScaleToMetaViewport = () => {
   const el = document.querySelector('meta[name=viewport]');
 
