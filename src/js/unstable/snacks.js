@@ -1,43 +1,55 @@
-function makeSnack(message, type = false) {
-  const notificationSnackWrap = document.querySelector(
-    ".notification-snack__wrap"
-  );
-  const notificationSnackTemplate = document.querySelector(
-    ".notification-snack--template"
-  );
-  const notificationSnack = notificationSnackTemplate.cloneNode(true).content;
-  notificationSnack.querySelector(".notification-snack__message").innerHTML =
-    message;
-  notificationSnackWrap.appendChild(notificationSnack);
+/*
+  snackMaker — созадет функцию для вызова в определнном контейнере определенный шаблон c текстом
 
-  const snacks = Array.from(notificationSnackWrap.children);
-  const snacksLastChild = snacks[snacks.length - 1];
+  snackObject
 
-  if (type) {
-    if (type === "success") {
-      snacksLastChild.classList.add("alert--success");
-    } else if (type === "error") {
-      snacksLastChild.classList.add("alert--error");
-    }
+ */
+class snackMaker {
+
+  visibleClass = 'snacky--visible';
+
+  constructor(message, container, removeAfter = 5000) {
+    const snack = this.createSnack(message);
+    this.spawnSnack(snack, container);
+    this.removeSnack(snack, removeAfter);
   }
 
-  setTimeout((e) => {
-    snacksLastChild.classList.add("notification-snack--shown");
-  }, 100);
-  function removeSnack(snacksLastChild, delay = 200) {
-    setTimeout((e) => {
-      snacksLastChild.classList.remove("notification-snack--shown");
-    }, delay);
-    setTimeout((e) => {
-      snacksLastChild.remove();
-    }, delay + 600);
-  }
+  createSnack(message) {
 
-  snacksLastChild
-    .querySelector(".notification-snack__close")
-    .addEventListener("click", function () {
-      removeSnack(snacksLastChild);
+    const snack = document.createElement('div');
+    snack.classList.add('snacky');
+
+    const snackMessage = document.createElement('p');
+    snackMessage.innerText = message;
+    snackMessage.classList.add('snacky__message');
+    snack.append(snackMessage)
+
+    const snackCloser = document.createElement('button');
+    snackCloser.type = "button";
+    snackCloser.classList.add('snacky__closer');
+    snack.append(snackCloser);
+    snackCloser.addEventListener("click", (e) => {
+      this.removeSnack(snack);
     });
 
-  removeSnack(snacksLastChild, 5000);
+
+    return snack;
+  }
+  spawnSnack(snack, container = document.body, delay = 100) {
+    container.append(snack);
+
+    setTimeout((e) => {
+      snack.classList.add(this.visibleClass);
+    }, delay);
+  }
+  removeSnack(snack, delay = 200) {
+    setTimeout((e) => {
+      snack.classList.remove(this.visibleClass);
+    }, delay);
+    setTimeout((e) => {
+      snack.remove();
+    }, delay + 600);
+  }
 }
+
+window.snacky = snackMaker;

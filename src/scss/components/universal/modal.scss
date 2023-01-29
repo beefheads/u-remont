@@ -35,6 +35,7 @@
   text-align: center;
 }
 .modal__fieldset {
+  position: relative;
   display: grid;
   max-width: 21.875rem;//350px;
   row-gap: 1.25rem;//rem(20);

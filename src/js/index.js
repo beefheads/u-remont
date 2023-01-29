@@ -18,6 +18,7 @@ Fancybox.bind('[data-fancybox]', {
 });
 
 import "./unstable/copyclicker.js";
+import "./unstable/snacks.js";
 
 /**
  * Poppa
