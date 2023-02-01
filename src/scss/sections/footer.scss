@@ -1,6 +1,11 @@
 .footer {
 	padding-top: 7.5rem;//rem(120);
 	padding-bottom: 7.5rem;//rem(120);
+	overflow: hidden;
+	@media (max-width: $desktop-s) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 	@media (max-width: $w-mobile) {
 		padding-top: 4.285rem;
 		padding-bottom: 4.285rem;
@@ -64,7 +69,15 @@
 	object-fit: cover;
 	border-radius: rem(20);
 	@media (max-width: $w-mobile) {
-		// height: 11.457rem;
+		height: 11.142rem;
+	}
+	@media (max-width: 800px) and (min-width: 600px) {
+		height: 20.142rem;
+	}
+  @media (max-width: $w-mobile) and (min-width: ($mobile-l + 1)) {
+  	height: 41.142rem;
+  }
+	@media (max-width: ($mobile-l + 200)) {
 		height: 11.142rem;
 	}
 }

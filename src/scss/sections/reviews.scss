@@ -3,14 +3,23 @@
 	padding-bottom: 6rem;
 	position: relative;
 	z-index: 1;
+	@media (max-width: $desktop-s) {
+		padding-top: 6.5rem;
+	}
 	@media (max-width: $w-mobile) {
 		padding-bottom: 4rem;
 	}
 }
 .reviews__gallery {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: grid;
+	justify-content: stretch;
+	align-items: stretch;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1.25rem;
+	width: 100%;
+	@media (max-width: $w-mobile) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .reviews__title {
@@ -50,20 +59,21 @@
 	border-radius: rem(10);
 	padding: rem(20);
 	padding-top: 0;
-	margin-bottom: rem(20);
-	flex-basis: 32.3%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	@media (max-width: $w-mobile) {
-		flex-basis: 100%;
 		padding-left: 1.45rem;
 		padding-right: 1.45rem;
 		padding-bottom: 1.45rem;
 		max-width: 100%;
 		border-radius: 0.714rem;
-		margin-bottom: 1.2rem;
-		margin-bottom: 1.4rem;
+	}
+}
+.reviews-card:nth-of-type(2) {
+	@media (min-width: ($w-mobile + 1)) {
+		grid-column-start: 2;
+		grid-column-end: 4;
 	}
 }
 .reviews-card:last-of-type {
@@ -73,9 +83,12 @@
 }
 
 .reviews__gallery-item--double {
-	flex-basis: 66.2%;
+	// flex-basis: 66.2%;
+	@media (max-width: $desktop-m) {
+		// flex-basis: 63.2%;
+	}
 	@media (max-width: $w-mobile) {
-		flex-basis: 100%;
+		// flex-basis: 100%;
 	}
 }
 
@@ -198,11 +211,11 @@
 
 .reviews-card__gallery {
 	display: grid;
-	grid-template-columns: repeat(4, 5.312rem) ;//rem(85)
+	grid-template-columns: repeat(auto-fit, 5.312rem) ;//rem(85)
 	column-gap: rem(10);
 	row-gap: rem(10);
 	@media (max-width: $w-mobile) {
-		grid-template-columns: repeat(3, 6.071rem) ;//rem(85)
+		grid-template-columns: repeat(auto-fit, 6.071rem) ;//rem(85)
 	}
 }	
 .reviews-card__gallery-photo {

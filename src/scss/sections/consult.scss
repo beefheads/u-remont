@@ -1,7 +1,11 @@
 .consult {
 	padding-bottom: 12.5rem;
+	@media (max-width: $desktop-s) {
+		padding-bottom: 8.5rem;
+	}
 	@media (max-width: $w-mobile) {
 		padding-bottom: 8.8rem;
+		overflow: hidden;
 	}
 }
 .consult__container {
@@ -35,6 +39,9 @@
 	font-family: var(--ff-em);
 	line-height: initial;
 	margin-bottom: rem(60);
+	@media (max-width: $desktop-s) {
+		margin-bottom: 2.75rem;
+	}
 	@media (max-width: $w-mobile) {
 		letter-spacing: normal;
 		font-size: 1.285rem;
@@ -42,14 +49,22 @@
 		margin-bottom: 2.45rem;
 	}
 }
+.consult__desc br {
+	@media (max-width: $w-mobile) {
+		display: none;
+	}
+}
 
 .consult-form__fieldset {
 	display: grid;
-	grid-template-columns: repeat(3, 227px);
+	grid-template-columns: repeat(3, 14.1875rem);//227
 	column-gap: rem(20);
 	align-items: center;
 	justify-content: flex-start;
 	margin-bottom: rem(16);
+	@media (max-width: $desktop-s) {
+		grid-template-columns: repeat(3, 13.188rem);
+	}
 	@media (max-width: $w-mobile) {
 		grid-template-columns: 1fr;
 		row-gap: 0.51rem;
@@ -96,15 +111,23 @@
 		right: 0;
 		left: 0;
 		bottom: -5.357rem
-
 	}
 }
+
 .consult-card__img {
 	display: block;
 	width: rem(429);
 	height: rem(438);
 	border-radius: 50%;
 	object-fit: cover;
+	@media (max-width: $desktop-m) {
+		width: 20.813rem;
+		height: 20.375rem;
+	}
+	@media (max-width: $desktop-s) {
+		width: 23.813rem;
+		height: 23.375rem;
+	}
 	@media (max-width: $w-mobile) {
 		width: 100%;
 		height: 100%;

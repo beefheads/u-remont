@@ -38,12 +38,12 @@
   Модификаторы
  */ 
 ._only-desktop {
-  @media (max-width: 786px) {
+  @media (max-width: $w-mobile) {
     display: none !important;
   }
 }
 ._only-mobile {
-  @media (min-width: 769px) {
+  @media (min-width: ($w-mobile + 1)) {
     display: none !important;
   }
 }

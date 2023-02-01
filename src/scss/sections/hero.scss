@@ -1,5 +1,8 @@
 .hero {
   padding-bottom: 9.2rem;
+  @media (max-width: $desktop-m) {
+    padding-bottom: 6.3rem;
+  }
   @media (max-width: $w-mobile) {
     padding-top: 3.286rem;
     padding-bottom: 5.8914285714rem;
@@ -13,6 +16,11 @@
   @media (max-width: $w-mobile) {
     font-size: 1.4285714285714286rem; //20
     margin-bottom: 1.4285714285714286rem; //20
+  }
+}
+.hero__title br {
+  @media (max-width: $desktop-m) {
+    display: none;   
   }
 }
 .hero__desc {
@@ -180,6 +188,10 @@
   padding: 1.125rem 2.8125rem;//rem(18) rem(45);
   border-radius: 0.625rem;
   font-size: 1rem;
+  @media (max-width: $desktop-m) {
+    bottom: -2.15rem;
+    left: 0.2rem;
+  }
   @media (max-width: $w-mobile) {
     margin-left: auto;
     margin-right: auto;
@@ -209,12 +221,14 @@
   left: -0.75rem;//-12
   border-radius: 1.25rem 1.25rem 0 1.25rem;//20
   height: 85%;
+  @media (max-width: $desktop-s) {
+    border-radius: 0.7142857142857143rem 0.7142857142857143rem 0 0;//20
+  }
   @media (max-width: $w-mobile) {
     top: -0.82rem;
     border: 0.2857142857142857rem solid #f6f6f6;
     border-bottom: none;
     background-color: var(--bg-element);
-    border-radius: 0.7142857142857143rem 0.7142857142857143rem 0 0;//20
     height: 80%;
   }
 }

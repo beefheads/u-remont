@@ -1,5 +1,11 @@
 .turnkey {
 	padding-bottom: 6.5rem;
+	@media (max-width: $desktop-m) {
+		padding-bottom: 4.5rem;
+	}
+	@media (max-width: $desktop-s) {
+		padding-top: 6rem;
+	}
 	@media (max-width: $w-mobile) {
 		padding-bottom: 4.285714285714286rem;
 	}
@@ -147,7 +153,7 @@
 	font-weight: 600;
 	line-height: initial;
 	transition: var(--tr-regular);
-	text-align-last: left;
+	text-align: left;
 }
 .turnkey-card__more:hover,
 .turnkey-card__link:hover {

@@ -6,13 +6,15 @@ $max-width-container: 1170px;
 
 $laptop-l: 1500px;
 $laptop: 1100px;
-$tablet: 800px;
+$tablet: 992px;
 $mobile-l: 450px;
 $mobile-m: 390px;
 $mobile-s: 330px;
 
+$desktop-m: 1500px;
+$desktop-s: 1100px;
 $w-burger: $tablet;
-$w-mobile: $tablet;
+$w-mobile: 810px;
 
 :root {
   --index: #{"calc(1vw + 1vh)"};
@@ -39,6 +41,12 @@ $w-mobile: $tablet;
 
   // Widths
   --w-container: 1440px;
+  @media (max-width: $desktop-m) {
+    --w-container: 1260px;
+  }
+  @media (max-width: $desktop-s) {
+    --w-container: 892px;
+  }
   @media (max-width: 768px) {
     --w-container: 100%;
   }
