@@ -16,6 +16,14 @@
 .section--bg-grey {
   background-color: #F6F6F6;
 }
+.section--bg-grey:first-child {
+  margin-top: -120px;
+  border-top: 120px solid #f6f6f6;
+}
+.section--bg-grey:first-child .vertical-strings {
+  top: -120px;
+  height: #{'calc(100% + 120px)'};
+}
 .section-title {
   font-weight: 600;
   font-size: 2rem;//rem(32);
