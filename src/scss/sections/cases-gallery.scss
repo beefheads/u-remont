@@ -1,0 +1,119 @@
+.cases__container {
+	position: relative;
+	z-index: 1;
+}
+.cases-gallery__page {
+	display: grid;
+	grid-template-areas: "slideshow desc" "slideshow thumbs";
+	grid-template-columns: 44.5rem 37.5rem;
+	grid-template-rows: auto 1fr;
+	column-gap: 30px;
+	row-gap: 36px;
+	background-color: var(--bg-element);
+	padding: 2.8125rem 3.125rem ;
+	border-radius: 20px;
+}
+
+.cases-gallery__desc {
+	grid-area: desc;
+	font-size: 1.5rem;
+	font-family: var(--ff-em);
+
+}
+.cases-gallery-carousel__slideshow {
+	grid-area: slideshow;
+	// max-width: 44.5rem;
+	width: 100%;
+}
+.cases-gallery-carousel__thumbs {
+	grid-area: thumbs;
+	width: 100%;
+}
+.cases-gallery-slide__pic {
+	display: block;
+	height: 100%;
+}
+.cases-gallery-carousel__slideshow .cases-gallery-slide__pic {
+	height: 27.8125rem;
+}
+.cases-gallery-slide__img {
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.cases-gallery-carousel__thumbs .cases-gallery-slide {
+	height: 4.375rem;
+}
+.cases-gallery-carousel__thumbs .cases-gallery-slide._active::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid var(--c-text-regular);
+	border-radius: 10px;
+}
+
+.cases-gallery-carousel__thumbs .swiper-wrapper {
+	align-content: flex-start;
+}
+
+.cases-gallery-carousel__slideshow .cases-gallery-button-prev,
+.cases-gallery-carousel__slideshow .cases-gallery-button-next {
+	width: 2.375rem;
+	height: 2.375rem;
+}
+.cases-gallery-carousel__slideshow .cases-gallery-button-prev {
+	background: var(--bg-element);
+	border-radius: 50%;
+	left: -13px;
+}
+.cases-gallery-carousel__slideshow .cases-gallery-button-next {
+	background: var(--bg-element);
+	border-radius: 50%;
+	right: -13px;
+}
+
+.cases-gallery-carousel__slideshow .cases-gallery-button-prev .swiper-button__icon {
+	width: 60%;
+	margin-right: auto;
+	margin-left: 0;
+	left: unset;
+	right: 10%;
+}
+.cases-gallery-carousel__slideshow .cases-gallery-button-next .swiper-button__icon {
+	width: 60%;
+	margin-right: 0;
+	margin-left: auto;
+	left: 10%;
+	right: unset;
+}
+
+.cases-gallery-carousel__slideshow .cases-gallery-button-prev:after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #fff;
+}
+.cases-gallery-carousel__slideshow .cases-gallery-button-next:after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #fff;
+}
+
+
+.cases-gallery-carousel__thumbs-controls {
+
+}

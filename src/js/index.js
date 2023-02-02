@@ -6,6 +6,7 @@
 
 import "./components/header.js"
 // import "./components/controls.js"
+import "./components/megachips.js"
 import { Fancybox, Carousel } from "@fancyapps/ui";
 // import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 

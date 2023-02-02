@@ -1,6 +1,6 @@
 "use strict"
 
-import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs, EffectFade, Grid } from "swiper";
 import {debounce} from "../utils/helpers.js";
 
 
@@ -72,17 +72,23 @@ quizes.forEach((quiz, index) => {
 
 
 
-function makeThumbSwiper(selectorGallery, selectorThumbs) {
-  if (document.querySelector(selectorGallery) && document.querySelector(selectorThumbs)) {
-    let carouselThumbs = new Swiper(selectorThumbs, {
-      // direction: 'vertical',
-      centeredSlides: true,
-      centeredSlidesBounds: true,
-      centerInsufficientSlides: true,
-      spaceBetween: 10,
-      slidesPerView: 3,
-    });
-    let carouselGallery = new Swiper(selectorGallery, {
+/*
+  @param gallerySettings: {
+    selector:
+    config
+  }
+  @param thumbs: {
+    selector:
+    config
+  }
+ */
+function makeThumbSwiper(gallerySettings, thumbsSettings) {
+  let carouselThumbs;
+  let carouselGallery;
+
+  const selectorGallery = gallerySettings.selector
+  const configGalleryCustom = gallerySettings.config
+  let configGalleryInitial = {
       modules: [Navigation, Pagination, EffectFade],
       spaceBetween: 10,
       // pagination: {
@@ -112,18 +118,103 @@ function makeThumbSwiper(selectorGallery, selectorThumbs) {
           }, 2000)
         }
       }
-    });
+  }
+  let configGallery = {};
+  if (configGalleryCustom) {
+    configGallery = {
+      ...configGalleryInitial,
+      ...configGalleryCustom
+    };
+  } else {
+    configGallery = configGalleryInitial;
+  }
+
+  const selectorThumbs = thumbsSettings.selector;
+  const configThumbsCustom = thumbsSettings.config;
+  let configThumbsInitial = {
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      centerInsufficientSlides: true,
+      spaceBetween: 10,
+      slidesPerView: 3,
+  }
+  let configThumbs = {};
+  if (configThumbsCustom) {
+    configThumbs = {
+      ...configThumbsInitial,
+      ...configThumbsCustom,
+    }
+  } else {
+    configThumbs = configThumbsInitial;
+  }
+
+  if (document.querySelector(selectorGallery) && document.querySelector(selectorThumbs)) {
+    carouselThumbs = new Swiper(selectorThumbs, configThumbs);
+    carouselGallery = new Swiper(selectorGallery, configGallery);
     carouselThumbs.on('slideChange', () => {
       carouselGallery.slideTo(carouselThumbs.activeIndex);
+      carouselThumbs.slides.forEach(thumb => {
+        thumb.classList.remove('_active');
+      })
+      carouselThumbs.slides[carouselThumbs.activeIndex].classList.add('_active');
+
     })
     carouselThumbs.slides.forEach((slide, index) => {
       slide.addEventListener('click', () => {
         carouselGallery.slideTo(index);
+        carouselThumbs.slides.forEach(thumb => {
+          thumb.classList.remove('_active');
+        })
+        slide.classList.add('_active');
       })
     })
+    return {
+      gallery: carouselGallery,
+      thumbs: carouselThumbs,
+    }
   }
 }
-makeThumbSwiper('.modal-case-photos-gallery-carousel', '.modal-case-photos-thumbs-carousel');
+
+let casesGallery = makeThumbSwiper(
+  {
+    selector: '.cases-gallery-carousel__slideshow',
+    config: {
+      modules: [Navigation],
+      navigation: {
+        nextEl: ".cases-gallery-carousel__slideshow .cases-gallery-button-next",
+        prevEl: ".cases-gallery-carousel__slideshow .cases-gallery-button-prev",
+      },
+    }
+  },
+  {
+    selector: '.cases-gallery-carousel__thumbs',
+    config: {
+      modules: [Grid, Navigation],
+      grid: {
+        fill: "row",
+        // rows: 2,
+        rows: 4,
+      },
+      centeredSlides: false,
+      centeredSlidesBounds: false,
+      centerInsufficientSlides: false,
+      spaceBetween: 10,
+      slidesPerView: 5,
+      // slidesPerView: 2,
+      navigation: {
+        nextEl: ".cases-gallery-carousel__thumbs .cases-gallery-button-next",
+        prevEl: ".cases-gallery-carousel__thumbs .cases-gallery-button-prev",
+      },
+    }
+  }
+);
+casesGallery.gallery.on('slideChange', function() {
+  // console.log(this.activeIndex)
+  // casesGallery.thumbs.slides[this.activeIndex].classList.add('_active')
+})
+
+makeThumbSwiper({selector: '.modal-case-photos-gallery-carousel'}, {selector: '.modal-case-photos-thumbs-carousel'});
+
 
 // let carouselGallery = new Swiper('.modal-case-photos-gallery-carousel', {
 //   // direction: 'vertical',
@@ -268,7 +359,7 @@ if (document.querySelector('.product-cases-carousel')) {
       });
       carousel.querySelectorAll('.product-cases-carousel-slide').forEach(slide => {
         slide.querySelector('.gallery-accordion__button-more').addEventListener('click', () => {
-          console.log(productCaseSlider)
+          // console.log(productCaseSlider)
           setTimeout(() => {
             productCaseSlider.update();
           }, 200)
