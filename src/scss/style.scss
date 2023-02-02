@@ -155,6 +155,50 @@ input[type="search"]::-webkit-search-cancel-button {
  */ 
 @import "./components";
 
+.before-after-slider .slider-container .before-img img {
+  object-fit: cover;
+  object-position: left;
+}
+.before-after-slider .slider-container .after-img img {
+  object-fit: cover;
+  object-position: right;
+}
+.before-after-slider .slider-container .slider-wrap .slider-btn {
+  background: var(--c-text-on);
+}
+.before-after-slider .slider-container .slider-wrap .slider-btn::after {
+  content: "";
+  border-radius: 0;
+  box-shadow: none;
+  background: url("../img/compare/compare-desktop.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2.375rem;
+  height: 11.1875rem;
+  @media (max-width: $w-mobile) {
+    width: 4.5rem;
+    height: 4.5rem;
+    background: url("../img/compare/compare-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center
+  }
+}
+.before-after-slider .slider-container .slider-wrap .slider-btn:hover::after{
+  width: 2.375rem;
+  height: 11.1875rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  @media (max-width: $w-mobile) {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
 /*
   Карточки
  */ 
