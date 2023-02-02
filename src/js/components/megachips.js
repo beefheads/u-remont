@@ -1,19 +1,39 @@
 const megachips = document.querySelectorAll('.megachips');
 
+
+function toggleActiveButton(button, buttons) {
+  buttons.forEach((button, index, arr) => {
+    button.style.order = '';
+    button.classList.remove('_active')
+  })
+  button.classList.add('_active')
+}
+
+/**
+ * Проверяет есть кнопки расположены в одну или 2 строки
+ * Если кнопки расположены в 2 строки, то последняя нажатая кнопка савится в конец списка
+ */
 megachips.forEach((control) => {
-	const megachipsButtons = control.querySelectorAll('.megachips__button');
-	megachipsButtons.forEach(button => {
+	const megachipsButtons = [...control.querySelectorAll('.megachips__button')];
+
+	megachipsButtons.forEach((button, index) => {
 		button.addEventListener('click', () => {
-			megachipsButtons.forEach(button => {
-				button.classList.remove('_active')
-			})
-			button.classList.add('_active')
-		})
-	})
+      toggleActiveButton(button, megachipsButtons);
+
+      const totalButtonsWidth = megachipsButtons.reduce((buttonsWidth, button, index) => {
+        const currentButtonWidth = button.getBoundingClientRect().width;
+        return buttonsWidth += currentButtonWidth;
+      }, 0)
+      const megachipsWidth = control.querySelector('.megachips__list ').getBoundingClientRect().width
+
+      if (megachipsWidth <= totalButtonsWidth) {
+        button.style.order = index + 1;
+      }
+		});
+  })
 })
 
 const tabsButtons = document.querySelectorAll('.tabs__buttons');
-
 tabsButtons.forEach(buttons => {
 	const tabsName = buttons.dataset.tabs;
 	const tabsPagesWraps = [...document.querySelectorAll(`.tabs__pages[data-tabs="${tabsName}"]`)];
@@ -33,13 +53,19 @@ tabsButtons.forEach(buttons => {
 	})
 })
 
+/**
+ * Делает активной кнопку с классом _active и включает соотвествующий таб
+ */
 megachips.forEach((control) => {
 	const megachipsButtons = control.querySelectorAll('.megachips__button');
-	megachipsButtons.forEach(button => {
-		if (button.classList.contains('_active')) {
-			button.click()
-		}
-	})
+  
+  const activeButton = megachipsButtons.querySelector('._active');
+  if (activeButton) {
+    activeButton.classList.remove('_active')
+    activeButton.click();
+  } else {
+    megachipsButtons.querySelector('button').click()
+  }
 })
 
 // Добавляем активное состояние для табов, чтоб инициализировать Swiper

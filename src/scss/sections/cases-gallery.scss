@@ -12,6 +12,9 @@
 	background-color: var(--bg-element);
 	padding: 2.8125rem 3.125rem ;
 	border-radius: 20px;
+	@media (max-width: $desktop-m) {
+		grid-template-columns: 40.5rem auto;
+	}
 }
 
 .cases-gallery__desc {

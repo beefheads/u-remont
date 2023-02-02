@@ -71,6 +71,16 @@ quizes.forEach((quiz, index) => {
 })
 
 
+let compareCarousel = new Swiper(".comparer-carousel", {
+  modules: [Navigation],
+  spaceBetween: 10,
+  allowTouchMove: false,
+  navigation: {
+    nextEl: ".comparer-carousel-button-next",
+    prevEl: ".comparer-carousel-button-prev",
+  },
+});
+
 
 /*
   @param gallerySettings: {

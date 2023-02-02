@@ -75,7 +75,7 @@ function makeBeforeAfterSlider(el, index) {
 }
 const beforeAfterSliders = document.querySelectorAll('.before-after-slider');
 beforeAfterSliders.forEach((slider, index) => {
-  console.log(slider)
+  // console.log(slider)
   makeBeforeAfterSlider(slider, index);
 })
 

@@ -3,6 +3,11 @@
 	align-items: center;
 	padding: 0 3.125rem ;
 }
+.megachips__list {
+	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+}
 .megachips__button {
 	padding-top: 1.5625rem;
 	padding-bottom: 1.1875rem;
