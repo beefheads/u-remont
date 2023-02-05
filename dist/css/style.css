@@ -4907,6 +4907,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .input-attach__icon {
+  z-index: 3;
   position: absolute;
   top: 0.9375rem;
   right: 1.1875rem;
@@ -4923,6 +4924,8 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .input-attach__captions {
+  position: relative;
+  z-index: 3;
   --link-color: var(--color);
   text-align: left;
   transition: var(--tr-regular);
@@ -4948,6 +4951,52 @@ input[type=search]::-webkit-search-cancel-button {
 .input-attach__desc {
   font-weight: 300;
   font-style: italic;
+  font-size: 0.75rem;
+}
+
+.input-attach__dropdown {
+  position: absolute;
+  background: #fff;
+  top: 30px;
+  z-index: 2;
+  left: -1px;
+  width: calc(100% + 2px);
+  border: 1px solid var(--c-text-regular);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
+  transition: var(--tr-regular);
+  opacity: 1;
+}
+
+.input-attach__dropdown--hidden,
+.input-attach__dropdown:empty {
+  opacity: 0;
+}
+
+.input-attach-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 65%;
+}
+
+.input-attach-file__img {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+}
+
+.input-attach-file__name {
+  max-width: 85%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1em;
   font-size: 0.75rem;
 }
 
