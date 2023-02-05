@@ -42,6 +42,7 @@ let lazyLoadInstance = new LazyLoad();
  **/
 import "./utils/smooth-anchors.js";
 
+import "./unstable/inputster/formich.js";
 /**
  * Smooth anchors
  **/

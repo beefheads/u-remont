@@ -118,17 +118,18 @@
   color: #BABABA;
 }
 
-/*
+
 .input:last-of-type {
   margin-bottom: 0;
 }
 .input--invalid {
-  --label-color: var(--c-error);
-  --message-transform: scale(1);
-  --message-color: var(--c-error);
-  --message-offset: 9px;
+  --border-color: #FF3B30 !important;
+  // --label-color: var(--c-error);
+  // --message-transform: scale(1);
+  // --message-color: var(--c-error);
+  // --message-offset: 9px;
   // --border-color: var(--c-error);
-  --error-icon-transform: scale(1);
+  // --error-icon-transform: scale(1);
 }
 
 
@@ -175,5 +176,5 @@
   padding: 0.4166666666666667em 0.8333333333333334em 0.6666666666666666em;//5px 10px 8px;
   display: inline-block;
 }
-*/
+
 

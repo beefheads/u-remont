@@ -202,6 +202,11 @@ class Poppa {
       pop.classList.remove('poppa--scrollable')
     }
   }
+  closeCurrentPop() {
+    const popname = window.location.hash.replace("#", "");
+    if (popname == '') return
+    this.closePop(popname)
+  }
 
   handleClose(button) {
     const id = button.dataset.poppaClose;

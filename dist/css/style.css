@@ -4820,19 +4820,13 @@ input[type=search]::-webkit-search-cancel-button {
   color: #BABABA;
 }
 
-/*
 .input:last-of-type {
   margin-bottom: 0;
 }
-.input--invalid {
-  --label-color: var(--c-error);
-  --message-transform: scale(1);
-  --message-color: var(--c-error);
-  --message-offset: 9px;
-  // --border-color: var(--c-error);
-  --error-icon-transform: scale(1);
-}
 
+.input--invalid {
+  --border-color: #FF3B30 !important;
+}
 
 .input__icon {
   position: absolute;
@@ -4842,19 +4836,22 @@ input[type=search]::-webkit-search-cancel-button {
   display: block;
   width: 18px;
   height: 18px;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .input__icon {
     top: 18px;
     left: 24px;
     width: 14px;
     height: 14px;
   }
 }
+
 .input__error-icon {
   display: block;
-  width: 1.25rem;//20px;
-  height: 1.25rem;//20px;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
-  top: 0.6875rem;//11px;
+  top: 0.6875rem;
   right: 0.6875rem;
   z-index: 2;
   transform: var(--error-icon-transform);
@@ -4869,15 +4866,15 @@ input[type=search]::-webkit-search-cancel-button {
   transform: var(--message-transform);
   transform-origin: top;
   font-weight: 400;
-  font-size: 0.75rem;//12px;
-  line-height: 1.1666666666666667;//14px;
+  font-size: 0.75rem;
+  line-height: 1.1666666667;
   color: #FFFFFF;
   background: #A1AEB3;
   border-radius: var(--brad-regular);
-  padding: 0.4166666666666667em 0.8333333333333334em 0.6666666666666666em;//5px 10px 8px;
+  padding: 0.4166666667em 0.8333333333em 0.6666666667em;
   display: inline-block;
 }
-*/
+
 .input-attach {
   --icon-color: var(--c-text-regular);
   --icon-size: 1.8125rem;

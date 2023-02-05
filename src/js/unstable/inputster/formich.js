@@ -102,6 +102,7 @@ function enableButton(button) {
   button.classList.remove(buttonClasses.disabled);
   button.disabled = false;
 }
+
 // Обработчик форм
 const formsList = document.querySelectorAll("form");
 formsList.forEach((form) => {
@@ -124,8 +125,8 @@ formsList.forEach((form) => {
     // try {
     // let result = await response.json();
     // console.log(result);
-    console.log(form);
-    console.log("thanks");
+    // console.log(form);
+    // console.log("thanks");
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.dataset.buttonText = submitButton.innerHTML;
@@ -146,6 +147,9 @@ formsList.forEach((form) => {
     // } catch {
     // console.log("error");
     // }
+    setTimeout(() => {
+      window.poppa.closeCurrentPop()
+    }, 2500);
   });
 });
 

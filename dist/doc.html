@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Отзывы</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230205131800" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230205134431" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -431,7 +431,7 @@
 		<br>
 		для уточнения деталей
 	</h2>
-	<form action="./callback.php" class="modal__form">
+	<form action="./callback.php" class="modal__form form">
 		<input type="hidden" name="page_url" value="">
 		<input type="hidden" name="form_name" value="Перезвонить">
 		<fieldset class="modal__fieldset">
@@ -484,7 +484,7 @@
 		<br>
 		<span class="section-text--color">для расчёта демонтажа или уборки</span>
 	</h2>
-	<form action="./callback.php" class="modal__form">
+	<form action="./callback.php" class="modal__form form">
 		<input type="hidden" name="page_url" value="">
 		<input type="hidden" name="form_name" value="Демонтаж и вывоз мусора">
 		<fieldset class="modal__fieldset">
@@ -520,7 +520,7 @@
   </svg>
  --></label>
 
-      <button class="button-primary modal__submit">Получить консультацию по расчёту</button>
+      <button class="button-primary modal__submit" type="submit">Получить консультацию по расчёту</button>
 		</fieldset>
     <a href="#" class="modal__caption">
     	Нажимая кнопку, вы соглашаетесь на обработку <br>
@@ -538,7 +538,7 @@
 		Мы будем рады увидеть ваше честное мнение о нашей работе. :) <br>
 		После проверки модератором, отзыв будет опубликован на сайте.
 	</p>
-	<form action="./callback.php" class="modal__form">
+	<form action="./callback.php" class="modal__form form">
 		<input type="hidden" name="page_url" value="">
 		<input type="hidden" name="form_name" value="Оставить отзыв">
 		<fieldset class="modal__fieldset modal-review__fieldset">
@@ -563,6 +563,7 @@
     name="user_email"
     type="email"
     placeholder="Эл. почта*"
+    required
     autocomplete="email"
     data-value-missing="Напишите имейл"
     data-value-invalid="Проверьте корректность имейла"
@@ -618,7 +619,7 @@
 					</label>
       	</div>
       </div>
-      <button class="button-primary modal__submit modal-review__submit">Отправить отзыв</button>
+      <button class="button-primary modal__submit modal-review__submit" type="submit">Отправить отзыв</button>
 		</fieldset>
     <a href="#" class="modal__caption modal-review__caption">
     	Нажимая кнопку, вы соглашаетесь на обработку <br>
@@ -714,7 +715,7 @@
 			<li>Уборка и вынос/вывоз мусора.</li>
 		</ul>
 	</div>
-	<form action="./callback.php" class="modal-case__form">
+	<form action="./callback.php" class="modal-case__form form">
 		<fieldset class="modal-case__fieldset">
       <label class="input input--name">
   <input
@@ -758,7 +759,7 @@
 
     </div>
 
-    <script src="./js/phoneUtils.js?_v=20230205131800"></script>
-    <script src="./js/index.js?_v=20230205131800"></script>
+    <script src="./js/phoneUtils.js?_v=20230205134431"></script>
+    <script src="./js/index.js?_v=20230205134431"></script>
   </body>
 </html>
