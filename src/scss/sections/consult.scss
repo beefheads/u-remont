@@ -63,7 +63,7 @@
 	justify-content: flex-start;
 	margin-bottom: rem(16);
 	@media (max-width: $desktop-s) {
-		grid-template-columns: repeat(3, 13.188rem);
+		grid-template-columns: repeat(3, 15.188rem);
 	}
 	@media (max-width: $w-mobile) {
 		grid-template-columns: 1fr;
