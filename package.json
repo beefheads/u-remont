@@ -56,6 +56,8 @@
   "private": true,
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
+    "aos": "^2.3.4",
+    "before-after-slider": "^1.0.1",
     "choices.js": "^10.1.0",
     "flatpickr": "^4.6.13",
     "intl-tel-input": "^17.0.19",

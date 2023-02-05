@@ -75,7 +75,6 @@ function makeBeforeAfterSlider(el, index) {
 }
 const beforeAfterSliders = document.querySelectorAll('.before-after-slider');
 beforeAfterSliders.forEach((slider, index) => {
-  // console.log(slider)
   makeBeforeAfterSlider(slider, index);
 })
 
@@ -98,3 +97,13 @@ if (servicesLeadButton) {
 */
 import "./components/carousels.js";
 import "./utils/ios-input-zoom-fix.js";
+
+
+// import "./libs/aos.js";
+import AOS from "aos";
+AOS.init();
+window.aos = AOS;
+
+setTimeout(() => {
+  AOS.refresh();
+}, 5000)

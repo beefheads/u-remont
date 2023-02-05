@@ -218,10 +218,12 @@ let casesGallery = makeThumbSwiper(
     }
   }
 );
-casesGallery.gallery.on('slideChange', function() {
-  // console.log(this.activeIndex)
-  // casesGallery.thumbs.slides[this.activeIndex].classList.add('_active')
-})
+if (casesGallery != undefined) {
+  casesGallery.gallery.on('slideChange', function() {
+    // console.log(this.activeIndex)
+    // casesGallery.thumbs.slides[this.activeIndex].classList.add('_active')
+  })
+}
 
 makeThumbSwiper({selector: '.modal-case-photos-gallery-carousel'}, {selector: '.modal-case-photos-thumbs-carousel'});
 
