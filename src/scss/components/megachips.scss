@@ -1,33 +1,123 @@
 .megachips {
 	display: flex;
 	align-items: center;
-	padding: 0 3.125rem ;
+	@media (max-width: $w-mobile) {
+		position: relative;
+		flex-direction: column;
+	}
 }
 .megachips__list {
 	display: flex;
 	flex-wrap: wrap;
 	white-space: nowrap;
+	@media (max-width: $w-mobile) {
+		position: absolute;
+		left: 0;
+		top: 4.5rem;
+		width: 100%;
+		display: block;
+		background-color: var(--bg-element);
+		pointer-events: none;
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 0.3s ease-in;
+		padding-bottom: 2rem;
+		border-radius: 0 0 20px 20px;
+	}
 }
+.megachips._active .megachips__list {
+	@media (max-width: $w-mobile) {
+		pointer-events: initial;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .megachips__button {
 	padding-top: 1.5625rem;
 	padding-bottom: 1.1875rem;
 	margin-right: 1.475rem;
 	color: var(--c-accent);
 	font-size: 1rem;
-	font-stretch: italic;
+	font-style: italic;
 	font-weight: 600;
 	border-radius: 20px 20px 0 0;
+	@media (max-width: $w-mobile) {
+		display: block;
+		margin-right: 0;
+		padding-top: 0.42857142857142855rem;
+		padding-right: 2.0714285714285716rem;
+		padding-bottom: 0.42857142857142855rem;
+		padding-left: 2.0714285714285716rem;
+		text-align: left;
+	}
 }
 .megachips__button._active {
 	color: var(--c-text-regular);
 	background-color: var(--bg-element);
 	padding-left: 3.75rem;
 	padding-right: 3.75rem;
-}
-.megachips__button:last-child {
-	margin-right: 0;
+	font-style: normal;
+	@media (max-width: $w-mobile) {
+		text-align: left;
+		padding-top: 0.42857142857142855rem;
+		padding-right: 2.0714285714285716rem;
+		padding-bottom: 0.42857142857142855rem;
+		padding-left: 2.0714285714285716rem;
+	}
 }
 
 .tabs__page:not(._active) {
 	display: none;
+}
+
+.megachips__current {
+	padding: 1.5714285714285714rem 2.142857142857143rem;
+	background-color: var(--bg-element);
+	border-radius: 20px 20px 0 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-weight: 600;
+	align-items: center;
+	font-style: normal;
+	position: relative;
+
+	@media (min-width: ($w-mobile + 1)) {
+		display: none;
+	}
+}
+@media (max-width: $w-mobile) {
+	.megachips__current::after {
+		position: absolute;
+		top: 20px;
+		right: 18px;
+		content: "";
+		display: block;
+		width: 20px;
+		height: 20px;
+		@include getmask("../img/common/slider-arrow-right.svg");
+		background-color: var(--c-text-regular);
+		transform: rotate(90deg);
+		transition: var(--tr-regular);
+	}
+	.megachips__current::before {
+		content: "";
+		width: 12px;
+		height: 4px;
+		position: absolute;
+		top: 27px;
+		right: 22px;
+		background-color: var(--c-text-regular);
+		transition: var(--tr-regular);
+		opacity: 0;
+		order: 3;
+		border-radius: 2px;
+	}
+	.megachips._active .megachips__current::after {
+		background-color: transparent;
+	}
+	.megachips._active .megachips__current::before {
+		opacity: 1;
+	}
 }

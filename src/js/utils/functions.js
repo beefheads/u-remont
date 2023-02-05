@@ -230,7 +230,7 @@ export const isMobile = {
  * Возвращает true если ширина экрана меньше value, false если нет.
  * ℹ️ Попробовать `window.innerWidth`
  */
-function mediaMax(value) {
+export function mediaMax(value) {
   return window.matchMedia(`(max-width: ${parseInt(value)}px)`).matches
 }
 

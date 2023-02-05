@@ -1,9 +1,13 @@
+.slider-container .slider-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+}
 .before-after-slider .slider-container .before-img img {
   object-fit: cover;
   object-position: left;
   border-radius: 20px 0 0 20px;
 }
-.before-after-slider .slider-container .after-img img {
+.before-after-slider .slider-container > img {
   object-fit: cover;
   object-position: right;
   border-radius: 20px;

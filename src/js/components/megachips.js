@@ -1,3 +1,5 @@
+import { mediaMax, isMobile } from "../utils/functions.js";
+import { isClickedBeyond } from "../utils/helpers.js";
 const megachips = document.querySelectorAll('.megachips');
 
 
@@ -15,22 +17,42 @@ function toggleActiveButton(button, buttons) {
  */
 megachips.forEach((control) => {
 	const megachipsButtons = [...control.querySelectorAll('.megachips__button')];
+  const megachipsCurrent = control.querySelector('.megachips__current');
+
 
 	megachipsButtons.forEach((button, index) => {
 		button.addEventListener('click', () => {
-      toggleActiveButton(button, megachipsButtons);
 
+      toggleActiveButton(button, megachipsButtons);
+      megachipsCurrent.innerText = button.innerText;
+
+      let buttons = 0;
       const totalButtonsWidth = megachipsButtons.reduce((buttonsWidth, button, index) => {
         const currentButtonWidth = button.getBoundingClientRect().width;
-        return buttonsWidth += currentButtonWidth;
+        let marginRight = window.getComputedStyle(button).marginRight;
+        marginRight = +marginRight.replace('px', '');
+
+        return buttonsWidth += currentButtonWidth + marginRight;
       }, 0)
       const megachipsWidth = control.querySelector('.megachips__list ').getBoundingClientRect().width
 
-      if (megachipsWidth <= totalButtonsWidth) {
+      if (megachipsWidth + 1 <= totalButtonsWidth) {
         button.style.order = index + 1;
       }
 		});
   })
+
+  window.addEventListener("click", (e) => {
+    if (isClickedBeyond(e, 'megachips__current')) {
+      control.classList.remove('_active')
+    } else {
+      if (control.classList.contains('_active')) {
+        control.classList.remove('_active')
+      } else {
+        control.classList.add('_active')
+      }
+    }
+  });
 })
 
 const tabsButtons = document.querySelectorAll('.tabs__buttons');
@@ -59,7 +81,7 @@ tabsButtons.forEach(buttons => {
 megachips.forEach((control) => {
 	const megachipsButtons = control.querySelectorAll('.megachips__button');
   
-  const activeButton = megachipsButtons.querySelector('._active');
+  const activeButton = control.querySelector('._active');
   if (activeButton) {
     activeButton.classList.remove('_active')
     activeButton.click();

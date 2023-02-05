@@ -143,10 +143,10 @@ export function bodyLock(con) {
  */
 export function isClickedBeyond(e, selector) {
     let isClickBeyond = true;
-    const path = event.path || (event.composedPath && event.composedPath());
+    const path = e.path || (e.composedPath && e.composedPath());
     const isSelect = path.map((item, index, pathElems) => {
       if (pathElems.length - 4 < index) return;
-      if (item.classList.includes(selector)) {
+      if (item.classList.contains(selector)) {
         isClickBeyond = false;
       }
     })
