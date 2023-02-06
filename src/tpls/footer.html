@@ -184,6 +184,7 @@
 	</div>
 	<form action="./callback.php" class="modal-case__form form">
 		<fieldset class="modal-case__fieldset">
+			<input type="hidden" name="form_name" readonly>
       @@include('./inputs/name.html',{})
       @@include('./inputs/tel.html',{})
       <button class="button-primary modal-case__submit" type="submit">Получить консультацию по расчёту</button>

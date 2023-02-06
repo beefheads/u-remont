@@ -4553,6 +4553,11 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
+.button--wait {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /*
   Swiper Buttons
  */

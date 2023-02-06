@@ -45,6 +45,10 @@
     color: var(--button-color-hover)
   }
 }
+.button--wait {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 
 /*

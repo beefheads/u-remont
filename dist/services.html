@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Услуги и цены</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230205231127" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230207000341" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -82,7 +82,7 @@
               <article class="stages-card" data-aos="fade-up">
                 <h3 class="stages-card__title">Штукатурные работы от 200 ₽/м2</h3>
                 <p class="stages-card__desc">
-                  <button class="stages-card__link" data-poppa-open="case">Подробнее об услуге</button>
+                  <button class="stages-card__link js-case-caller" data-case-id="1" data-pop-open="case">Подробнее об услуге</button>
                 </p>
               </article>
               <article class="stages-card" data-aos="fade-up" data-aos-delay="100">
@@ -592,6 +592,7 @@
 	</div>
 	<form action="./callback.php" class="modal-case__form form">
 		<fieldset class="modal-case__fieldset">
+			<input type="hidden" name="form_name" readonly>
       <label class="input input--name">
   <input
     class="input__field"
@@ -634,7 +635,7 @@
 
     </div>
 
-    <script src="./js/phoneUtils.js?_v=20230205231127"></script>
-    <script src="./js/index.js?_v=20230205231127"></script>
+    <script src="./js/phoneUtils.js?_v=20230207000341"></script>
+    <script src="./js/index.js?_v=20230207000341"></script>
   </body>
 </html>
