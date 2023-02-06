@@ -276,6 +276,9 @@
   font-weight: 600;
   font-style: italic;
 }
+.modal-case-photos__price-shield:empty {
+  display: none;
+}
 .modal-case-photos__price-shield::before {
   content: "";
   position: absolute;

@@ -256,6 +256,7 @@ window.updateModalCases = () => {
   window.modalCases.gallery.update();
   window.modalCases.thumbs.update();
   makeThumbsClickable(window.modalCases.gallery, window.modalCases.thumbs);
+  window.modalCases.gallery.slideTo(0);
 }
 window.removeModalCases = () => {
   window.modalCases.gallery.slides.forEach(slide => slide.remove());
@@ -284,27 +285,26 @@ window.appendImagesModalCases = (slides) => {
 const buttonCaseCallers = document.querySelectorAll('.js-case-caller');
 buttonCaseCallers.forEach((button, index) => {
   const caseId = button.dataset.caseId;
+  const action = button.dataset.action;
   if (!caseId) return;
 
   let body = new FormData();
   body.append("id", caseId);
+  body.append("action", action);
 
   button.addEventListener("click", async (e) => {
     button.classList.add('button--wait');
     const buttonText = button.innerText;
     button.innerText = 'Загрузка...';
 
-    const caseObject = await fetch('../resources/cases.json', {
-      method: "GET",
-      // method: "POST",
-      // body: body,
-      // headers: {
-      //   "Content-Type": "application/x-www-form-urlencoded",
-      // },
+    const caseObject = await fetch(urem_ajax.ajaxUrl, {
+      // method: "GET",
+      method: "POST",
+      body: body,
     });
 
     let result = await caseObject.text();
-    try {
+    // try {
       const caseData = JSON.parse(result);
 
       button.innerText = buttonText;
@@ -324,13 +324,18 @@ buttonCaseCallers.forEach((button, index) => {
       })
 
       window.removeModalCases();
-      const slides = [caseData.thumb, ...caseData.gallery];
+      let slides = [];
+      if (caseData.thumb != false) {
+        slides = [caseData.thumb, ...caseData.gallery];
+      } else {
+        slides = [...caseData.gallery];
+      }
       window.appendImagesModalCases(slides);
       window.updateModalCases();
 
-    } catch {
+    // } catch {
       console.log('error')
-    }
+    // }
   });
 })
 

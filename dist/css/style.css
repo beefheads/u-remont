@@ -5767,6 +5767,10 @@ input[type=search]::-webkit-search-cancel-button {
   font-style: italic;
 }
 
+.modal-case-photos__price-shield:empty {
+  display: none;
+}
+
 .modal-case-photos__price-shield::before {
   content: "";
   position: absolute;
