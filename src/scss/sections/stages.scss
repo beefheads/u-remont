@@ -184,6 +184,9 @@
 	bottom: 0;
 	height: 100%;
 	width: rem(208);
+	@media (max-width: $desktop-l) {
+		width: 11rem;
+	}
 	@media (max-width: $desktop-m) {
 		width: 10rem;
 	}

@@ -84,7 +84,10 @@ html {
   // font-size: calc(var(--index) * 0.54795);
   // font-size: 0.833333vw; //1920 16px
   font-size: #{'calc(var(--index) * 0.547945)'}; // 1920 — 16px
-  @media (max-width: 1440px) {
+  @media (max-width: $desktop-l) {
+    font-size: #{'calc(var(--index) * 0.759735)'}; // 1920 — 16px
+  }
+  @media (max-width: 1500px) {
     font-size: 1.11111vw; //1440 16px
   }
   // @media (max-width: 1300px) {

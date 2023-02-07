@@ -62,7 +62,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	margin-bottom: rem(16);
-	@media (max-width: $desktop-s) {
+	@media (max-width: $desktop-l) {
 		grid-template-columns: repeat(3, 15.188rem);
 	}
 	@media (max-width: $w-mobile) {
@@ -102,6 +102,9 @@
 	display: block;
 	border: rem(12) solid var(--bg-element);
 	border-radius: 50%;
+	@media (max-width: $desktop-l) {
+		right: 1.25rem;
+	}
 	@media (max-width: $w-mobile) {
 		width: 18rem;
 		height: 18.285rem;
@@ -120,6 +123,10 @@
 	height: rem(438);
 	border-radius: 50%;
 	object-fit: cover;
+	@media (max-width: $desktop-l) {
+    width: 23.8125rem;
+    height: 23.375rem;
+	}
 	@media (max-width: $desktop-m) {
 		width: 20.813rem;
 		height: 20.375rem;

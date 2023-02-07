@@ -143,6 +143,9 @@
   background-color: var(--bg-element);
   padding: 40px;
   color: var(--c-text-regular);
+  @media (max-width: $desktop-l) {
+    max-width: 1386px;
+  }
   @media (max-width: $w-mobile) {
     grid-template-areas: unset;   
     grid-template-columns: unset;
@@ -344,6 +347,11 @@
 }
 .modal-case .poppa__closer:not(:hover) {
   --closer-color: var(--c-text-regular);
+}
+
+.modal-case__submit {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 
