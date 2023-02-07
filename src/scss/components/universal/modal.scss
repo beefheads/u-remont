@@ -139,8 +139,10 @@
   display: grid;
   grid-template-areas: "gallery title" "gallery content" "gallery form";
   grid-template-columns: 365px auto;
-  grid-template-rows: min-content max-content 1fr;//minmax(22px, 44px);
+  // grid-template-rows: max-content max-content auto;//minmax(22px, 44px);
+  grid-auto-rows: max-content;
   column-gap: 40px;
+  row-gap: 20px;
   max-width: 1346px;
   width: 100%;
   background-color: var(--bg-element);
@@ -162,6 +164,7 @@
   grid-area: gallery;
   max-width: 100%;
   width: 100%;
+  min-height: 370px;
   position: relative;
   @media (max-width: $w-mobile) {
     max-width: 21.357rem;
@@ -173,9 +176,10 @@
   grid-area: title;
   font-weight: 600;
   font-size: rem(18);
-  margin-bottom: 1.55rem;//rem(20);
+  // margin-bottom: 1.55rem;//rem(20);
   line-height: lhperc(18, 22);
   padding-top: 5px;
+  align-self: end;
   @media (max-width: $w-mobile) {
     order: -1;
     margin-bottom: 1.428rem;
@@ -190,6 +194,7 @@
   font-size: rem(14);
   color: var(--c-text-regular);
   max-width: 45rem;
+  align-self: center;
   @media (max-width: $w-mobile) {
     font-size: 1rem;
     max-width: 100%;
@@ -197,7 +202,7 @@
 }
 .modal-case__desc ul {
   padding-left: rem(22);
-  margin-bottom: rem(36);
+  // margin-bottom: rem(36);
   @media (max-width: $w-mobile) {
     padding-left: 1.571rem;
     margin-bottom: 2.857rem;
@@ -231,6 +236,8 @@
 .modal-case__form {
   grid-area: form;
   align-self: end;
+  padding-top: 20px;
+  align-self: top;
 }
 .modal-case-photos-gallery-carousel {
   margin-bottom: rem(10);
@@ -255,7 +262,7 @@
   // height: rem(507);
 }
 .modal-case-photos-gallery-slide .modal-case-photos__pic {
-  min-height: 377px;
+  // min-height: 377px;
 }
 .modal-case-photos-thumbs-slide .modal-case-photos__pic {
   height: rem(81);

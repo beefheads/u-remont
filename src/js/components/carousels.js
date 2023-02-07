@@ -152,6 +152,7 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
   let configGalleryInitial = {
       modules: [Navigation, Pagination, EffectFade],
       spaceBetween: 10,
+      speed: 400,
       thumbs: {
         swiper: carouselThumbs,
       },
@@ -184,6 +185,7 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
       centeredSlides: true,
       centeredSlidesBounds: true,
       centerInsufficientSlides: true,
+      speed: 400,
       spaceBetween: 10,
       slidesPerView: 3,
   }
@@ -332,6 +334,8 @@ buttonCaseCallers.forEach((button, index) => {
         `)
       })
 
+        
+
       window.removeModalCases();
       let slides = [];
       if (caseData.thumb != false) {
@@ -342,8 +346,18 @@ buttonCaseCallers.forEach((button, index) => {
       window.appendImagesModalCases(slides);
       window.updateModalCases();
 
+      setTimeout(() => {
+        const titleHeight = pop.querySelector('.modal-case__title').getBoundingClientRect().height;
+        const descHeight = pop.querySelector('.modal-case__desc').getBoundingClientRect().height;
+        const formHeight = pop.querySelector('.modal-case__form').getBoundingClientRect().height;
+        const carouselHeight = titleHeight + descHeight + formHeight + 30;
+
+        pop.querySelector('.modal-case-photos').style.height = `${carouselHeight}px`;
+      }, 360);
+
+
     // } catch {
-      console.log('error')
+      // console.log('error')
     // }
   });
 })
