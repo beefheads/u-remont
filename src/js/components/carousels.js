@@ -81,6 +81,56 @@ let compareCarousel = new Swiper(".comparer-carousel", {
   },
 });
 
+window.makeThumbsClickable = (gallerySwiper, thumbsSwiper) => {
+  if (!thumbsSwiper || !gallerySwiper) return;
+  thumbsSwiper.slides.forEach((slide, index) => {
+
+    if (slide.classList.contains('js-b-clickable')) return;
+
+    slide.classList.add('js-b-clickable')
+    slide.addEventListener('click', () => {
+      gallerySwiper.slideTo(index);
+      thumbsSwiper.slides.forEach(thumb => {
+        thumb.classList.remove('_active');
+      })
+      slide.classList.add('_active');
+    })
+
+  })
+}
+window.modalCases = initModalCases();
+window.initModalCases = () => {
+  window.modalCases = initModalCases();
+};
+window.updateModalCases = () => {
+  window.modalCases.gallery.update();
+  window.modalCases.thumbs.update();
+  makeThumbsClickable(window.modalCases.gallery, window.modalCases.thumbs);
+  window.modalCases.gallery.slideTo(0);
+}
+window.removeModalCases = () => {
+  window.modalCases.gallery.slides.forEach(slide => slide.remove());
+  window.modalCases.thumbs.slides.forEach(slide => slide.remove());
+}
+window.appendImagesModalCases = (slides) => {
+  slides.forEach(slide => {
+    window.modalCases.gallery.el.querySelector('.swiper-wrapper').insertAdjacentHTML('beforeend', `
+      <div class="swiper-slide modal-case-photos-gallery-slide">
+        <picture class="modal-case-photos__pic">
+          <img src="${slide}" alt="Кейс" class="modal-case-photos__img">
+        </picture>
+      </div>
+    `);
+
+    window.modalCases.thumbs.el.querySelector('.swiper-wrapper').insertAdjacentHTML('beforeend', `
+      <div class="swiper-slide modal-case-photos-thumbs-slide">
+        <picture class="modal-case-photos__pic">
+          <img src="${slide}" alt="Кейс" class="modal-case-photos__img">
+        </picture>
+      </div>
+    `)
+  })
+}
 
 /*
   @param gallerySettings: {
@@ -157,17 +207,7 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
       carouselThumbs.slides[carouselThumbs.activeIndex].classList.add('_active');
 
     })
-    makeThumbsClickable(carouselGallery, carouselThumbs);
-    // carouselThumbs.slides.forEach((slide, index) => {
-    //   slide.classList.add('js-b-clickable')
-    //   slide.addEventListener('click', () => {
-    //     carouselGallery.slideTo(index);
-    //     carouselThumbs.slides.forEach(thumb => {
-    //       thumb.classList.remove('_active');
-    //     })
-    //     slide.classList.add('_active');
-    //   })
-    // })
+    window.makeThumbsClickable(carouselGallery, carouselThumbs);
     return {
       gallery: carouselGallery,
       thumbs: carouselThumbs,
@@ -231,55 +271,6 @@ function initModalCases() {
       selector: '.modal-case-photos-thumbs-carousel'
     }
   );
-}
-window.makeThumbsClickable = (gallerySwiper, thumbsSwiper) => {
-  thumbsSwiper.slides.forEach((slide, index) => {
-
-    if (slide.classList.contains('js-b-clickable')) return;
-
-    slide.classList.add('js-b-clickable')
-    slide.addEventListener('click', () => {
-      gallerySwiper.slideTo(index);
-      thumbsSwiper.slides.forEach(thumb => {
-        thumb.classList.remove('_active');
-      })
-      slide.classList.add('_active');
-    })
-
-  })
-}
-window.modalCases = initModalCases();
-window.initModalCases = () => {
-  window.modalCases = initModalCases();
-};
-window.updateModalCases = () => {
-  window.modalCases.gallery.update();
-  window.modalCases.thumbs.update();
-  makeThumbsClickable(window.modalCases.gallery, window.modalCases.thumbs);
-  window.modalCases.gallery.slideTo(0);
-}
-window.removeModalCases = () => {
-  window.modalCases.gallery.slides.forEach(slide => slide.remove());
-  window.modalCases.thumbs.slides.forEach(slide => slide.remove());
-}
-window.appendImagesModalCases = (slides) => {
-  slides.forEach(slide => {
-    window.modalCases.gallery.el.querySelector('.swiper-wrapper').insertAdjacentHTML('beforeend', `
-      <div class="swiper-slide modal-case-photos-gallery-slide">
-        <picture class="modal-case-photos__pic">
-          <img src="${slide}" alt="Кейс" class="modal-case-photos__img">
-        </picture>
-      </div>
-    `);
-
-    window.modalCases.thumbs.el.querySelector('.swiper-wrapper').insertAdjacentHTML('beforeend', `
-      <div class="swiper-slide modal-case-photos-thumbs-slide">
-        <picture class="modal-case-photos__pic">
-          <img src="${slide}" alt="Кейс" class="modal-case-photos__img">
-        </picture>
-      </div>
-    `)
-  })
 }
 
 const buttonCaseCallers = document.querySelectorAll('.js-case-caller');
