@@ -4372,7 +4372,7 @@ h6 {
   font-style: normal;
   font-weight: 300;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-LightItalic.woff2") format("woff2"), url("../resources/fonts/inter/Inter-LightItalic.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-lightitalic.woff2") format("woff2"), url("../resources/fonts/inter/inter-lightitalic.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4380,7 +4380,7 @@ h6 {
   font-style: normal;
   font-weight: 300;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-Light.woff2") format("woff2"), url("../resources/fonts/inter/Inter-Light.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-light.woff2") format("woff2"), url("../resources/fonts/inter/inter-light.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4388,7 +4388,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-Regular.woff2") format("woff2"), url("../resources/fonts/inter/Inter-Regular.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-regular.woff2") format("woff2"), url("../resources/fonts/inter/inter-regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4396,7 +4396,7 @@ h6 {
   font-style: normal;
   font-weight: 500;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-Medium.woff2") format("woff2"), url("../resources/fonts/inter/Inter-Medium.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-medium.woff2") format("woff2"), url("../resources/fonts/inter/inter-medium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4404,7 +4404,7 @@ h6 {
   font-style: italic;
   font-weight: 400;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-MediumItalic.woff2") format("woff2"), url("../resources/fonts/inter/Inter-MediumItalic.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-mediumitalic.woff2") format("woff2"), url("../resources/fonts/inter/inter-mediumitalic.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4412,7 +4412,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-SemiBold.woff2") format("woff2"), url("../resources/fonts/inter/Inter-SemiBold.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-semibold.woff2") format("woff2"), url("../resources/fonts/inter/inter-semibold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4420,7 +4420,7 @@ h6 {
   font-style: italic;
   font-weight: 600;
   font-stretch: 100%;
-  src: url("../resources/fonts/inter/Inter-SemiBoldItalic.woff2") format("woff2"), url("../resources/fonts/inter/Inter-SemiBoldItalic.woff") format("woff");
+  src: url("../resources/fonts/inter/inter-semibolditalic.woff2") format("woff2"), url("../resources/fonts/inter/inter-semibolditalic.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -4428,7 +4428,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-stretch: 100%;
-  src: url("../resources/fonts/texgyrechorus/TexGyreChorus-MediumItalic.woff2") format("woff2"), url("../resources/fonts/texgyrechorus/TexGyreChorus-MediumItalic.woff") format("woff");
+  src: url("../resources/fonts/texgyrechorus/texgyrechorus-mediumitalic.woff2") format("woff2"), url("../resources/fonts/texgyrechorus/texgyrechorus-mediumitalic.woff") format("woff");
   font-display: swap;
 }
 html {
@@ -4701,7 +4701,7 @@ input[type=search]::-webkit-search-cancel-button {
   position: relative;
   display: block;
   width: 100%;
-  font-family: var(--ff-title);
+  font-family: var(--ff-regular);
   font-weight: 600;
   background-color: var(--input-bg);
   border: 1px solid var(--border-color);
@@ -5307,11 +5307,11 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .poppa__closer::before {
-  transform: rotate(35deg);
+  transform: rotate(40deg);
 }
 
 .poppa__closer::after {
-  transform: rotate(-35deg);
+  transform: rotate(-40deg);
 }
 
 .poppa__closer:hover::before,
@@ -5321,7 +5321,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .poppa__closer {
   --closer-color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: transparent;
 }
 
@@ -5416,7 +5416,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 @media (min-width: 769px) {
   body:not(.os-linux):not(.os-macos) .poppa__closer {
-    right: 27px;
+    right: 33px;
   }
 }
 
@@ -5608,7 +5608,7 @@ input[type=search]::-webkit-search-cancel-button {
 .modal-case {
   display: grid;
   grid-template-areas: "gallery title" "gallery content" "gallery form";
-  grid-template-columns: 385px auto;
+  grid-template-columns: 365px auto;
   grid-template-rows: min-content max-content 1fr;
   column-gap: 40px;
   max-width: 1346px;
@@ -5647,11 +5647,13 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .modal-case__title {
+  max-width: 92%;
   grid-area: title;
   font-weight: 600;
   font-size: 1.125rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.55rem;
   line-height: 1.2;
+  padding-top: 5px;
 }
 @media (max-width: 810px) {
   .modal-case__title {
@@ -5668,10 +5670,12 @@ input[type=search]::-webkit-search-cancel-button {
   font-weight: 300;
   font-size: 0.875rem;
   color: var(--c-text-regular);
+  max-width: 45rem;
 }
 @media (max-width: 810px) {
   .modal-case__desc {
     font-size: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -5691,6 +5695,7 @@ input[type=search]::-webkit-search-cancel-button {
   margin-bottom: 0.5rem;
   line-height: initial;
   position: relative;
+  letter-spacing: -0.005em;
 }
 @media (max-width: 810px) {
   .modal-case__desc li {
@@ -5705,11 +5710,11 @@ input[type=search]::-webkit-search-cancel-button {
 .modal-case__desc li::before {
   content: "";
   position: absolute;
-  left: -1.375rem;
-  top: 2px;
+  left: -1.4rem;
+  top: 4px;
   display: block;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.6rem;
+  height: 0.6rem;
   background: var(--c-accent);
   border-radius: 50%;
 }
@@ -5771,15 +5776,17 @@ input[type=search]::-webkit-search-cancel-button {
 .modal-case-photos__price-shield {
   position: absolute;
   top: 1.25rem;
-  left: 0.625rem;
+  left: -0.5rem;
   z-index: 3;
   display: inline-block;
-  padding: 0.625rem 1.5625rem 0.625rem 0.3125rem;
-  margin-left: 1.25rem;
+  padding: 0.625rem 1.5625rem 0.625rem 1.5625rem;
   color: var(--c-text-regular);
   font-size: 0.75rem;
   font-weight: 600;
   font-style: italic;
+  border: 6px solid var(--bg-element);
+  background-color: var(--bg-element);
+  border-radius: 10px;
 }
 
 .modal-case-photos__price-shield:empty {
@@ -5790,11 +5797,11 @@ input[type=search]::-webkit-search-cancel-button {
   content: "";
   position: absolute;
   top: 0;
-  left: -1.5rem;
+  left: -0.3rem;
   display: block;
   height: 100%;
   width: 1.875rem;
-  background-image: url(../img/common/price-bullet.svg);
+  background-image: url(../img/common/price-bullet-grey.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -5804,26 +5811,30 @@ input[type=search]::-webkit-search-cancel-button {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 1.25rem;
+  width: calc(100% - 1.25rem);
   height: 100%;
-  background-color: var(--bg-element);
+  background-color: #f6f6f6;
   border-radius: 0 0.3125rem 0.3125rem 0;
   z-index: -1;
 }
 
 .modal-case__fieldset {
   display: grid;
-  grid-template-columns: 13.1875rem 13.1875rem auto;
+  grid-template-columns: 15.188rem 15.188rem auto;
   align-items: center;
   column-gap: 0.625rem;
-  margin-bottom: 0.625rem;
 }
 @media (max-width: 992px) {
   .modal-case__fieldset {
     grid-template-columns: initial;
     row-gap: 0.714rem;
   }
+}
+
+.modal-case__fieldset .input {
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
 }
 
 @media (max-width: 810px) {
@@ -5853,8 +5864,8 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .modal-case .poppa__closer {
-  top: 1.875rem;
   right: 2.5rem;
+  top: 1.675rem;
 }
 
 .modal-case .poppa__closer:not(:hover) {
@@ -6974,7 +6985,7 @@ input[type=search]::-webkit-search-cancel-button {
   justify-content: flex-start;
   align-items: flex-start;
   border-right: 1px solid #E4E4E4;
-  padding-right: 3.4285714286rem;
+  padding-right: 2.728571rem;
   letter-spacing: -0.5px;
 }
 @media (max-width: 810px) {
@@ -7360,6 +7371,9 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
+.worktypes {
+  overflow: hidden;
+}
 @media (max-width: 1500px) {
   .worktypes {
     padding-bottom: 7rem;
@@ -7617,6 +7631,7 @@ input[type=search]::-webkit-search-cancel-button {
 .stages {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .stages__container {
@@ -7958,7 +7973,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .consult-form__fieldset {
   display: grid;
-  grid-template-columns: repeat(3, 14.1875rem);
+  grid-template-columns: repeat(3, 15.1875rem);
   column-gap: 1.25rem;
   align-items: center;
   justify-content: flex-start;
@@ -8339,9 +8354,11 @@ input[type=search]::-webkit-search-cancel-button {
 
 .reviews-shifter {
   padding: 1.625rem 1.375rem;
+  grid-column: 2/4;
 }
 @media (max-width: 810px) {
   .reviews-shifter {
+    grid-column: auto;
     padding: 0;
     padding-top: 1.4rem;
   }
@@ -8376,6 +8393,10 @@ input[type=search]::-webkit-search-cancel-button {
   .reviews-shifter__make-feedback:hover {
     border-color: transparent;
   }
+}
+
+.reviews-shifter__platforms {
+  background-color: #f6f6f6;
 }
 
 .services {

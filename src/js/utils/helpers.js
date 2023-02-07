@@ -114,6 +114,7 @@ export function getTodayPlus(days, someDate = new Date()) {
 /**
  * Фиксирует скрол у body
  *  */
+import {isMobile} from "./functions.js"
 export function bodyLock(con) {
   let scrollFix = window.innerWidth - document.body.clientWidth;
   const DEFAULT_SCROLLBAR_WIDTH = 17;
@@ -121,7 +122,11 @@ export function bodyLock(con) {
     // scrollFix предотвращает скачки верстки в строну при блокировке скролла
     scrollFix =
       scrollFix > DEFAULT_SCROLLBAR_WIDTH ? DEFAULT_SCROLLBAR_WIDTH : scrollFix;
-    document.body.style.paddingRight = `${scrollFix}px`;
+
+    if (!isMobile.any) {
+      document.body.style.paddingRight = `${scrollFix}px`;
+    }
+    
     document.body.classList.add("_lock");
   } else if (con === false) {
     document.body.classList.remove("_lock");

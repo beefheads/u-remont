@@ -243,7 +243,9 @@
 
 .reviews-shifter {
 	padding: rem(26) rem(22);
+	grid-column: 2/4;
 	@media (max-width: $w-mobile) {
+		grid-column: auto;
 		padding: 0;
 		padding-top: 1.4rem;	
 	}
@@ -271,4 +273,7 @@
 	@media (any-hover:hover) {
 		border-color: transparent;
 	}
+}
+.reviews-shifter__platforms {
+	background-color: #f6f6f6;
 }

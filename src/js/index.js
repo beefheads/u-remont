@@ -54,7 +54,7 @@ telInputs.forEach((input) => {
   const iti = intlTelInput(input, {
       initialCountry: "ru",
       // separateDialCode: true,
-      nationalMode: "true",
+      nationalMode: false,
       preferredCountries: ['ru', 'by', "kz"],
       utilsScript: "./js/phoneUtils.js"
   });

@@ -1,6 +1,7 @@
 .stages {
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 }
 .stages__container {
 	position: relative;

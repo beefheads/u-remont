@@ -94,10 +94,10 @@
   transition: all 0.3s ease;
 }
 .poppa__closer::before {
-  transform: rotate(35deg);
+  transform: rotate(40deg);
 }
 .poppa__closer::after {
-  transform: rotate(-35deg);
+  transform: rotate(-40deg);
 }
 .poppa__closer:hover::before,
 .poppa__closer:hover::after {
@@ -107,7 +107,7 @@
 
 .poppa__closer {
   --closer-color: #fff;
-  font-size: 1.25rem;//20px;
+  font-size: 1.2rem;//20px;
   color: transparent;
 }
 .poppa__closer::before,
@@ -209,7 +209,7 @@
 
 body:not(.os-linux):not(.os-macos) .poppa__closer {
   @media (min-width: 769px) {
-    right: 27px;
+    right: 33px;
   }
 }
 
