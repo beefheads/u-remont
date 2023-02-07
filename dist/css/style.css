@@ -6651,7 +6651,7 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
   .hero__title br {
     display: none;
   }
@@ -6719,6 +6719,11 @@ input[type=search]::-webkit-search-cancel-button {
   font-size: 0.875rem;
   transition: var(--tr-regular);
   z-index: 1;
+}
+@media (max-width: 1800px) {
+  .hero-gallery__circle {
+    right: 7.8125rem;
+  }
 }
 @media (max-width: 810px) {
   .hero-gallery__circle {

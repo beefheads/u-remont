@@ -19,7 +19,7 @@
   }
 }
 .hero__title br {
-  @media (max-width: $desktop-m) {
+  @media (max-width: $desktop-l) {
     display: none;   
   }
 }
@@ -74,6 +74,9 @@
   font-size: 0.875rem;//rem(14);
   transition: var(--tr-regular);
   z-index: 1;
+  @media (max-width: $desktop-l) {
+    right: 7.8125rem;//rem(173);
+  }
   @media (max-width: $w-mobile) {
     width: 9.642857142857142rem;//135
     height: 9.714285714285714rem;//136
