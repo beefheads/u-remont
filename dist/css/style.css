@@ -4964,7 +4964,7 @@ input[type=search]::-webkit-search-cancel-button {
 .input-attach__dropdown {
   position: absolute;
   background: #fff;
-  top: 30px;
+  top: 2.9rem;
   z-index: 2;
   left: -1px;
   width: calc(100% + 2px);
@@ -5814,7 +5814,7 @@ input[type=search]::-webkit-search-cancel-button {
   column-gap: 0.625rem;
   margin-bottom: 0.625rem;
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .modal-case__fieldset {
     grid-template-columns: initial;
     row-gap: 0.714rem;

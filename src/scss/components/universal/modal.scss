@@ -313,7 +313,7 @@
   align-items: center;
   column-gap: rem(10);
   margin-bottom: rem(10);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     grid-template-columns: initial;
     row-gap: 0.714rem
   }
