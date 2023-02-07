@@ -82,6 +82,7 @@ let compareCarousel = new Swiper(".comparer-carousel", {
 });
 
 window.makeThumbsClickable = (gallerySwiper, thumbsSwiper) => {
+  // console.log(thumbsSwiper.slides)
   if (!thumbsSwiper || !gallerySwiper) return;
   thumbsSwiper.slides.forEach((slide, index) => {
 
@@ -199,15 +200,7 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
   if (document.querySelector(selectorGallery) && document.querySelector(selectorThumbs)) {
     carouselThumbs = new Swiper(selectorThumbs, configThumbs);
     carouselGallery = new Swiper(selectorGallery, configGallery);
-    carouselThumbs.on('slideChange', () => {
-      carouselGallery.slideTo(carouselThumbs.activeIndex);
-      carouselThumbs.slides.forEach(thumb => {
-        thumb.classList.remove('_active');
-      })
-      carouselThumbs.slides[carouselThumbs.activeIndex].classList.add('_active');
-
-    })
-    window.makeThumbsClickable(carouselGallery, carouselThumbs);
+    // window.makeThumbsClickable(carouselGallery, carouselThumbs);
     return {
       gallery: carouselGallery,
       thumbs: carouselThumbs,
@@ -215,45 +208,70 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
   }
 }
 
-let casesGallery = makeThumbSwiper(
-  {
-    selector: '.cases-gallery-carousel__slideshow',
-    config: {
-      modules: [Navigation],
-      navigation: {
-        nextEl: ".cases-gallery-carousel__slideshow .cases-gallery-button-next",
-        prevEl: ".cases-gallery-carousel__slideshow .cases-gallery-button-prev",
-      },
+const casesGallerySlideshows = document.querySelectorAll('.cases-gallery-carousel__slideshow');
+const casesGalleryThumbs = document.querySelectorAll('.cases-gallery-carousel__thumbs');
+casesGallerySlideshows.forEach((gallery, index) => {
+  const galleryClassName = `cases-gallery-carousel__slideshow-${index}`
+  const thumbsClassName = `cases-gallery-carousel__thumbs-${index}`
+  gallery.classList.add(galleryClassName)
+  casesGalleryThumbs[index].classList.add(thumbsClassName)
+
+  const casesGallery = makeThumbSwiper(
+    {
+      selector: `.${galleryClassName}`,
+      config: {
+        modules: [Navigation],
+        navigation: {
+          nextEl: `.${galleryClassName} .cases-gallery-button-next`,
+          prevEl: `.${galleryClassName} .cases-gallery-button-prev`,
+        },
+      }
+    },
+    {
+      selector: `.${thumbsClassName}`,
+      config: {
+        modules: [Grid, Navigation],
+        grid: {
+          fill: "row",
+          // rows: 2,
+          rows: 4,
+        },
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        centerInsufficientSlides: false,
+        spaceBetween: 10,
+        slidesPerView: 5,
+        // slidesPerView: 2,
+        navigation: {
+          nextEl: `.${thumbsClassName} .cases-gallery-button-next`,
+          prevEl: `.${thumbsClassName} .cases-gallery-button-prev`,
+        },
+      }
     }
-  },
-  {
-    selector: '.cases-gallery-carousel__thumbs',
-    config: {
-      modules: [Grid, Navigation],
-      grid: {
-        fill: "row",
-        // rows: 2,
-        rows: 4,
-      },
-      centeredSlides: false,
-      centeredSlidesBounds: false,
-      centerInsufficientSlides: false,
-      spaceBetween: 10,
-      slidesPerView: 5,
-      // slidesPerView: 2,
-      navigation: {
-        nextEl: ".cases-gallery-carousel__thumbs .cases-gallery-button-next",
-        prevEl: ".cases-gallery-carousel__thumbs .cases-gallery-button-prev",
-      },
-    }
+  );
+  if (casesGallery != undefined) {
+    const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.swiper-slide');
+    thumbsSlides.forEach((slide, index) => {
+      slide.addEventListener("click", (e) => {
+        casesGallery.gallery.slideTo(index);
+      });
+    })
+    casesGallery.gallery.on('slideChange', function() {
+      thumbsSlides.forEach((slide, index) => {
+        slide.classList.remove('_active')
+
+        if (this.activeIndex == index) {
+          slide.classList.add('_active');
+        }
+      })
+    })
+    // casesGallery.thumbs.slides.forEach((slide, index) => {
+    //   slide.addEventListener("click", (e) => {
+    //     console.log(index)
+    //   });
+    // })
   }
-);
-if (casesGallery != undefined) {
-  casesGallery.gallery.on('slideChange', function() {
-    // console.log(this.activeIndex)
-    // casesGallery.thumbs.slides[this.activeIndex].classList.add('_active')
-  })
-}
+})
 
 function initModalCases() {
   return makeThumbSwiper(
