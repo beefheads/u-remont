@@ -42,6 +42,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.6875rem;//rem(11);
+  @media (max-width: $tablet) {
+    max-width: 25.428rem;
+  }
   @media (max-width: $w-mobile) {
     max-width: 23.428rem;
     width: 100%;

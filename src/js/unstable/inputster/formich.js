@@ -149,6 +149,7 @@ formsList.forEach((form) => {
     // }
     setTimeout(() => {
       window.poppa.closeCurrentPop()
+      form.reset();
     }, 2500);
   });
 });
