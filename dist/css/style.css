@@ -8684,6 +8684,11 @@ input[type=search]::-webkit-search-cancel-button {
   padding: 2.8125rem 3.125rem;
   border-radius: 20px;
 }
+@media (max-width: 1800px) {
+  .cases-gallery__page {
+    grid-template-columns: 34.5rem 37.5rem;
+  }
+}
 @media (max-width: 1500px) {
   .cases-gallery__page {
     grid-template-columns: 40.5rem auto;

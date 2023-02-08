@@ -16,6 +16,9 @@
 	background-color: var(--bg-element);
 	padding: 2.8125rem 3.125rem ;
 	border-radius: 20px;
+	@media (max-width: $desktop-l) {
+		grid-template-columns: 34.5rem 37.5rem;
+	}
 	@media (max-width: $desktop-m) {
 		grid-template-columns: 40.5rem auto;
 	}
