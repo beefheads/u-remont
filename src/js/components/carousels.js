@@ -248,32 +248,59 @@ casesGallerySlideshows.forEach((gallery, index) => {
     }
   );
   if (casesGallery != undefined) {
-    // const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.swiper-slide');
     const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.cases-gallery-slide__pic');
     thumbsSlides.forEach((slide, index) => {
       slide.addEventListener("click", (e) => {
         casesGallery.gallery.slideTo(index);
       });
     })
+    casesGallery.thumbs.on('slideChange', function() {
+      // console.log(this.activeIndex, Math.ceil([...casesGallery.thumbs.slides].length / 19))
+      casesGallery.thumbs.el.querySelector('.cases-gallery-page').innerText = `${this.activeIndex + 1} / ${Math.ceil([...casesGallery.thumbs.slides].length / 19) + 1}`
+      
+    })
     casesGallery.gallery.on('slideChange', function() {
-
       thumbsSlides.forEach((slide, index) => {
         slide.classList.remove('_active')
-
         if (this.activeIndex == index) {
           slide.classList.add('_active');
-          // console.log(index)
-          // console.log(Math.round([...casesGallery.thumbs.slides].length / 20))
         }
-
+        casesGallery.thumbs.slideTo(Math.floor(this.activeIndex / 19))
         // Спрашивает сколько слайдов и какой индекс у активного
       })
     })
-    // casesGallery.thumbs.slides.forEach((slide, index) => {
-    //   slide.addEventListener("click", (e) => {
-    //     console.log(index)
-    //   });
-    // })
+
+    function handleFirstSlide() {
+      mobilePrev.style.display = "";
+      if (casesGallery.thumbs.activeIndex === 0) {
+        mobilePrev.style.display = "none"
+        mobileNext.style.display = ""
+      }
+    }
+    function haldleLastSlide() {
+      mobileNext.style.display = "";
+      if (casesGallery.thumbs.activeIndex === [...casesGallery.thumbs.slides].length - 1) {
+        mobileNext.style.display = "none"
+        mobilePrev.style.display = ""
+      }
+    }
+    const mobilePrev = casesGallery.thumbs.el.querySelector('.cases-gallery-button-prev--mobile')
+    const mobileNext = casesGallery.thumbs.el.querySelector('.cases-gallery-button-next--mobile')
+    if (mobileNext && mobilePrev) {
+      handleFirstSlide();
+      mobilePrev.addEventListener("click", (e) => {
+        casesGallery.thumbs.slidePrev()
+        mobilePrev.style.display = ""
+        mobileNext.style.display = ""
+        handleFirstSlide();
+      });
+      mobileNext.addEventListener("click", (e) => {
+        casesGallery.thumbs.slideNext()
+        mobilePrev.style.display = ""
+        mobileNext.style.display = ""
+        haldleLastSlide();
+      });
+    }
   }
 })
 
