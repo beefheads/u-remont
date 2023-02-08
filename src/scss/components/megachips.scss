@@ -6,6 +6,28 @@
 		flex-direction: column;
 	}
 }
+@media (max-width: $w-mobile) {
+	.megachips::before,
+	.megachips::after {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		display: block;
+		width: 70px;
+	  height: 32px;
+		border-radius: 50%;
+	}
+	.megachips::before {
+		right: -30px;
+	  background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6);
+	  transform: scaleX(-1);
+	}
+	.megachips::after {
+		left: -30px;
+	  background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6);
+	  // background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6) top right, radial-gradient(circle 30px at bottom left ,#0000 98%,green) bottom left, radial-gradient(circle 30px at bottom right,#0000 98%,purple) bottom right;
+	}
+}
 .megachips__list {
 	display: flex;
 	flex-wrap: wrap;
@@ -58,6 +80,7 @@
 	padding-left: 3.75rem;
 	padding-right: 3.75rem;
 	font-style: normal;
+	position: relative;
 	@media (max-width: $w-mobile) {
 		text-align: left;
 		padding-top: 0.42857142857142855rem;
@@ -66,7 +89,29 @@
 		padding-left: 2.0714285714285716rem;
 	}
 }
-
+.megachips__button._active::before,
+.megachips__button._active::after {
+	position: absolute;
+	bottom: -5px;
+	content: "";
+	display: block;
+	width: 70px;
+  height: 32px;
+	border-radius: 50%;
+	@media (max-width: $w-mobile) {
+		display: none;
+	}
+}
+.megachips__button._active::before {
+	right: -30px;
+  background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6);
+  transform: scaleX(-1);
+}
+.megachips__button._active::after {
+	left: -30px;
+  background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6);
+  // background: radial-gradient(circle 30px at top left ,#0000 98%,#fff) top left, radial-gradient(circle 30px at top right,#0000 98%,#f6f6f6) top right, radial-gradient(circle 30px at bottom left ,#0000 98%,green) bottom left, radial-gradient(circle 30px at bottom right,#0000 98%,purple) bottom right;
+}
 .tabs__page:not(._active) {
 	display: none;
 }
