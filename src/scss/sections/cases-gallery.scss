@@ -97,6 +97,9 @@
 	height: 100%;
 	border: 2px solid var(--c-text-regular);
 	border-radius: 10px;
+	@media (max-width: $w-mobile) {
+		border-radius: 5px;
+	}
 }
 
 .cases-gallery-carousel__thumbs .swiper-wrapper {

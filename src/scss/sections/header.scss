@@ -10,6 +10,7 @@
 		justify-content: flex-start;
 		flex-direction: column;
 		align-items: flex-end;
+		pointer-events: none;
 	}
 }
 .header__container {
@@ -20,6 +21,7 @@
 	background-color: #F6F6F6;
 	padding: rem(16) rem(48);
 	border-radius: rem(20);
+	pointer-events: initial;
 }
 
 .header__logo {

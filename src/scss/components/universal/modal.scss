@@ -158,6 +158,7 @@
     padding: 2.214rem;
     display: flex;
     flex-direction: column;
+    row-gap: 0;
   }
 }
 .modal-case-photos {
@@ -168,6 +169,7 @@
   position: relative;
   @media (max-width: $w-mobile) {
     max-width: 21.357rem;
+    max-height: 400px;
     margin-bottom: 2.857rem;
   }
 }
@@ -184,8 +186,9 @@
     order: -1;
     margin-bottom: 1.428rem;
     font-size: 1rem;
-    line-height: auto;
+    line-height: initial;
     max-width: 80%;
+    align-self: start;
   }
 }
 .modal-case__desc {
@@ -332,7 +335,8 @@
   // margin-bottom: rem(10);
   @media (max-width: $tablet) {
     grid-template-columns: initial;
-    row-gap: 0.714rem
+    row-gap: 0.714rem;
+    margin-bottom: 9px;
   }
 }
 .modal-case__fieldset .input {
