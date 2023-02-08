@@ -56,9 +56,16 @@
 	grid-area: thumbs;
 	width: 100%;
 }
+.cases-gallery-carousel__thumbs .cases-gallery-slide {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 71px);
+	grid-gap: 10px;
+}
 .cases-gallery-slide__pic {
 	display: block;
 	height: 100%;
+	position: relative;
 }
 .cases-gallery-carousel__slideshow .cases-gallery-slide__pic {
 	height: 27.8125rem;
@@ -77,7 +84,7 @@
 		height: 2.5rem;
 	}
 }
-.cases-gallery-carousel__thumbs .cases-gallery-slide._active::after {
+.cases-gallery-carousel__thumbs .cases-gallery-slide__pic._active::after {
 	content: "";
 	position: absolute;
 	left: 0;

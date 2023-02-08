@@ -158,6 +158,7 @@ function makeThumbSwiper(gallerySettings, thumbsSettings) {
       },
       on: {
         slideChange: function() {
+          if (this.el.classList.contains('cases-gallery-carousel__slideshow')) return;
           carouselThumbs.slideTo(this.activeIndex);
         },
         init: function() {
@@ -232,18 +233,13 @@ casesGallerySlideshows.forEach((gallery, index) => {
     {
       selector: `.${thumbsClassName}`,
       config: {
-        modules: [Grid, Navigation],
-        grid: {
-          fill: "row",
-          // rows: 2,
-          rows: 4,
-        },
+        modules: [Navigation],
+        spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
         centerInsufficientSlides: false,
-        spaceBetween: 10,
-        slidesPerView: 5,
-        // slidesPerView: 2,
+        slidesPerView: 1,
+        slideToClickedSlide: false,
         navigation: {
           nextEl: `.${thumbsClassName} .cases-gallery-button-next`,
           prevEl: `.${thumbsClassName} .cases-gallery-button-prev`,
@@ -252,19 +248,25 @@ casesGallerySlideshows.forEach((gallery, index) => {
     }
   );
   if (casesGallery != undefined) {
-    const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.swiper-slide');
+    // const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.swiper-slide');
+    const thumbsSlides = casesGallery.thumbs.el.querySelectorAll('.cases-gallery-slide__pic');
     thumbsSlides.forEach((slide, index) => {
       slide.addEventListener("click", (e) => {
         casesGallery.gallery.slideTo(index);
       });
     })
     casesGallery.gallery.on('slideChange', function() {
+
       thumbsSlides.forEach((slide, index) => {
         slide.classList.remove('_active')
 
         if (this.activeIndex == index) {
           slide.classList.add('_active');
+          // console.log(index)
+          // console.log(Math.round([...casesGallery.thumbs.slides].length / 20))
         }
+
+        // Спрашивает сколько слайдов и какой индекс у активного
       })
     })
     // casesGallery.thumbs.slides.forEach((slide, index) => {
