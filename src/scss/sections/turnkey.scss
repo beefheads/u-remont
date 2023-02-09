@@ -46,8 +46,8 @@
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	padding: rem(10) rem(25) rem(10) rem(5);
-	margin-left: 1.25rem;//rem(20);
+	padding: rem(10) rem(25) rem(10) 0.7625rem;
+	margin-left: 0.8rem;//rem(20);
 	color: var(--c-text-regular);
 	font-size: 0.75rem;//rem(12);
 	font-weight: 600;
@@ -67,7 +67,7 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	left: -1.2rem;
+	left: -1rem;
 	display: block;
 	height: 100%;
 	width: rem(30);
@@ -76,6 +76,9 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	@media (max-width: $tablet) {
+		left: -1.2rem;
+	}
 }
 .turnkey-card__shield::after {
 	content: "";

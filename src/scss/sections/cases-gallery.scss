@@ -62,20 +62,22 @@
 .cases-gallery-carousel__thumbs .cases-gallery-slide {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4, 4.4375rem);//71px);
+	// grid-template-rows: repeat(4, 4.4375rem);//71px);
+	grid-template-rows: repeat(4, 4.6375rem);//71px);
 	grid-gap: 10px;
 	@media (max-width: $desktop-l) {
-		grid-template-rows: repeat(4, 4.7375rem);
+		grid-template-rows: initial;
+		grid-auto-rows: 4.7375rem;
 	}
-	// @media (max-width: $desktop-m) {
-	// 	grid-template-rows: repeat(4, 4.68rem);
-	// }
+	@media (max-width: $desktop-m) {
+		grid-auto-rows: 4.6375rem;
+	}
 	@media (max-width: $tablet) {
-		grid-template-rows: repeat(4, 4rem);
+		grid-auto-rows: 4rem;
 		grid-gap: 0.35714285714285715rem;//5px;
 	}
 	@media (max-width: $w-mobile) {
-		grid-template-rows: repeat(4, 2.5rem);
+		grid-auto-rows: 2.5rem;
 	}
 }
 .cases-gallery-slide__pic {
