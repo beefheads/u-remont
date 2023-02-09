@@ -22,6 +22,10 @@
 	padding: rem(16) rem(48);
 	border-radius: rem(20);
 	pointer-events: initial;
+	transition: background-color 0.3s ease;
+}
+.header--light .header__container {
+	background-color: #fff;
 }
 
 .header__logo {
@@ -138,18 +142,18 @@
 	position: relative;
   z-index: 1;
 	display: block;
-	width: 26px;
-	height: 26px;
+	width: 1.625rem;//26px;
+	height: 1.625rem;//26px;
   text-decoration: none;
   border-bottom: none;
-  margin-right: 20px;
+  margin-right: 1.25rem;//20px;
   transition: var(--tr-regular);
 }
 .header__contact-icon::before {
 	content: "";
 	position: absolute;
-	right: 2px;
-	top: 1px;
+	right: 0.125rem;//2px;
+	top: 0.0625rem;//1px;
 	z-index: -1;
 	display: block;
 	width: 90%;
@@ -175,10 +179,13 @@
 
 
 .header__container--mobile {
-	width: initial;
-	display: inline-flex;
-	padding: 14px 15px;
-	margin-right: 16px;
+	display: none;
+	@media (max-width: $w-burger) {
+		width: initial;
+		display: inline-flex;
+		padding: 1rem 1rem;//14px 15px;
+		margin-right: 1.1428571428571428rem;//16px;
+	}
 }
 .header__container--desktop {
 	@media (max-width: $w-burger) {
@@ -196,6 +203,7 @@
 		transform: translateY(-150%);
 		overflow-y: auto;
 		max-height: #{'calc(100 * 1vh)'};
+		max-width: 100%;
 	}
 }
 .header--opened .header__container--desktop {

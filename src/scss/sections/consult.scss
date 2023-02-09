@@ -3,13 +3,13 @@
 	@media (max-width: $desktop-s) {
 		padding-bottom: 8.5rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		padding-bottom: 8.8rem;
 		overflow: hidden;
 	}
 }
 .consult__container {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		padding-left: 0.785rem;
 		padding-right: 0.785rem;
 	}
@@ -23,14 +23,14 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border-radius: 0.625rem;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		border-radius: 0.714rem;
 		padding: 2.857rem 1.28rem 12.71rem;
 	}
 }
 .consult__title {
 	margin-bottom: rem(20);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-bottom: 0.914rem;
 	}
 }
@@ -42,7 +42,7 @@
 	@media (max-width: $desktop-s) {
 		margin-bottom: 2.75rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		letter-spacing: normal;
 		font-size: 1.285rem;
 		line-height: initial;
@@ -50,7 +50,7 @@
 	}
 }
 .consult__desc br {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		display: none;
 	}
 }
@@ -65,14 +65,14 @@
 	@media (max-width: $desktop-l) {
 		grid-template-columns: repeat(3, 15.188rem);
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		grid-template-columns: 1fr;
 		row-gap: 0.51rem;
 		margin-bottom: 1.142rem;
 	}
 }
 .consult-form__caption-row {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		text-align: center;
 		margin-bottom: 2.857rem;
 	}
@@ -85,7 +85,7 @@
 	font-style: italic;
 	border-bottom: 1px solid var(--color);
 	transition: var(--tr-regular);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		font-size: 0.857rem;
 	}
 }
@@ -105,7 +105,7 @@
 	@media (max-width: $desktop-l) {
 		right: 1.25rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		width: 18rem;
 		height: 18.285rem;
 		margin-left: auto;
@@ -135,7 +135,7 @@
 		width: 23.813rem;
 		height: 23.375rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		width: 100%;
 		height: 100%;
 		margin-left: auto;

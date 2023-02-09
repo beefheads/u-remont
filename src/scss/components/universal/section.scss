@@ -8,7 +8,7 @@
     padding-top: 6rem; //120
     padding-bottom: 6rem; //120
   }
-  @media (max-width: $w-burger) {
+  @media (max-width: $tablet) {
     padding-top: 4.285714285714286rem; //60
     padding-bottom: 4.285714285714286rem; //60
   }
@@ -34,7 +34,7 @@
   @media (max-width: $desktop-s) {
     margin-bottom: 2.75rem;
   }
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 1.2857142857142858rem;
     margin-bottom: 5.142857142857143rem;
   }

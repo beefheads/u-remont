@@ -2,7 +2,7 @@
   padding: 4.6875rem 3.875rem;//rem(75) rem(62);
   border-radius: 0.625rem;
   max-width: 58.625rem;//938px;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     padding: 4.285rem 2.142rem;
     max-width: 25.714rem ;
     border-radius: 0.714rem;
@@ -16,7 +16,7 @@
   margin-right: auto;
   line-height: 1.2;
   margin-bottom: 3.75rem;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 1.142rem;
     margin-bottom: 2.857rem;
   }
@@ -26,7 +26,7 @@
   text-align: center;
   margin-bottom: rem(53);
   font-size: rem(24);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 1.285rem;
     margin-bottom: 2rem;
   }
@@ -45,7 +45,7 @@
   @media (max-width: $tablet) {
     max-width: 25.428rem;
   }
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     max-width: 23.428rem;
     width: 100%;
     row-gap: 0.714rem;
@@ -54,12 +54,15 @@
 }
 .modal__caption {
   --color: var(--c-text-on);
+  font-family: var(--ff-regular);
   color: var(--color);
   border-bottom: 1px solid var(--color);
+  font-weight: 300;
   font-style: italic;
+  font-size: 0.875rem;
   line-height: initial;
   transition: var(--tr-regular);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 0.857rem;
   }
 }
@@ -79,6 +82,10 @@
   background-size: cover;
   color: var(--c-text-regular);
 }
+.modal-review .poppa__closer:not(:hover):before,
+.modal-review .poppa__closer:not(:hover):after {
+  background: var(--c-accent);
+}
 .modal-review__title {
   margin-bottom: rem(20);
 }
@@ -94,7 +101,7 @@
 .modal-review__fieldset .input-attach {
   max-width: 49%;
   --border-color: var(--c-text-regular);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     max-width: 100%;
   }
 }
@@ -109,7 +116,7 @@
   border-radius: rem(10);
   font-size: rem(14);
   line-height: initial;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     text-align: left;
     padding: 1.071rem 1.428rem;
     flex-direction: column;
@@ -118,7 +125,7 @@
   }
 }
 .modal-review__rating-title {
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     margin-bottom: 0.857rem;
   }
 }
@@ -129,7 +136,7 @@
   --color: var(--c-text-regular);
   font-size: rem(14);
   font-weight: 300;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 0.857rem;
   }
 }
@@ -151,7 +158,7 @@
   @media (max-width: $desktop-l) {
     max-width: 1386px;
   }
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     grid-template-areas: unset;   
     grid-template-columns: unset;
     grid-template-rows: unset;
@@ -167,7 +174,7 @@
   width: 100%;
   min-height: 370px;
   position: relative;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     max-width: 21.357rem;
     max-height: 400px;
     margin-bottom: 2.857rem;
@@ -182,7 +189,7 @@
   line-height: lhperc(18, 22);
   padding-top: 5px;
   align-self: end;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     order: -1;
     margin-bottom: 1.428rem;
     font-size: 1rem;
@@ -198,7 +205,7 @@
   color: var(--c-text-regular);
   max-width: 45rem;
   align-self: center;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 1rem;
     max-width: 100%;
   }
@@ -206,7 +213,7 @@
 .modal-case__desc ul {
   padding-left: rem(22);
   // margin-bottom: rem(36);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     padding-left: 1.571rem;
     margin-bottom: 2.857rem;
   }
@@ -217,7 +224,7 @@
   line-height: initial;
   position: relative;
   letter-spacing: -0.005em;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     margin-bottom: 0.571rem;
   }
 }
@@ -277,7 +284,7 @@
   max-width: 100%;
   object-fit: cover;
   border-radius: rem(10);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     position: absolute;
     left: 0;
     top: 0;
@@ -345,7 +352,7 @@
 }
 
 .modal-case__caption-row {
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     text-align: center;
   }
 }
@@ -353,10 +360,11 @@
   --color: var(--c-text-regular);
   font-size: rem(12);
   font-weight: 300;
+  font-style: italic;
   border-bottom: 1px solid var(--color);
   color: var(--color);
   transition: var(--tr-regular);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     font-size: 0.857rem;
     
   }
@@ -372,7 +380,7 @@
   top: 1.675rem
 }
 .modal-case .poppa__closer:not(:hover) {
-  --closer-color: var(--c-text-regular);
+  --closer-color: var(--c-accent);
 }
 
 .modal-case__submit {

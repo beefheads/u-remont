@@ -28,7 +28,7 @@
  */ 
 @include font(
   "Inter",
-  normal,
+  italic,
   300,
   "../resources/fonts/inter/inter-lightitalic"
 );
@@ -53,7 +53,7 @@
 @include font(
   "Inter",
   italic,
-  400,
+  500,
   "../resources/fonts/inter/inter-mediumitalic"
 );
 @include font(
@@ -93,7 +93,7 @@ html {
   // @media (max-width: 1300px) {
   //   font-size: 1.0938vw; //1300 14px
   // }
-  @media (max-width: 768px) {
+  @media (max-width: $tablet) {
     font-size: #{'calc(var(--index) * 1.2963)'}; // 1920 — 16px
   }
   @media (max-width: 320px) {

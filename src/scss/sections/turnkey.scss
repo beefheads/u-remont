@@ -28,7 +28,7 @@
 	color: var(--color);
 	max-width: 32.142007%;
 	width: 100%;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		max-width: 100%;
 		padding-top: 1.315rem;
 		padding-bottom: 1.928rem;
@@ -53,12 +53,13 @@
 	font-weight: 600;
 	font-style: italic;
 	margin-bottom: 9.6875rem;//rem(155);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-left: 0;
 		font-size: 0.857rem;//rem(12);
 		padding-right: 0.9285714285714286rem;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
+		padding-left: 0.51rem;
 		margin-bottom: 12.571428571428571rem;//176
 	}
 }
@@ -66,10 +67,11 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	left: rem(-24);
+	left: -1.2rem;
 	display: block;
 	height: 100%;
 	width: rem(30);
+	padding-left: 10px;
 	background-image: url(../img/common/price-bullet.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -171,18 +173,18 @@
 .turnkey__gallery > .turnkey-card:nth-child(1) .turnkey-card__shield,
 .turnkey__gallery > .turnkey-card:nth-child(2) .turnkey-card__shield {
 	margin-bottom: rem(255);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-bottom: 14.642857142857142rem;//205
 	}
 }
 .turnkey__gallery > .turnkey-card:nth-child(1) {
-	@media (min-width: ($w-mobile + 1)) {
+	@media (min-width: ($tablet + 1)) {
 		max-width: 59.628252788104085%;
 
 	}
 }
 .turnkey__gallery > .turnkey-card:nth-child(2) {
-	@media (min-width: ($w-mobile + 1)) {
+	@media (min-width: ($tablet + 1)) {
 		max-width: 38.876952%;
 	}
 }

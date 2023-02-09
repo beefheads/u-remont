@@ -11,8 +11,8 @@
 	grid-template-areas: "slideshow desc" "slideshow thumbs";
 	grid-template-columns: 44.5rem 37.5rem;
 	grid-template-rows: auto 1fr;
-	column-gap: 30px;
-	row-gap: 36px;
+	column-gap: 1.875rem;//30px;
+	row-gap: 2.25rem;//36px;
 	background-color: var(--bg-element);
 	padding: 2.8125rem 3.125rem ;
 	border-radius: 20px;
@@ -22,7 +22,7 @@
 	@media (max-width: $desktop-m) {
 		grid-template-columns: 40.5rem auto;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		// grid-template-areas: initial;
 		// grid-template-columns: initial;
 		// grid-template-rows: initial;
@@ -37,13 +37,13 @@
 	grid-area: desc;
 	font-size: 1.5rem;
 	font-family: var(--ff-em);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		font-size: 1.2857142857142858rem;
 		margin-bottom: 1.4285714285714286rem;
 	}
 }
 .cases-gallery__desc br {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		display: none;	
 	}
 }
@@ -51,7 +51,7 @@
 	grid-area: slideshow;
 	// max-width: 44.5rem;
 	width: 100%;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-bottom: 0.7142857142857143rem;
 	}
 }
@@ -64,8 +64,11 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 71px);
 	grid-gap: 10px;
-	@media (max-width: $w-mobile) {
-		grid-template-rows: repeat(4, 35px);
+	@media (max-width: $desktop-m) {
+		grid-template-rows: repeat(4, 4.83rem);
+	}
+	@media (max-width: $tablet) {
+		grid-template-rows: repeat(4, 2.5rem);
 		grid-gap: 5px;
 	}
 }
@@ -76,14 +79,14 @@
 }
 .cases-gallery-carousel__slideshow .cases-gallery-slide__pic {
 	height: 28.2125rem;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		height: 18.928571428571427rem;
 	}
 }
 .cases-gallery-slide__img {
 	object-fit: cover;
 	border-radius: 10px;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		border-radius: 5px;
 	}
 }
@@ -97,7 +100,7 @@
 	height: 100%;
 	border: 2px solid var(--c-text-regular);
 	border-radius: 10px;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		border-radius: 5px;
 	}
 }
@@ -170,7 +173,7 @@
   font-family: var(--ff-em);
   color: var(--c-text-regular);
   font-size: 1.5rem;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
   	font-size: 1.1428571428571428rem;
   	bottom: 38px;
   }
@@ -199,7 +202,7 @@
 	padding: 0 0.125rem 0 3.125rem;
 	position: relative;
 	z-index: 2;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 	padding: 0 3.125rem;
 	}
 }

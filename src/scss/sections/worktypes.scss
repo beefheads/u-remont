@@ -22,7 +22,7 @@
 	@media (max-width: $desktop-s) {
 		width: 100%;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		flex-direction: column;
 		border-radius: 1.428rem;//rem(20);
 		width: calc(100% + 2.8rem);
@@ -31,7 +31,7 @@
 }
 
 .worktypes__title {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-bottom: 11rem;
 	}
 }
@@ -46,7 +46,7 @@
 		margin-left: -5.562rem;
 		margin-bottom: -1.25rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: -8.55rem;
@@ -58,7 +58,7 @@
 	object-fit: cover;
 	width: rem(329);
 	height: rem(336);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		width: 20.863rem;
 		height: 21.1rem;
 	}
@@ -72,7 +72,7 @@
 	column-count: 3;
 	padding-top: rem(30);
 	padding-right: rem(8);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		column-count: initial;
 		padding: 0 1.4rem 6.071rem 1.5rem;
 	}
@@ -93,7 +93,7 @@
 	@media (max-width: $desktop-m) {
 		margin-right: 0.75rem;
 	}
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		max-width: 100%;
 		margin-right: 0;
 		margin-bottom: 1.428rem;
@@ -103,7 +103,7 @@
 	}
 }
 .worktypes__item:last-of-type {
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		margin-bottom: 0;
 	}
 }
@@ -120,7 +120,7 @@
 	width: rem(16);
 	height: rem(16);
 	background-color: #f6f6f6;
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		width: 1.142rem;
 		height: 1.142rem;
 		top: 0.857rem;
@@ -133,7 +133,7 @@
 	height: rem(12);
 	background-color: var(--c-accent);
 	border: 1px solid var(--c-text-on);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		top: 1rem;
 		left: -0.285rem;
 		width: 0.8571428571428571rem;
@@ -159,7 +159,7 @@
   	// right: 4.875rem;
   	bottom: -2.562rem;
   }
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
 		margin-left: auto; 	
 		margin-right: auto;
 		right: 0;
@@ -185,7 +185,7 @@
   width: 100%;
   height: 100%;
   border-radius: 1.25rem;//rem(20);
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
   	border-radius: 0.714rem;
   }
 }

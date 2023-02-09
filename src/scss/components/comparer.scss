@@ -1,6 +1,6 @@
 .comparer__title {
-  @media (max-width: $w-mobile) {
-    margin-bottom: 32px;
+  @media (max-width: $tablet) {
+    margin-bottom: 2.2857142857142856rem;//32px;
   }
 }
 
@@ -10,8 +10,8 @@
 }
 .before-after-slider {
   height: 45.5625rem;
-  @media (max-width: $w-mobile) {
-    height: 189px;
+  @media (max-width: $tablet) {
+    height: 13.5rem;//189px;
   }
 }
 .before-after-slider .slider-container .before-img img {
@@ -37,7 +37,7 @@
   background-repeat: no-repeat;
   width: 2.375rem;
   height: 11.1875rem;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     width: 4.5rem;
     height: 4.5rem;
     background: url("../img/compare/compare-mobile.svg");
@@ -52,7 +52,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  @media (max-width: $w-mobile) {
+  @media (max-width: $tablet) {
     width: 4.5rem;
     height: 4.5rem;
     background-repeat: no-repeat;

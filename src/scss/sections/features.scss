@@ -25,7 +25,7 @@
 	row-gap: rem(60);
 	background-color: var(--bg-element);
 	border-radius: rem(20);
-	@media (max-width: $w-mobile) {
+	@media (max-width: $tablet) {
 		grid-template-columns: 1fr;
 		padding: 2.257rem 1.4rem 7.5rem 1.7857142857142858rem;
 		row-gap: 2.667rem; //26

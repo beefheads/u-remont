@@ -126,3 +126,31 @@ function stickyHeader() {
 window.addEventListener('scroll', stickyHeader);
 window.addEventListener('orientationchange', stickyHeader);
 stickyHeader();
+
+function calcHeaderInvert() {
+ invertHeaderBlocks.forEach((inverter, index, arr) => {
+    const bounds = inverter.getBoundingClientRect();
+
+    if (arr[0].getBoundingClientRect().top > 100) {
+      header.classList.remove('header--light')
+    }
+    if (bounds.top > 100) return;
+
+    if (bounds.top < 100) {
+        header.classList.add('header--light')
+    }  else {
+      header.classList.remove('header--light')
+    }
+    if (bounds.bottom < 100) {
+      header.classList.remove('header--light')
+    }
+
+  })
+}
+const invertHeaderBlocks = document.querySelectorAll('[data-invert-header]');
+window.addEventListener("scroll", (e) => {
+  calcHeaderInvert();
+});
+calcHeaderInvert();
+   
+
