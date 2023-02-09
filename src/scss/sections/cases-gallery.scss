@@ -17,7 +17,7 @@
 	padding: 2.8125rem 3.125rem ;
 	border-radius: 20px;
 	@media (max-width: $desktop-l) {
-		grid-template-columns: 34.5rem 37.5rem;
+		grid-template-columns: 34.5rem auto;
 	}
 	@media (max-width: $desktop-m) {
 		grid-template-columns: 40.5rem auto;
@@ -62,14 +62,20 @@
 .cases-gallery-carousel__thumbs .cases-gallery-slide {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4, 71px);
+	grid-template-rows: repeat(4, 4.4375rem);//71px);
 	grid-gap: 10px;
-	@media (max-width: $desktop-m) {
-		grid-template-rows: repeat(4, 4.83rem);
+	@media (max-width: $desktop-l) {
+		grid-template-rows: repeat(4, 4.7375rem);
 	}
+	// @media (max-width: $desktop-m) {
+	// 	grid-template-rows: repeat(4, 4.68rem);
+	// }
 	@media (max-width: $tablet) {
+		grid-template-rows: repeat(4, 4rem);
+		grid-gap: 0.35714285714285715rem;//5px;
+	}
+	@media (max-width: $w-mobile) {
 		grid-template-rows: repeat(4, 2.5rem);
-		grid-gap: 5px;
 	}
 }
 .cases-gallery-slide__pic {
@@ -117,12 +123,12 @@
 .cases-gallery-carousel__slideshow .cases-gallery-button-prev {
 	background: var(--bg-element);
 	border-radius: 50%;
-	left: -13px;
+	left: -0.8125rem;//-13px;
 }
 .cases-gallery-carousel__slideshow .cases-gallery-button-next {
 	background: var(--bg-element);
 	border-radius: 50%;
-	right: -13px;
+	right: -0.8125rem;//-13px;
 }
 
 .cases-gallery-carousel__slideshow .cases-gallery-button-prev .swiper-button__icon {
@@ -175,11 +181,11 @@
   font-size: 1.5rem;
   @media (max-width: $tablet) {
   	font-size: 1.1428571428571428rem;
-  	bottom: 38px;
+  	bottom: 2.7142857142857144rem;//38px;
   }
 }
 .cases-gallery-carousel__thumbs-controls--mobile {
-	padding-top: 20px;
+	padding-top: 1.4285714285714286rem;//20px;
 	position: static;
 	display: flex;
 	justify-content: space-between;

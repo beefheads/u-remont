@@ -4338,13 +4338,13 @@ h6 {
 /*
   Модификаторы
  */
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   ._only-desktop {
     display: none !important;
   }
 }
 
-@media (min-width: 811px) {
+@media (min-width: 993px) {
   ._only-mobile {
     display: none !important;
   }
@@ -7044,13 +7044,13 @@ input[type=search]::-webkit-search-cancel-button {
     padding-bottom: 8rem;
   }
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features {
     padding-bottom: 6.2857142857rem;
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features__container {
     padding-left: 0.7857142857rem;
     padding-right: 0.7857142857rem;
@@ -7083,7 +7083,7 @@ input[type=search]::-webkit-search-cancel-button {
   padding-right: 2.728571rem;
   letter-spacing: -0.5px;
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card {
     align-items: center;
     position: relative;
@@ -7094,7 +7094,7 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
-@media (min-width: 811px) {
+@media (min-width: 993px) {
   .features-card:nth-of-type(3) {
     border-right: none;
   }
@@ -7104,7 +7104,7 @@ input[type=search]::-webkit-search-cancel-button {
   border-right: none;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card:nth-of-type(1) {
     order: 1;
   }
@@ -7115,17 +7115,17 @@ input[type=search]::-webkit-search-cancel-button {
     order: 5;
   }
 }
-@media (max-width: 810px) and (max-width: 810px) {
+@media (max-width: 992px) and (max-width: 992px) {
   .features-card:nth-of-type(3) .features-card__pic::after {
     display: none;
   }
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card:nth-of-type(4) {
     order: 2;
   }
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card:nth-of-type(5) {
     order: 4;
   }
@@ -7138,13 +7138,13 @@ input[type=search]::-webkit-search-cancel-button {
   height: var(--size);
   margin-right: 1.4285714286rem;
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card__pic {
     --size: 2.4rem;
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features-card__pic::after {
     content: "";
     left: -0.428rem;
@@ -7189,7 +7189,7 @@ input[type=search]::-webkit-search-cancel-button {
     right: 3.125rem;
   }
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features__button {
     right: 0;
     left: 0;
@@ -7225,7 +7225,7 @@ input[type=search]::-webkit-search-cancel-button {
   top: -0.75rem;
   left: -0.75rem;
 }
-@media (max-width: 810px) {
+@media (max-width: 992px) {
   .features__button::before {
     width: calc(100% + 1rem);
     top: -0.5rem;
@@ -8765,7 +8765,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (max-width: 1800px) {
   .cases-gallery__page {
-    grid-template-columns: 34.5rem 37.5rem;
+    grid-template-columns: 34.5rem auto;
   }
 }
 @media (max-width: 1500px) {
@@ -8816,18 +8816,23 @@ input[type=search]::-webkit-search-cancel-button {
 .cases-gallery-carousel__thumbs .cases-gallery-slide {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 71px);
+  grid-template-rows: repeat(4, 4.4375rem);
   grid-gap: 10px;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
   .cases-gallery-carousel__thumbs .cases-gallery-slide {
-    grid-template-rows: repeat(4, 4.83rem);
+    grid-template-rows: repeat(4, 4.7375rem);
   }
 }
 @media (max-width: 992px) {
   .cases-gallery-carousel__thumbs .cases-gallery-slide {
+    grid-template-rows: repeat(4, 4rem);
+    grid-gap: 0.3571428571rem;
+  }
+}
+@media (max-width: 810px) {
+  .cases-gallery-carousel__thumbs .cases-gallery-slide {
     grid-template-rows: repeat(4, 2.5rem);
-    grid-gap: 5px;
   }
 }
 
@@ -8885,13 +8890,13 @@ input[type=search]::-webkit-search-cancel-button {
 .cases-gallery-carousel__slideshow .cases-gallery-button-prev {
   background: var(--bg-element);
   border-radius: 50%;
-  left: -13px;
+  left: -0.8125rem;
 }
 
 .cases-gallery-carousel__slideshow .cases-gallery-button-next {
   background: var(--bg-element);
   border-radius: 50%;
-  right: -13px;
+  right: -0.8125rem;
 }
 
 .cases-gallery-carousel__slideshow .cases-gallery-button-prev .swiper-button__icon {
@@ -8947,12 +8952,12 @@ input[type=search]::-webkit-search-cancel-button {
 @media (max-width: 992px) {
   .cases-gallery-carousel__thumbs-controls {
     font-size: 1.1428571429rem;
-    bottom: 38px;
+    bottom: 2.7142857143rem;
   }
 }
 
 .cases-gallery-carousel__thumbs-controls--mobile {
-  padding-top: 20px;
+  padding-top: 1.4285714286rem;
   position: static;
   display: flex;
   justify-content: space-between;
