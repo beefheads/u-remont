@@ -155,6 +155,9 @@
 	font-family: var(--ff-em);
   transition: var(--tr-regular);
   text-align: center;
+  @media (max-width: $desktop-l) {
+  	bottom: -3.5625rem;
+  }
   @media (max-width: $desktop-m) {
   	// right: 4.875rem;
   	bottom: -2.562rem;

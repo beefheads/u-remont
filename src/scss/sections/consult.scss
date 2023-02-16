@@ -102,6 +102,7 @@
 	bottom: rem(-82);
 	display: block;
 	border: rem(12) solid var(--bg-element);
+	background-color: var(--bg-element);
 	border-radius: 50%;
 	@media (max-width: $desktop-l) {
 		right: 1.25rem;
@@ -125,8 +126,8 @@
 	border-radius: 50%;
 	object-fit: cover;
 	@media (max-width: $desktop-l) {
-    width: 23.8125rem;
-    height: 23.375rem;
+    width: 20.8125rem;
+    height: 20.375rem;
 	}
 	@media (max-width: $desktop-m) {
 		width: 20.813rem;

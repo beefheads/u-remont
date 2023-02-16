@@ -68,16 +68,16 @@
 	width: 100%;
 	object-fit: cover;
 	border-radius: rem(20);
-	@media (max-width: $tablet) {
-		height: 11.142rem;
-	}
-	@media (max-width: 800px) and (min-width: 600px) {
-		height: 20.142rem;
-	}
-  @media (max-width: $w-mobile) and (min-width: ($mobile-l + 1)) {
-  	height: 41.142rem;
+  @media (max-width: $tablet) and (min-width: ($mobile-l + 1)) {
+  	height: 21.142rem;
   }
-	@media (max-width: ($mobile-l + 200)) {
+	@media (max-width: ($mobile-l + 350)) {
+		height: 18.142rem;
+	}
+	@media (max-width: ($mobile-l + 151)) {
+		height: 16.142rem;
+	}
+	@media (max-width: $mobile-l) {
 		height: 11.142rem;
 	}
 }

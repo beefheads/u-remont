@@ -5136,6 +5136,11 @@ input[type=search]::-webkit-search-cancel-button {
 @media (max-width: 992px) {
   .section-title {
     font-size: 1.2857142857rem;
+    margin-bottom: 2.1428571429rem;
+  }
+}
+@media (max-width: 450px) {
+  .section-title {
     margin-bottom: 5.1428571429rem;
   }
 }
@@ -6335,6 +6340,11 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (max-width: 992px) {
   .before-after-slider {
+    height: 23.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .before-after-slider {
     height: 13.5rem;
   }
 }
@@ -6774,6 +6784,16 @@ input[type=search]::-webkit-search-cancel-button {
     margin-bottom: 2.8571428571rem;
   }
 }
+@media (max-width: 810px) {
+  .hero__desc {
+    margin-bottom: 3.857143rem;
+  }
+}
+@media (max-width: 450px) {
+  .hero__desc {
+    margin-bottom: 2.8571428571rem;
+  }
+}
 
 .hero-gallery {
   position: relative;
@@ -6786,6 +6806,10 @@ input[type=search]::-webkit-search-cancel-button {
 @media (max-width: 992px) {
   .hero-gallery {
     border-width: 0.2857142857rem;
+  }
+}
+@media (max-width: 810px) {
+  .hero-gallery {
     border-radius: 0;
   }
 }
@@ -6805,7 +6829,7 @@ input[type=search]::-webkit-search-cancel-button {
   border-radius: 1.25rem;
   object-fit: cover;
 }
-@media (max-width: 992px) {
+@media (max-width: 810px) {
   .hero-gallery__img {
     border-radius: 0;
   }
@@ -7200,6 +7224,12 @@ input[type=search]::-webkit-search-cancel-button {
     padding-right: 1.5714285714rem;
     padding-top: 1.7142857143rem;
     padding-bottom: 1.7142857143rem;
+  }
+}
+@media (max-width: 450px) {
+  .features__button {
+    padding-left: 1.0714285714rem;
+    padding-right: 1.0714285714rem;
   }
 }
 
@@ -7657,6 +7687,11 @@ input[type=search]::-webkit-search-cancel-button {
   transition: var(--tr-regular);
   text-align: center;
 }
+@media (max-width: 1800px) {
+  .worktypes__button {
+    bottom: -3.5625rem;
+  }
+}
 @media (max-width: 1500px) {
   .worktypes__button {
     bottom: -2.562rem;
@@ -7742,6 +7777,11 @@ input[type=search]::-webkit-search-cancel-button {
 
 @media (max-width: 992px) {
   .stages__title {
+    margin-bottom: 2.143rem;
+  }
+}
+@media (max-width: 450px) {
+  .stages__title {
     margin-bottom: 4.143rem;
   }
 }
@@ -7759,6 +7799,11 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 @media (max-width: 992px) {
+  .stages__gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 810px) {
   .stages__gallery {
     grid-template-columns: 1fr;
     row-gap: 2.6rem;
@@ -7901,6 +7946,12 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
+@media (max-width: 810px) {
+  .stages-card__desc br {
+    display: none;
+  }
+}
+
 .stages-card__quote {
   position: relative;
   background-color: #F6F6F6;
@@ -7936,6 +7987,16 @@ input[type=search]::-webkit-search-cancel-button {
     letter-spacing: initial;
     line-height: initial;
     margin-bottom: 0.714rem;
+  }
+}
+@media (max-width: 810px) {
+  .stages-card__quote-desc {
+    max-width: 64%;
+  }
+}
+@media (max-width: 450px) {
+  .stages-card__quote-desc {
+    max-width: 10.857rem;
   }
 }
 
@@ -8129,6 +8190,7 @@ input[type=search]::-webkit-search-cancel-button {
   bottom: -5.125rem;
   display: block;
   border: 0.75rem solid var(--bg-element);
+  background-color: var(--bg-element);
   border-radius: 50%;
 }
 @media (max-width: 1800px) {
@@ -8158,8 +8220,8 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (max-width: 1800px) {
   .consult-card__img {
-    width: 23.8125rem;
-    height: 23.375rem;
+    width: 20.8125rem;
+    height: 20.375rem;
   }
 }
 @media (max-width: 1500px) {
@@ -8586,9 +8648,14 @@ input[type=search]::-webkit-search-cancel-button {
 }
 @media (max-width: 992px) {
   .contacts .footer-contact__map {
-    height: 11.1428571429rem;
+    height: 21.1428571429rem;
     margin-bottom: -7rem;
     max-width: 85%;
+  }
+}
+@media (max-width: 810px) {
+  .contacts .footer-contact__map {
+    height: 14.142857rem;
   }
 }
 
@@ -9084,22 +9151,22 @@ input[type=search]::-webkit-search-cancel-button {
   object-fit: cover;
   border-radius: 1.25rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 451px) {
   .footer-contact__map-img {
-    height: 11.142rem;
+    height: 21.142rem;
   }
 }
-@media (max-width: 800px) and (min-width: 600px) {
+@media (max-width: 800px) {
   .footer-contact__map-img {
-    height: 20.142rem;
+    height: 18.142rem;
   }
 }
-@media (max-width: 810px) and (min-width: 451px) {
+@media (max-width: 601px) {
   .footer-contact__map-img {
-    height: 41.142rem;
+    height: 16.142rem;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 450px) {
   .footer-contact__map-img {
     height: 11.142rem;
   }

@@ -32,6 +32,12 @@
     line-height: initial;
     margin-bottom: 2.857142857142857rem;//40
   }
+  @media (max-width: $w-mobile) {
+    margin-bottom: 3.857143rem;
+  }
+  @media (max-width: $mobile-l) {
+    margin-bottom: 2.857142857142857rem;//40
+  }
 }
 
 .hero-gallery {
@@ -43,6 +49,8 @@
   z-index: 1;
   @media (max-width: $tablet) {
     border-width: 0.2857142857142857rem;
+  }
+  @media (max-width: $w-mobile) {
     border-radius: 0;
   }
 }
@@ -57,7 +65,7 @@
   display: block;
   border-radius: 1.25rem;//20
   object-fit: cover;
-  @media (max-width: $tablet) {
+  @media (max-width: $w-mobile) {
     border-radius: 0;
   }
 }

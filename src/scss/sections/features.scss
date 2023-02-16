@@ -144,6 +144,10 @@
   	padding-top: 1.7142857142857142rem;
   	padding-bottom: 1.7142857142857142rem;
   }
+  @media (max-width: $mobile-l) {
+  	padding-left: 1.0714285714285714rem;
+  	padding-right: 1.0714285714285714rem;
+  }
 }
 .features__button::after,
 .features__button::before {

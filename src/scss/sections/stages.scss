@@ -9,6 +9,9 @@
 }
 .stages__title {
 	@media (max-width: $tablet) {
+		margin-bottom: 2.143rem;
+	}
+	@media (max-width: $mobile-l) {
 		margin-bottom: 4.143rem;
 	}
 }
@@ -22,6 +25,9 @@
 		row-gap: 1.25rem;
 	}
 	@media (max-width: $tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $w-mobile) {
 		grid-template-columns: 1fr;
 		row-gap: 2.6rem;
 	}
@@ -135,6 +141,11 @@
 		line-height: initial;
 	}
 }
+.stages-card__desc br {
+	@media (max-width: $w-mobile) {
+		display: none;
+	}
+}
 
 .stages-card__quote {
 	position: relative;
@@ -166,6 +177,12 @@
 		letter-spacing: initial;
 		line-height: initial;
 		margin-bottom: 0.714rem;
+	}
+	@media (max-width: $w-mobile) {
+		max-width: 64%;
+	}
+	@media (max-width: $mobile-l) {
+		max-width: 10.857rem;
 	}
 }
 .stages-card__quote-cite {
